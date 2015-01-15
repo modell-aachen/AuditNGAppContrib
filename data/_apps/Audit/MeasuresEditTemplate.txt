@@ -1,0 +1,23 @@
+%META:TOPICINFO{author="BaseUserMapping_333" date="1417776135" format="1.1" version="1"}%
+%TMPL:INCLUDE{edit}%
+
+%TMPL:DEF{"content"}%%TMPL:P{"simpleheader"}%
+%TMPL:P{"formstart"}%%TMPL:P{"formtop"}%
+%TMPL:P{"measures"}%
+%TMPL:P{"topicinfo"}%
+%TMPL:P{"formend"}%
+%TMPL:END%
+
+%TMPL:DEF{"measures"}%
+<div class="widgetBlockTitle">%MAKETEXT{"Measures"}%</div>
+<div class="widgetBlockContent">
+<table class="metaDataHead">
+<tr><td width="200px;">%MAKETEXT{"Description"}%<font color="red">*</font>:</td><td>%RENDERFOREDIT{field="TopicTitle" format="$edit"}%</td></tr>
+<tr><td>%MAKETEXT{"Responsible"}%<font color="red">*</font>:</td><td>%RENDERFOREDIT{field="Responsible" format="$edit"}%</td></tr>
+<tr><td>%MAKETEXT{"Deviation"}%:</td><td>%RENDERFOREDIT{field="Deviation" format="$edit"}%</td></tr>
+<tr><td>%MAKETEXT{"Status"}%:</td><td>%RENDERFOREDIT{field="Status" format="$edit"}%</td></tr>
+<tr><td>%MAKETEXT{"Protected"}%:</td><td>%RENDERFOREDIT{field="Protected" format="$edit"}%</td></tr>
+<tr><td>%MAKETEXT{"Participants"}%:</td><td>%RENDERFOREDIT{field="Participants" format="$edit"}%</td></tr>
+</table>
+</div>
+%TMPL:END%

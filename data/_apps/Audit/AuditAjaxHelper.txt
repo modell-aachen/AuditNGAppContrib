@@ -1,0 +1,31 @@
+%META:TOPICINFO{author="BaseUserMapping_333" date="1418053242" format="1.1" version="5"}%
+<verbatim>
+%STARTSECTION{name="question"}%{"results":[%SOLRSEARCH{
+  "topic:Question* form:*QuestionForm web:%URLPARAM{"web"}%"
+  format="{\"id\":\"$topic\",\"text\":\"$field_TopicTitle_s\"}"
+  separator=", "
+  rows="999999"
+}%]}%ENDSECTION{name="question"}%
+%STARTSECTION{name="question_init"}%[
+%SOLRSEARCH{
+  "topic:%FORMATLIST{"%URLPARAM{id}%" header="(" footer=")" separator=" OR "}% form:*QuestionForm"
+  format="{\"id\":\"$topic\",\"text\":\"$field_TopicTitle_s\"}"
+  separator=", "
+  sort="topic"
+}%
+]%ENDSECTION{name="question_init"}%
+%STARTSECTION{name="deviation"}%{"results":[%SOLRSEARCH{
+  "topic:Deviation* form:*DeviationForm web:%URLPARAM{"web"}%"
+  format="{\"id\":\"$topic\",\"text\":\"$field_TopicTitle_s\"}"
+  separator=", "
+  rows="999999"
+}%]}%ENDSECTION{name="deviation"}%
+%STARTSECTION{name="deviation_init"}%[
+%SOLRSEARCH{
+  "topic:%FORMATLIST{"%URLPARAM{id}%" header="(" footer=")" separator=" OR "}% form:*DeviationForm"
+  format="{\"id\":\"$topic\",\"text\":\"$field_TopicTitle_s\"}"
+  separator=", "
+  sort="topic"
+}%
+]%ENDSECTION{name="deviation_init"}%
+</verbatim>

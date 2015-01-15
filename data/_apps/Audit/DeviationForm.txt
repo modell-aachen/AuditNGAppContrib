@@ -1,0 +1,8 @@
+%META:TOPICINFO{author="BaseUserMapping_333" date="1418763895" format="1.1" version="7"}%
+| *Name* | *Type* | *Size* | *Values* | *Tool Message* | *Attributes* |
+| TopicTitle | text | 50 | | %MAKETEXT{"Description"}% | M |
+| Type | select+values | 1 | %MAKETEXT{"Main deviation"}%=Main deviation, %MAKETEXT{"Secondary deviation"}%=Secondary deviation, %MAKETEXT{"Recommendation"}%=Recommendation | %MAKETEXT{"Type"}% | |
+| Question | select2+multi | 50 limit="1" mustMatch | %SCRIPTURL{view}%/%AUDITWEB%/AuditAjaxHelper?contenttype=text/plain;skin=text;section=question;web=%BASEWEB% | %MAKETEXT{"Question"}% | initUrl="%SCRIPTURL{view}%/%AUDITWEB%/AuditAjaxHelper?section=question_init;contenttype=text/plain;skin=text;" |
+
+   * Set ALLOWTOPICCHANGE = AdminUser
+   * Set NOWYSIWYG = 1

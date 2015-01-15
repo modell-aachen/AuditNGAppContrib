@@ -1,0 +1,98 @@
+%META:TOPICINFO{author="BaseUserMapping_333" date="1417769120" format="1.1" version="1"}%
+%TMPL:INCLUDE{"PrintOnlyView"}%
+
+%TMPL:DEF{"content"}%%TMPL:P{"simpleheader"}%
+%TMPL:P{"data"}%
+%TMPL:P{"preparation"}%
+%TMPL:P{"report"}%
+%TMPL:END%
+
+%TMPL:DEF{"data"}%
+<div class="widgetBlockTitle">
+%MAKETEXT{"General audit information"}%&nbsp;<a href="%SCRIPTURLPATH{"edit"}%/%WEB%/%TOPIC%?t=%GMTIME{"$epoch"}%\" title="%MAKETEXT{"Edit"}%">%ICON{pencil}%</a>
+</div>
+<div class="widgetBlockContent">
+<table class="metaDataHead">
+<tr><td width="150px">%MAKETEXT{"Audit title"}%</td><td>%QUERY{"TopicTitle"}%</td></tr>
+<tr><td width="150px">%MAKETEXT{"Audited division"}%</td><td>%QUERY{"Division"}%</td></tr>
+<tr><td>%MAKETEXT{"Auditor"}%</td><td>%QUERY{"Auditor"}%</td></tr>
+<tr><td>%MAKETEXT{"Planned date"}%</td><td> %QUERY{"PlannedDate"}%</td></tr>
+<tr><td> %MAKETEXT{"Date of execution"}%</td><td> %QUERY{"DateOfExecution"}%</td></tr>
+<tr><td>%MAKETEXT{"Audit type"}%</td><td>%MAKETEXT{"%QUERY{"AuditType"}%"}%</td></tr> 
+<tr><td>%MAKETEXT{"Status"}%</td><td>%MAKETEXT{"%QUERY{"Status"}%"}%</td></tr>
+</table> 
+</div>
+%TMPL:END%
+
+
+%TMPL:DEF{"preparation"}%
+<div class="widgetBlockTitle">%MAKETEXT{"Preparation"}%</div>
+<div class="widgetBlockContent">
+%BUTTON{"%MAKETEXT{"New question"}%" href="%SCRIPTURL{edit}%/%BASEWEB%/QuestionAUTOINC0000?templatetopic=%AUDITWEB%.QuestionTemplate;formtemplate=%AUDITWEB%.QuestionForm;template=%AUDITWEB%.QuestionEdit;t=%GMTIME{$epoch}%"}%
+<table class="tablesorter">
+<thead>
+<tr><th width="50%">%MAKETEXT{"Question"}%</th><th width="40%">%MAKETEXT{"Chapter"}%</th></tr>
+</thead>
+<tbody>
+%SOLRSEARCH{
+"type:topic form:*QuestionForm topic:Question*"
+web="%BASEWEB%"
+fields="web,topic,field_TopicTitle_s,field_Chapter_lst"
+header=""
+format="<tr><td>$field_TopicTitle_s</td><td>$field_Chapter_lst</td><td><a href=\"%SCRIPTURLPATH{edit}%/$web/$topic?t=$percntGMTIME{\"$epoch\"}$percnt\" title=\"$percntMAKETEXT{Edit}$percnt\">$percntICON{pencil}$percnt</a></td></tr>"
+footer=""
+rows="99999"
+sort="field_TopicTitle_s asc"
+}%
+</table>
+</div>
+%TMPL:END%
+
+%TMPL:DEF{"report"}%
+<div class="widgetBlockTitle">%MAKETEXT{"Audit report"}%</div>
+<div class="widgetBlockContent">
+<table class="tablesorter">
+<thead>
+<tr><th width="33%">%MAKETEXT{"Question"}%</th><th width="33%">%MAKETEXT{"Deviation"}%</th><th>%MAKETEXT{"Measures"}%</th></tr>
+</thead>
+<tbody>
+%SOLRSEARCH{
+"type:topic form:*DeviationForm topic:Deviation*"
+web="%BASEWEB%"
+fields="web,topic,field_TopicTitle_s,field_Type_s"
+header=""
+format="<tr><td>$percntTMPL:P{\"searchquestion\" deviation=\"$topic\"}$percnt</td><td>$field_TopicTitle_s&nbsp;<a href=\"%SCRIPTURLPATH{edit}%/$web/$topic?t=$percntGMTIME{\"$epoch\"}$percnt\" title=\"$percntMAKETEXT{Edit}$percnt\">$percntICON{pencil}$percnt</a>%BR%<font size=\"-2\">$percntMAKETEXT{\"$field_Type_s\"}$percnt</font></td><td>$percntTMPL:P{\"searchmeasures\" deviation=\"$topic\"}$percnt%BR%%BUTTON{"%MAKETEXT{"Record measures"}%" href="%SCRIPTURL{edit}%/%BASEWEB%/MeasuresAUTOINC0000?templatetopic=%AUDITWEB%.MeasuresTemplate;formtemplate=%AUDITWEB%.MeasuresForm;template=%AUDITWEB%.MeasuresEdit;Deviation=$topic;t=%GMTIME{$epoch}%"}%</td></tr>"
+footer=""
+rows="99999"
+sort="field_Description_s asc"
+}%
+<tr><td></td><td>%BUTTON{"%MAKETEXT{"Record deviation"}%" href="%SCRIPTURL{edit}%/%BASEWEB%/DeviationAUTOINC0000?templatetopic=%AUDITWEB%.DeviationTemplate;formtemplate=%AUDITWEB%.DeviationForm;template=%AUDITWEB%.DeviationEdit;t=%GMTIME{$epoch}%"}%</td><td></td></tr>
+</tbody>
+</table>
+</div>
+%TMPL:END%
+
+
+%TMPL:DEF{"searchquestion"}%
+%SOLRSEARCH{
+"topic:%deviation%"
+web="%BASEWEB%"
+fields="web,topic,field_Question_lst"
+header=""
+format="$percntQUERY{'$topic'/Question/TopicTitle}$percnt"
+footer=""
+}%
+%TMPL:END%
+
+%TMPL:DEF{"searchmeasures"}%
+%SOLRSEARCH{
+"type:topic form:*MeasuresForm field_Deviation_lst:%deviation%"
+web="%BASEWEB%"
+fields="web,topic,field_TopicTitle_s,field_Status_s"
+header=""
+format="<div>[[$web.$topic]] ($percntMAKETEXT{\"$field_Status_s\"}$percnt)</div>"
+footer=""
+rows="99999"
+sort="topic asc"
+}%
+%TMPL:END%

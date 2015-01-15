@@ -1,0 +1,13 @@
+%META:TOPICINFO{author="BaseUserMapping_333" comment="reprev" date="1418051595" format="1.1" reprev="4" version="2"}%
+| *Name* | *Type* | *Size* | *Values* | *Tooltip message* | *Attributes* |
+| TopicTitle | text | 50 | | | M |
+| Division | text | 50 | | | |
+| Auditor | textboxlist | 50 mustMatch limit="1" | %USERAUTOCOMPLETE% | | M |
+| PlannedDate | date | 15 | | | |
+| DateOfExecution | date | 15 | | | |
+| AuditType | select+values | 1  | %MAKETEXT{"System audit"}%=System audit, %MAKETEXT{"Process audit"}%=Process audit, %MAKETEXT{"External audit"}%=External audit | | |
+| Status | select+values | 1| %MAKETEXT{"open"}%=open, %MAKETEXT{"closed"}%=closed | | |
+
+
+   * Set ALLOWTOPICCHANGE = AdminUser
+   * Set NOWYSIWYG = 1

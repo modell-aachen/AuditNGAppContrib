@@ -1,0 +1,19 @@
+%META:TOPICINFO{author="BaseUserMapping_333" date="1417772646" format="1.1" version="4"}%
+ %TMPL:INCLUDE{edit}%
+
+%TMPL:DEF{"content"}%%TMPL:P{"simpleheader"}%
+%TMPL:P{"formstart"}%%TMPL:P{"formtop"}%
+%TMPL:P{"question"}%
+%TMPL:P{"topicinfo"}%
+%TMPL:P{"formend"}%
+%TMPL:END%
+
+%TMPL:DEF{"question"}%
+<div class="widgetBlockTitle">%MAKETEXT{"Question"}%</div>
+<div class="widgetBlockContent">
+<table class="metaDataHead">
+<tr><td width="200px;">%MAKETEXT{"Question"}%:<font color="red">*</font></td><td>%RENDERFOREDIT{field="TopicTitle" format="$edit"}%</td></tr>
+<tr><td>%MAKETEXT{"Chapter"}%:</td><td>%RENDERFOREDIT{field="Chapter" format="$edit"}%</td></tr>
+</table>
+</div>
+%TMPL:END%
