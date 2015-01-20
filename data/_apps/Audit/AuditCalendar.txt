@@ -1,0 +1,100 @@
+%JQREQUIRE{"fullcalendar"}%
+%ADDTOZONE{"body" topic="%WEB%.%TOPIC%" section="init" requires="JQUERYPLUGIN::FULLCALENDAR"}%
+
+<div id="loading" style="border: solid 1px #ccc; padding: 10px; font-size: 150%; font-weight: bold; width: 15em; z-index: 20000; background: #eee;"><img src="%PUBURLPATH%/%SYSTEMWEB%/JQueryPlugin/images/spinner.gif" /> &nbsp;&nbsp;&nbsp;Please wait...</div>
+<div id="calendar2" style="width:1000px"></div>
+
+<div style="display:none;">
+---++ !JavaScript initialisation
+%TWISTY%
+<verbatim class="tml">
+%STARTSECTION{"init"}%
+<literal>
+<script type='text/javascript'>
+jQuery(function($) {
+    var date = new Date();
+    var d = date.getDate();
+    var m = date.getMonth();
+    var y = date.getFullYear();
+
+    $('#calendar2').fullCalendar({
+      theme: true,
+      editable: false,
+      firstDay: 1,
+      defaultView: 'month',
+
+      events: '%SCRIPTURLPATH{"view"}%/%BASEWEB%/AuditCalendar?section=json-events;skin=text',
+
+      header: {
+        left: 'prev,next today',
+        center: 'title',
+        right: 'month,agendaWeek,agendaDay'
+      },
+
+      eventDragStop: function(calEvent, jsEvent, ui, view) {
+        /*alert(calEvent.title + 
+              ' was dragged\n' +
+              'id=' + calEvent.id + '\n' +
+              'start=' + calEvent.start + '\n' +
+              'end='+calEvent.end);*/
+      },
+
+      eventResize: function(calEvent, jsEvent, ui, view) {
+        /*alert(calEvent.title + 
+              ' was resized\n' +
+              'id=' + calEvent.id + '\n' +
+              'start=' + calEvent.start + '\n' +
+              'end='+calEvent.end);*/
+      },
+
+      eventClick: function(calEvent, jsEvent, view) {
+        var dlg = '<div id="eventdetails" title="%MAKETEXT{"Audit"}%: '+ calEvent.title+'"><ul><li>%MAKETEXT{"Date"}%: '+ calEvent.start.toDateString() +'</li><li>%MAKETEXT{"Status"}%: '+ calEvent.status +'</li>';
+       var zeropad = function(x) { if (x < 10) return '0'+x; return x; };
+        $(dlg).dialog({resizable: false, height: 250, modal: true});
+      },
+
+      loading: function(bool) {
+        if (bool) {
+          $('#loading').stop().show();
+        } else {
+          $('#loading').stop().fadeOut();
+        }
+      },
+      timeFormat: {
+        // for agendaWeek and agendaDay
+        agenda: 'H:mm{ - H:mm}', 
+
+        // for all other views
+        '': 'h(:mm)'
+      },
+      columnFormat: {
+        month: 'ddd',
+        week: 'ddd d',
+        day: 'dddd d'
+      },
+      axisFormat: 'H:mm'
+    });
+   $('#loading').position({my: 'center center', at: 'center center', of: '#calendar2'});
+});
+</script>
+</literal>
+%ENDSECTION{"init"}%
+</verbatim>
+%ENDTWISTY%
+</div>
+
+<div style="display:none;">
+%STARTSECTION{"json-events"}%
+%SOLRSEARCH{
+"form:*AuditReportForm"
+web="%WEB%"
+fields="web,topic,field_TopicTitle_s,field_DateOfExecution_dt,field_Status_s"
+header="["
+format="{\"title\": \"$field_TopicTitle_s\", \"summary\": \"$field_Title_s\", \"start\": \"$field_DateOfExecution_dt 09:00:00\",\"end\": \"$field_DateOfExecution_dt 18:00:00\",\"allDay\": true, \"status\":\"$percntMAKETEXT{\"$field_Status_s\"}$percnt\",\"backgroundColor\": \"$percntIF{\"'$field_Status_s'='closed'\" then=\"green\" else=\"red\"}$percnt\"}"
+footer="]"
+separator=","
+rows="9999"
+}%
+%ENDSECTION{"json-events"}%
+</div>
+

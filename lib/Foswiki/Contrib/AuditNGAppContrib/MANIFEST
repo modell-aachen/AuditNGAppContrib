@@ -1,5 +1,6 @@
 data/_apps/Audit/.changes 0644
 data/_apps/Audit/AuditAjaxHelper.txt 0644
+data/_apps/Audit/AuditCalendar.txt 0644
 data/_apps/Audit/AuditReportEditTemplate.txt 0644
 data/_apps/Audit/AuditReportForm.txt 0644
 data/_apps/Audit/AuditReportViewTemplate.txt 0644
