@@ -1,5 +1,4 @@
-%META:TOPICINFO{author="BaseUserMapping_333" date="1418050539" format="1.1" version="5"}%
-
+%META:TOPICINFO{author="BaseUserMapping_333" date="1424793518" format="1.1" version="5"}%
 <div class="widgetBlockTitle">%MAKETEXT{"Audit reports"}%</div>
 <div class="widgetBlockContent">
 <table class="tablesorter">
@@ -22,3 +21,17 @@ sort="field_TopicTitle_s asc"
 %INCLUDE{"AuditCalendar"}%
 
 </div>
+
+%TMPL:DEF{"auditmeasures"}%
+%SOLRSEARCH{
+"form:MeasureForm"
+fields="count"
+header=""
+format="<span class=\"count\">$count</span>"
+footer=""
+rows="999999"
+sort="field_TopicTitle_s asc"
+}%
+%TMPL:END%
+
+%META:PREFERENCE{name="VIEW_TEMPLATE" title="VIEW_TEMPLATE" type="Set" value="AuditOverview"}%

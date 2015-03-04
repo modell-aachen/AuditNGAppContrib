@@ -1,6 +1,7 @@
-%META:TOPICINFO{author="BaseUserMapping_333" date="1418763895" format="1.1" version="7"}%
+%META:TOPICINFO{author="BaseUserMapping_333" date="1424774298" format="1.1" version="5"}%
 | *Name* | *Type* | *Size* | *Values* | *Tool Message* | *Attributes* |
-| TopicTitle | text | 50 | | %MAKETEXT{"Description"}% | M |
+| TopicTitle | textarea | 50x5 | | %MAKETEXT{"Description"}% | M |
+| Fulfillment | select | 1 | 10,5,0 | %MAKETEXT{"Fullfilment"}% |  |
 | Type | select+values | 1 | %MAKETEXT{"Main deviation"}%=Main deviation, %MAKETEXT{"Secondary deviation"}%=Secondary deviation, %MAKETEXT{"Recommendation"}%=Recommendation | %MAKETEXT{"Type"}% | |
 | Question | select2+multi | 50 limit="1" mustMatch | %SCRIPTURL{view}%/%AUDITWEB%/AuditAjaxHelper?contenttype=text/plain;skin=text;section=question;web=%BASEWEB% | %MAKETEXT{"Question"}% | initUrl="%SCRIPTURL{view}%/%AUDITWEB%/AuditAjaxHelper?section=question_init;contenttype=text/plain;skin=text;" |
 

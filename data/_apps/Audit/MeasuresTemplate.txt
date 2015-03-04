@@ -1,4 +1,4 @@
-%META:TOPICINFO{author="BaseUserMapping_333" comment="pending" date="1417781234" format="1.1" version="2"}%
+%META:TOPICINFO{author="BaseUserMapping_333" comment="pending" date="1424768156" format="1.1" version="2"}%
 
-%META:PREFERENCE{name="VIEW_TEMPLATE" title="VIEW_TEMPLATE" type="Set" value="Audit.MeasuresView"}%
-%META:PREFERENCE{name="EDIT_TEMPLATE" title="EDIT_TEMPLATE" type="Set" value="Audit.MeasuresEdit"}%
+%META:PREFERENCE{name="VIEW_TEMPLATE" title="VIEW_TEMPLATE" type="Set" value="AuditPrototype.MeasuresView"}%
+%META:PREFERENCE{name="EDIT_TEMPLATE" title="EDIT_TEMPLATE" type="Set" value="AuditPrototype.MeasuresEdit"}%

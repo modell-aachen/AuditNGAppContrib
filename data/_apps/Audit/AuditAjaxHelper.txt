@@ -1,4 +1,4 @@
-%META:TOPICINFO{author="BaseUserMapping_333" date="1418053242" format="1.1" version="5"}%
+%META:TOPICINFO{author="BaseUserMapping_333" date="1418053242" format="1.1" version="1"}%
 <verbatim>
 %STARTSECTION{name="question"}%{"results":[%SOLRSEARCH{
   "topic:Question* form:*QuestionForm web:%URLPARAM{"web"}%"

@@ -1,4 +1,4 @@
-%META:TOPICINFO{author="BaseUserMapping_333" date="1417776135" format="1.1" version="1"}%
+%META:TOPICINFO{author="BaseUserMapping_333" date="1424774279" format="1.1" version="3"}%
  %TMPL:INCLUDE{edit}%
 
 %TMPL:DEF{"content"}%%TMPL:P{"simpleheader"}%
@@ -15,6 +15,7 @@
 <tr><td width="200px:">%MAKETEXT{"Description"}%:<font color="red">*</font></td><td>%RENDERFOREDIT{field="TopicTitle" format="$edit"}%</td></tr>
 <tr><td>%MAKETEXT{"Deviation"}%:</td><td>%RENDERFOREDIT{field="Type" format="$edit"}%</td></tr>
 <tr><td>%MAKETEXT{"Question"}%:<font color="red">*</font></td><td>%RENDERFOREDIT{field="Question" format="$edit"}%</td></tr>
+<tr><td>%MAKETEXT{"Fulfillment"}%:</td><td>%RENDERFOREDIT{field="Fulfillment" format="$edit"}%</td></tr>
 </table>
 </div>
 %TMPL:END%

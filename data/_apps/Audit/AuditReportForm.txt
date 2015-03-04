@@ -1,12 +1,16 @@
-%META:TOPICINFO{author="BaseUserMapping_333" comment="reprev" date="1418051595" format="1.1" reprev="4" version="2"}%
+%META:TOPICINFO{author="BaseUserMapping_333" comment="reprev" date="1424854367" format="1.1" reprev="4" version="3"}%
 | *Name* | *Type* | *Size* | *Values* | *Tooltip message* | *Attributes* |
 | TopicTitle | text | 50 | | | M |
 | Division | text | 50 | | | |
+| Auditor | textboxlist | 50 mustMatch limit="1" | %USERAUTOCOMPLETE% | | |
 | Auditor | textboxlist | 50 mustMatch limit="1" | %USERAUTOCOMPLETE% | | M |
-| PlannedDate | date | 15 | | | |
+| AuditTeam | textboxlist | 50 mustMatch | %USERAUTOCOMPLETE% | | M |
+| PlanningDate | date | 15 | | | |
 | DateOfExecution | date | 15 | | | |
-| AuditType | select+values | 1  | %MAKETEXT{"System audit"}%=System audit, %MAKETEXT{"Process audit"}%=Process audit, %MAKETEXT{"External audit"}%=External audit | | |
-| Status | select+values | 1| %MAKETEXT{"open"}%=open, %MAKETEXT{"closed"}%=closed | | |
+| AuditType | select+values | 1  | %MAKETEXT{"System audit"}%=System audit, %MAKETEXT{"Process audit"}%=Process audit, %MAKETEXT{"Project audit"}%=Project audit, %MAKETEXT{"Product audit"}%=Product audit | | |
+| AuditScope | select+values | 1  | %MAKETEXT{"Internal audit"}%=Internal audit, %MAKETEXT{"External audit"}%=External audit,  %MAKETEXT{"Supplier audit"}%=Supplier audit | | |
+| UsedStandards | textboxlist  | 50 mustMatch  | ISO9001,ISO14001,ISO18001,ISO50001 | | |
+| Status | select+values | 1| %MAKETEXT{"new"}%=new, %MAKETEXT{"planned"}%=planned, %MAKETEXT{"Verification"}%=verification, %MAKETEXT{"done"}%=done | | |
 
 
    * Set ALLOWTOPICCHANGE = AdminUser

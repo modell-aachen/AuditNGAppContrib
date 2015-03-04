@@ -1,4 +1,4 @@
-%META:TOPICINFO{author="BaseUserMapping_333" date="1418726282" format="1.1" version="8"}%
+%META:TOPICINFO{author="BaseUserMapping_333" date="1424768043" format="1.1" version="2"}%
 ---+!! <nop>%WEB% Web Preferences
 
 %TOC%
@@ -41,10 +41,10 @@
 
    * Set AMPEL_OPT = WARN="%SIGNAL_PREWARNTIME{default="7"}%" DATE="$percntMAKETEXT{\"Due date\"}$percnt" DST="$percntMAKETEXT{\"Signal\"}$percnt" DONE="$percntMAKETEXT{\"Signal\"}$percnt" COND="closed"
 
-   * Set AUDITWEB = Audit
+   * Set AUDITWEB = AuditPrototype
 
    * Set VIEW_TEMPLATE_RULES = 
-      Question.* => Audit.QuestionView
+      Question.* => AuditPrototype.QuestionView
 
 ---++ ActionTracker settings
    * Set ACTIONTRACKERPLUGIN_EXTRAS = |createdate,date|task,text,50|state,select+values,"%MAKETEXT{"open"}%=open","%MAKETEXT{"closed"}%=closed"|
@@ -61,11 +61,11 @@ Users or groups who are allowed to view, change and rename topics in the <nop>%W
 Remember that an empty setting is a valid setting; setting DENYWEBVIEW to nothing means that anyone can view the web.
 
    * Set DENYWEBVIEW = 
-   * Set ALLOWWEBVIEW = 
-   * Set DENYWEBCHANGE = WikiGuest
-   * Set ALLOWWEBCHANGE = %USERSWEB%.AdminUser
+   * Set ALLOWWEBVIEW = AdminGroup 
+   * Set DENYWEBCHANGE = 
+   * Set ALLOWWEBCHANGE = AdminGroup
    * Set DENYWEBRENAME = 
-   * Set ALLOWWEBRENAME = %USERSWEB%.AdminUser
+   * Set ALLOWWEBRENAME = AdminGroup
 
 Users or groups allowed to change or rename this <nop>%TOPIC% topic: (e.g., [[%USERSWEB%.AdminGroup][AdminGroup]])
 

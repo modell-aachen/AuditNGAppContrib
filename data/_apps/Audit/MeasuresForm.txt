@@ -1,4 +1,4 @@
-%META:TOPICINFO{author="BaseUserMapping_333" date="1418053557" format="1.1" version="2"}%
+%META:TOPICINFO{author="BaseUserMapping_333" date="1418053557" format="1.1" version="1"}%
 | *Name* | *Type* | *Size* | *Values* | *Tool Message* | *Attributes* |
 | TopicTitle | text | 50 | | %MAKETEXT{"Description"}% | M |
 | Responsible | textboxlist | 50 mustMatch limit="1" | %USERAUTOCOMPLETE% | %MAKETEXT{"Responsible"}% | M |

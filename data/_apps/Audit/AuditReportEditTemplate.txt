@@ -1,4 +1,4 @@
-%META:TOPICINFO{author="BaseUserMapping_333" comment="reprev" date="1377188945" format="1.1" reprev="4" version="5"}%
+%META:TOPICINFO{author="BaseUserMapping_333" comment="reprev" date="1424854482" format="1.1" reprev="4" version="2"}%
 %META:TOPICPARENT{name="WebTopicList"}%
 %TMPL:INCLUDE{edit}%
 
@@ -19,9 +19,11 @@
 <tr><td width="150px">%MAKETEXT{"Audit title"}%<font color="red">*</font></td><td>%RENDERFOREDIT{field="TopicTitle" format="$edit"}%</td></tr>
 <tr><td width="150px">%MAKETEXT{"Audited division"}%</td><td>%RENDERFOREDIT{field="Division" format="$edit"}%</td></tr>
 <tr><td>%MAKETEXT{"Auditor"}%</td><td>%RENDERFOREDIT{field="Auditor" format="$edit"}%</td></tr>
-<tr><td>%MAKETEXT{"Planned date"}%</td><td> %RENDERFOREDIT{field="PlannedDate" format="$edit"}%</td></tr>
+<tr><td>%MAKETEXT{"Audit Team"}%</td><td>%RENDERFOREDIT{field="AuditTeam" format="$edit"}%</td></tr>
+<tr><td>%MAKETEXT{"Date of planning"}%</td><td> %RENDERFOREDIT{field="PlanningDate" format="$edit"}%</td></tr>
 <tr><td> %MAKETEXT{"Date of execution"}%</td><td> %RENDERFOREDIT{field="DateOfExecution" format="$edit"}%</td></tr>
 <tr><td>%MAKETEXT{"Audit type"}%</td><td>%RENDERFOREDIT{field="AuditType" format="$edit"}%</td></tr> 
+<tr><td>%MAKETEXT{"Used Standards"}%</td><td>%RENDERFOREDIT{field="UsedStandards" format="$edit"}%</td></tr> 
 <tr><td>%MAKETEXT{"Status"}%</td><td>%RENDERFOREDIT{field="Status" format="$edit"}%</td></tr>
 </table> 
 </div>

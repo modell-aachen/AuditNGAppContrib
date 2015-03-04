@@ -1,4 +1,4 @@
-%META:TOPICINFO{author="BaseUserMapping_333" date="1417772646" format="1.1" version="4"}%
+%META:TOPICINFO{author="BaseUserMapping_333" date="1424771244" format="1.1" version="5"}%
  %TMPL:INCLUDE{edit}%
 
 %TMPL:DEF{"content"}%%TMPL:P{"simpleheader"}%
@@ -14,6 +14,8 @@
 <table class="metaDataHead">
 <tr><td width="200px;">%MAKETEXT{"Question"}%:<font color="red">*</font></td><td>%RENDERFOREDIT{field="TopicTitle" format="$edit"}%</td></tr>
 <tr><td>%MAKETEXT{"Chapter"}%:</td><td>%RENDERFOREDIT{field="Chapter" format="$edit"}%</td></tr>
+<tr><td>%MAKETEXT{"Block"}%:</td><td>%RENDERFOREDIT{field="Block" format="$edit"}%</td></tr>
+<tr><td>%MAKETEXT{"Wertigkeit, Auswirkung"}%:</td><td>%RENDERFOREDIT{field="Wertigkeit" format="$edit"}%</td></tr>
 </table>
 </div>
 %TMPL:END%
