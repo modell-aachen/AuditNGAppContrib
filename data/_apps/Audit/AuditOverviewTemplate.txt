@@ -2,6 +2,7 @@
 %TMPL:INCLUDE{"SystemView"}%
 
 %TMPL:DEF{"content"}%
+%JQREQUIRE{livequery}%
 
 <div class="widgetBlockTitle">%MAKETEXT{"Audit reports"}%</div>
 <div class="widgetBlockContent">
@@ -11,23 +12,19 @@
 
 %TMPL:DEF{"auditsoverview"}%
 %TABPANE{select="%URLPARAM{"tab"}%" class="simple"}%
-%TAB{"%MAKETEXT{"New"}%" id="audits_open"}%
-%TMPL:P{"audits" state="open"}%
+%TAB{"%MAKETEXT{"New"}%" id="audits_open" url="%SCRIPTURL{rest}%/RenderPlugin/template?topic=%WEB%.%TOPIC%;expand=audits;render=on;name=AuditOverview;state=open"}%
+<span class="jqAjaxLoader">&nbsp;</span>
 %ENDTAB%
-%TAB{"%MAKETEXT{"Planned"}%" id="audits_planned"}%
-%TMPL:P{"audits" state="planned"}%
+%TAB{"%MAKETEXT{"Planned"}%" id="audits_planned" url="%SCRIPTURL{rest}%/RenderPlugin/template?topic=%WEB%.%TOPIC%;expand=audits;render=on;name=AuditOverview;state=planned"}%
+<span class="jqAjaxLoader">&nbsp;</span>
 %ENDTAB%
-%TAB{"%MAKETEXT{"Verification"}%" id="audits_verification"}%
-%TMPL:P{"audits" state="verification"}%
+%TAB{"%MAKETEXT{"Verification"}%" id="audits_verification" url="%SCRIPTURL{rest}%/RenderPlugin/template?topic=%WEB%.%TOPIC%;expand=audits;render=on;name=AuditOverview;state=verification"}%
+<span class="jqAjaxLoader">&nbsp;</span>
 %ENDTAB%
-%TAB{"%MAKETEXT{"Archived"}%" id="audits_archived"}%
-%TMPL:P{"audits" state="done"}%
+%TAB{"%MAKETEXT{"Archived"}%" id="audits_archived" url="%SCRIPTURL{rest}%/RenderPlugin/template?topic=%WEB%.%TOPIC%;expand=audits;render=on;name=AuditOverview;state=done"}%
+<span class="jqAjaxLoader">&nbsp;</span>
 %ENDTAB%
-%AMPEL{"SignalOpenPoints" WARN="7" DATE="%MAKETEXT{"Due"}%" DST="%MAKETEXT{"Status"}%" DONE="Status" COND="closed" LIVEQUERY="1"}%
-%AMPEL{"SignalClosedPoints" WARN="7" DATE="%MAKETEXT{"Due date"}%" DST="%MAKETEXT{"Signal"}%" DONE="Status" COND="closed" LIVEQUERY="1"}%
-%AMPEL{"SignalMyTasks" WARN="7" DATE="%MAKETEXT{"Due date"}%" DST="%MAKETEXT{"Signal"}%" DONE="Status" COND="closed" LIVEQUERY="1"}%
 %ENDTABPANE%
-
 %TMPL:END%
 
 %TMPL:DEF{"audits"}%

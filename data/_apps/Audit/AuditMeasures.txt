@@ -1,0 +1,36 @@
+%META:TOPICINFO{author="BaseUserMapping_333" date="1425545932" format="1.1" version="2"}%
+<div class="widgetBlockTitle">%MAKETEXT{"Audit measures"}%</div>
+<div class="widgetBlockContent">
+<table class="tablesorter">
+<thead>
+<tr><th width="33%">%MAKETEXT{"Deviation"}%</th><th>%MAKETEXT{"Fulfillment"}%</th><th>%MAKETEXT{"Measures"}%</th></tr>
+</thead>
+<tbody>
+%SOLRSEARCH{
+"type:topic form:*DeviationForm topic:Deviation*"
+web="%BASEWEB%"
+fields="web,topic,field_TopicTitle_s,field_Type_s,field_Fulfillment_s"
+header=""
+format="<tr><td>$field_TopicTitle_s&nbsp;<a href=\"%SCRIPTURLPATH{edit}%/$web/$topic?t=$percntGMTIME{\"$epoch\"}$percnt\" title=\"$percntMAKETEXT{Edit}$percnt\">$percntICON{pencil}$percnt</a>%BR%<font size=\"-2\">$percntMAKETEXT{\"$field_Type_s\"}$percnt</font></td><td>$field_Fulfillment_s</td><td>$percntINCLUDE{topic="%TOPIC%" section=\"searchmeasures\" deviation=\"$topic\"}$percnt%BR%%BUTTON{"%MAKETEXT{"Record measures"}%" href="%SCRIPTURL{edit}%/%BASEWEB%/MeasuresAUTOINC0000?templatetopic=%AUDITWEB%.MeasuresTemplate;formtemplate=%AUDITWEB%.MeasuresForm;template=%AUDITWEB%.MeasuresEdit;Deviation=$topic;t=%GMTIME{$epoch}%"}%</td></tr>"
+footer=""
+rows="99999"
+sort="field_Description_s asc"
+}%
+</tbody>
+</table>
+</div>
+
+<div style="display:none;">
+%STARTSECTION{"searchmeasures"}%
+%SOLRSEARCH{
+"type:topic form:*MeasuresForm field_Deviation_lst:%deviation%"
+web="%BASEWEB%"
+fields="web,topic,field_TopicTitle_s,field_Status_s"
+header=""
+format="<div>[[$web.$topic]] ($percntMAKETEXT{\"$field_Status_s\"}$percnt)</div>"
+footer=""
+rows="99999"
+sort="topic asc"
+}%
+%ENDSECTION{"searchmeasures"}%
+</div>

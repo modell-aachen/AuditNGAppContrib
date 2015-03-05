@@ -1,9 +1,9 @@
 %META:TOPICINFO{author="BaseUserMapping_333" comment="pending" date="1424771176" format="1.1" version="7"}%
 | *Name* | *Type* | *Size* | *Values* | *Tool Message* | *Attributes* |
 | TopicTitle | textarea | 50x5 |  | %MAKETEXT{"Question"}% | M |
-| Wertigkeit | select | 1 |  10,5,1 | %MAKETEXT{"Question"}% | M |
-| Block | select | 1 |  Block1,Block2,Block3,Block4,Block5 | %MAKETEXT{"Question"}% | M |
-| Chapter | select2+multi | 50 | %SCRIPTURL{view}%/Standards/NormAjaxHelper?contenttype=text/plain;skin=text;section=norm;norm=ISO9001 | %MAKETEXT{"Norm classification"}% | initUrl="%SCRIPTURL{view}%/Standards/NormAjaxHelper?section=norm_init;contenttype=text/plain;skin=text;norm=ISO9001" |
+| QualityRating | select | 1 |  10,5,1 | %MAKETEXT{"Quality rating"}% | M |
+| Block | select+values | 1 |  %MAKETEXT{"Block 1"}%=Block1, %MAKETEXT{"Block 2"}%=Block2, %MAKETEXT{"Block 3"}%=Block3, %MAKETEXT{"Block 4"}%=Block4, %MAKETEXT{"Block 5"}%=Block5 | %MAKETEXT{"Block"}% | M |
+| Chapter | select2+multi | 50 | %SCRIPTURL{view}%/_apps/NormClassifications/NormAjaxHelper?contenttype=text/plain;skin=text;section=norm;norm=ISO9001 | %MAKETEXT{"Norm classification"}% | initUrl="%SCRIPTURL{view}%/_apps/NormClassifications/NormAjaxHelper?section=norm_init;contenttype=text/plain;skin=text;norm=ISO9001" |
 
 
 

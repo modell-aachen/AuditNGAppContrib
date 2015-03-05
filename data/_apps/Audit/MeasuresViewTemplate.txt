@@ -1,5 +1,6 @@
 %META:TOPICINFO{author="BaseUserMapping_333" date="1417769120" format="1.1" version="1"}%
 %TMPL:INCLUDE{"view"}%
+%TMPL:DEF{"breadcrumb:currentweb"}%%TMPL:P{"breadcrumb:separator"}%<a href='%SCRIPTURLPATH{"view"}%/%AUDITWEB%/%HOMETOPIC%'>%MAKETEXT{"[_1] Web" args="<nop>%AUDITWEB%"}%</a>%TMPL:P{"breadcrumb:separator"}%<a href="%SCRIPTURLPATH{"view"}%/%WEB%/%HOMETOPIC%">%MAKETEXT{"[_1] Web" args="<nop>%WEB%"}%</a>%TMPL:END%
 %JQREQUIRE{"ui::dialog"}%
 
 %TMPL:DEF{"content"}%

@@ -1,0 +1,20 @@
+---+ AuditNGAppContrib
+---++ Installation Instructions
+
+* Install AuditNGAppContrib and its dependencies
+* The installation path would be _apps/Audit, so you have to do some customisations
+* * Move web to desired level
+* * Change path settings in preferences to:
+* * * Preferences in AuditTemplate/WebHome.txt
+* * * DeviationTemplate.txt
+* * * MeasuresTemplate.txt
+* * * QuestionForm.txt
+* * * QuestionTemplate.txt
+* * * WebPreferences.txt
+
+
+---++ Dependencies
+* NormClassificationsAppContrib
+* MoreFormfieldsContrib
+
+
