@@ -1,0 +1,30 @@
+%TMPL:INCLUDE{"SystemView"}%
+
+%TMPL:DEF{"content"}%
+%FORMATLIST{"%RENDERFORDISPLAY{form="%AUDITWEB%.DeviationForm" format="$values" fields="Block"}%"
+  format="$percentTMPL:P{\"block\" block=\"$1\"}$percent"
+  separator="<div class='pdfPageBreak'></div>"
+}%
+%TMPL:END%
+
+%TMPL:DEF{"block"}%
+<div class="widgetBlockTitle">%MAKETEXT{"Block[_1]" args="%block%"}%</div>
+<div class="widgetBlockContent">
+<table class="tablesorter">
+<thead>
+<tr><th>#</th><th>%MAKETEXT{"Bewertungsaspekt/-kriterium"}%</th><th>%MAKETEXT{"Norm"}%</th><th>%MAKETEXT{"Quality rating / effect"}%</th><th>%MAKETEXT{"Actual condition"}%</th><th>%MAKETEXT{"Fulfillment"}%</th><th>%MAKETEXT{"Result"}%</th><th class='modacPrintHide'></th></tr>
+</thead>
+<tbody>
+<!-- elements -->%SOLRSEARCH{
+  "type:topic form:%AUDITWEB%.DeviationForm field_Block_s:%block%"
+  rows="9999"
+  format="<tr>
+<td>$count</td><td>$percentQUERY{\"'%AUDITWEB%.$field_Question_s'/AspectCriteria\"}$percent</td><td>$percentQUERY{\"'%WEB%.$field_Question_s'/Chapter\"}$percent</td><td>$field_QualityRating_s</td><td>$field_ActualCondition_s</td><td>$field_Fulfillment_s</td><td>$percentCALC{\"$dollarINT($field_QualityRating_s * $field_Fulfillment_s)\"}$percent</td><td class='modacPrintHide'><a href='%SCRIPTURLPATH{edit}%/%WEB%/$topic?t=%GMTIME{"$epoch"}%' title='%MAKETEXT{"Edit"}%'>$percentICON{pencil}$percent</a></td>
+</tr>"
+  sort="topic"
+}% <!-- /elements -->
+</table>
+<a class="modacPrintHide" href="%SCRIPTURLPATH{"edit"}%/%WEB%/ElementAUTOINC00?Block=%block%;formtemplate=%AUDITWEB%.DeviationForm;template=%AUDITWEB%.DeviationEdit">%MAKETEXT{"Add audit element"}%</a>
+</div>
+%TMPL:END%
+

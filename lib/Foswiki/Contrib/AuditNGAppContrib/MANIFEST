@@ -1,13 +1,14 @@
 !noci
 data/_apps/Audit/AuditAjaxHelper.txt 0644
 data/_apps/Audit/AuditCalendar.txt 0644
+data/_apps/Audit/AuditPlanningViewTemplate.txt 0644
 data/_apps/Audit/AuditOverviewTemplate.txt 0644
 data/_apps/Audit/AuditReport.txt 0644
 data/_apps/Audit/AuditReportEditTemplate.txt 0644
 data/_apps/Audit/AuditReportForm.txt 0644
 data/_apps/Audit/AuditReportViewTemplate.txt 0644
 data/_apps/Audit/AuditTemplate/AuditMeasures.txt 0644
-data/_apps/Audit/AuditTemplate/AuditPlanning.txt 0644
+data/_apps/Audit/AuditTemplate/WebAuditPlanning.txt 0644
 data/_apps/Audit/AuditTemplate/WebActions.txt 0644
 data/_apps/Audit/AuditTemplate/WebAtom.txt 0644
 data/_apps/Audit/AuditTemplate/WebChanges.txt 0644
