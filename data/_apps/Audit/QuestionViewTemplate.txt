@@ -2,5 +2,15 @@
 %TMPL:INCLUDE{"view"}%
 
 %TMPL:DEF{"content"}%%TMPL:P{"simpleheader"}%
-%REDIRECT{"%BASEWEB%.WebHome"}%
+%TMPL:DEF{"content"}%<!-- this form will tell the "add new question" popup the actual name of the AUTOINC-->
+<form class="response">
+<input type="hidden" name="created" value="%TOPIC%" />
+</form>
+<div class="widgetBlockTitle">%MAKETEXT{"Question"}%</div>
+<div class="widgetBlockContent">
+<table class="metaDataHead">
+<tr><td> %MAKETEXT{"Question"}% </td><td> : </td><td> %QUERY{"AspectCriteria"}% </td></tr>
+<tr><td> %MAKETEXT{"Chapter"}% </td><td> : </td><td> %QUERY{"Chapter"}% </td></tr>
+</table>
+</div>
 %TMPL:END%
