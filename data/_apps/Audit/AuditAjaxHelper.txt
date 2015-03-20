@@ -1,19 +1,21 @@
 %META:TOPICINFO{author="BaseUserMapping_333" date="1418053242" format="1.1" version="1"}%
 <verbatim>
 %STARTSECTION{name="question"}%{"results":[%SOLRSEARCH{
-  "topic:Question* form:*QuestionForm web:%URLPARAM{"web"}%"
-  format="{\"id\":\"$topic\",\"text\":\"$field_TopicTitle_s\"}"
+  "topic:Question* form:*QuestionForm web:%AUDITWEB%%FORMATLIST{"%URLPARAM{"q" default=""}%" split=" " format="$1*" header=" field_AspectCriteria_search:(" separator=" AND " footer=")"}%"
+  format="{\"id\":\"$topic\",\"text\":\"$field_AspectCriteria_s\"}"
   separator=", "
   rows="999999"
 }%]}%ENDSECTION{name="question"}%
 %STARTSECTION{name="question_init"}%[
 %SOLRSEARCH{
   "topic:%FORMATLIST{"%URLPARAM{id}%" header="(" footer=")" separator=" OR "}% form:*QuestionForm"
-  format="{\"id\":\"$topic\",\"text\":\"$field_TopicTitle_s\"}"
+  format="{\"id\":\"$topic\",\"text\":\"$field_AspectCriteria_s\"}"
   separator=", "
   sort="topic"
 }%
 ]%ENDSECTION{name="question_init"}%
+</verbatim>
+<verbatim>
 %STARTSECTION{name="deviation"}%{"results":[%SOLRSEARCH{
   "topic:Deviation* form:*DeviationForm web:%URLPARAM{"web"}%"
   format="{\"id\":\"$topic\",\"text\":\"$field_TopicTitle_s\"}"

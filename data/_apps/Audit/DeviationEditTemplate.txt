@@ -12,10 +12,10 @@
 <div class="widgetBlockTitle">%MAKETEXT{"Deviation"}%</div>
 <div class="widgetBlockContent">
 <table class="metaDataHead">
-<tr><td width="200px:">%MAKETEXT{"Description"}%:<font color="red">*</font></td><td>%RENDERFOREDIT{field="TopicTitle" format="$edit"}%</td></tr>
-<tr><td>%MAKETEXT{"Deviation"}%:</td><td>%RENDERFOREDIT{field="Type" format="$edit"}%</td></tr>
-<tr><td>%MAKETEXT{"Question"}%:<font color="red">*</font></td><td>%RENDERFOREDIT{field="Question" format="$edit"}%</td></tr>
-<tr><td>%MAKETEXT{"Fulfillment"}%:</td><td>%RENDERFOREDIT{field="Fulfillment" format="$edit"}%</td></tr>
+<tr><td width="200px:">%MAKETEXT{"QualityRating"}%:</td><td>%RENDERFOREDIT{field="QualityRating" format="$edit"}%</td></tr>
+<tr><td width="200px:">%MAKETEXT{"Actual condition"}%:<font color="red">*</font></td><td>%RENDERFOREDIT{field="ActualCondition" format="$edit"}%</td></tr>
+<tr><td width="200px:">%MAKETEXT{"Fulfillment"}%:</td><td>%RENDERFOREDIT{field="Fulfillment" format="$edit"}%</td></tr>
+<tr><td>%MAKETEXT{"Question"}%:<font color="red">*</font></td><td>%RENDERFOREDIT{field="Question" format="$edit"}%<br/>%BUTTON{"Add new question" class="addQuestion" href="#"}%</td></tr>
 </table>
 </div>
 %TMPL:END%

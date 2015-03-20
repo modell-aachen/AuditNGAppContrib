@@ -12,10 +12,8 @@
 <div class="widgetBlockTitle">%MAKETEXT{"Question"}%</div>
 <div class="widgetBlockContent">
 <table class="metaDataHead">
-<tr><td width="200px;">%MAKETEXT{"Question"}%:<font color="red">*</font></td><td>%RENDERFOREDIT{field="TopicTitle" format="$edit"}%</td></tr>
+<tr><td width="200px;">%MAKETEXT{"Question"}%:<font color="red">*</font></td><td>%RENDERFOREDIT{field="AspectCriteria" format="$edit"}%</td></tr>
 <tr><td>%MAKETEXT{"Chapter"}%:</td><td>%RENDERFOREDIT{field="Chapter" format="$edit"}%</td></tr>
-<tr><td>%MAKETEXT{"Block"}%:</td><td>%RENDERFOREDIT{field="Block" format="$edit"}%</td></tr>
-<tr><td>%MAKETEXT{"Wertigkeit, Auswirkung"}%:</td><td>%RENDERFOREDIT{field="Wertigkeit" format="$edit"}%</td></tr>
 </table>
 </div>
 %TMPL:END%
