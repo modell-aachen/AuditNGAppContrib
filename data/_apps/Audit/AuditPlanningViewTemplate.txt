@@ -1,16 +1,27 @@
 %TMPL:INCLUDE{"SystemView"}%
 
-%TMPL:DEF{"content"}%
+%TMPL:DEF{"content"}%%ADDTOZONE{"head" id="printOnlyCss" text="<style type='text/css'>.printOnly{display:none;}</style>"}%
 %FORMATLIST{"%RENDERFORDISPLAY{form="%AUDITWEB%.DeviationForm" format="$values" fields="Block"}%"
   format="$percentTMPL:P{\"block\" block=\"$1\"}$percent"
   separator="<div class='pdfPageBreak'></div>"
 }%
 %TMPL:END%
 
-%TMPL:DEF{"block"}%
-<div class="widgetBlockTitle">%MAKETEXT{"Block[_1]" args="%block%"}%</div>
+%TMPL:DEF{"printTab"}%<li><a href="%SCRIPTURL{view}%/%WEB%/%TOPIC%?cover=print;contenttype=application/pdf;landscape=1">%MAKETEXT{"Pdf export"}%</a></li>%TMPL:END%
+%TMPL:DEF{"modacActionButtons"}%<ul id="modacButtonsLEFT" class="modacTabs"><li>%TMPL:P{"modacSystemTab"}%</li></ul><ul id="modacButtonsRIGHT" class="modacTabs"><li>%TMPL:P{"printTab"}%</li><li id="modacSearchBox">%TMPL:P{"SearchBox"}%</li></ul>%TMPL:END%
+
+%TMPL:DEF{"topheaderbody"}%
+<div class="Princefooter">%TMPL:P{"Princefooter"}%</div>
+%TMPL:END%
+
+%TMPL:DEF{"Princefooter"}%<div style="float:left;">%MAKETEXT{"Page"}% <span style="white-space: nowrap"><span class='pdfPage'></span> %MAKETEXT{"of"}% <span class='pdfPages'></span></span></div>%TMPL:PREV%%TMPL:END%
+
+%TMPL:DEF{"printHeaderHeight"}%1.5cm%TMPL:END%
+
+%TMPL:DEF{"block"}%<div class="Princeheader printOnly printme"><div style="float:left"><h1>%MAKETEXT{"Block[_1]" args="%block%"}%</h1></div><div style="float:right"><h1>%MAKETEXT{"Audit [_1]" args="%WEB%"}%</h1></div></div>
+<div class="widgetBlockTitle modacPrintHide">%MAKETEXT{"Block[_1]" args="%block%"}%</div>
 <div class="widgetBlockContent">
-<table class="tablesorter">
+<table class="tablesorter planning">
 <thead>
 <tr><th>#</th><th>%MAKETEXT{"Bewertungsaspekt/-kriterium"}%</th><th>%MAKETEXT{"Norm"}%</th><th>%MAKETEXT{"Quality rating / effect"}%</th><th>%MAKETEXT{"Actual condition"}%</th><th>%MAKETEXT{"Fulfillment"}%</th><th>%MAKETEXT{"Result"}%</th><th class='modacPrintHide'></th></tr>
 </thead>
