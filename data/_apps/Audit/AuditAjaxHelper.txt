@@ -17,15 +17,15 @@
 </verbatim>
 <verbatim>
 %STARTSECTION{name="deviation"}%{"results":[%SOLRSEARCH{
-  "topic:Deviation* form:*DeviationForm web:%URLPARAM{"web"}%"
-  format="{\"id\":\"$topic\",\"text\":\"$field_TopicTitle_s\"}"
+  "topic:Element* form:*DeviationForm web:%URLPARAM{"web"}%"
+  format="{\"id\":\"$topic\",\"text\":\"$field_ActualCondition_s\"}"
   separator=", "
   rows="999999"
 }%]}%ENDSECTION{name="deviation"}%
 %STARTSECTION{name="deviation_init"}%[
 %SOLRSEARCH{
   "topic:%FORMATLIST{"%URLPARAM{id}%" header="(" footer=")" separator=" OR "}% form:*DeviationForm"
-  format="{\"id\":\"$topic\",\"text\":\"$field_TopicTitle_s\"}"
+  format="{\"id\":\"$topic\",\"text\":\"$field_ActualCondition_s\"}"
   separator=", "
   sort="topic"
 }%
