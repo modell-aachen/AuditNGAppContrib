@@ -64,9 +64,9 @@ sort="field_Description_s asc"
 
 %TMPL:DEF{"searchdeviation"}%
 %SOLRSEARCH{
-"field_Question_lst:%question% form:AuditPrototype.DeviationForm"
+"field_Question_s:%question% form:AuditPrototype.DeviationForm"
 web="%BASEWEB%"
-fields="web,topic,field_Question_lst,field_TopicTitle_s,field_Fulfillment_s"
+fields="web,topic,field_Question_s,field_TopicTitle_s,field_Fulfillment_s"
 header=""
 format="<td>$field_TopicTitle_s</td><td>$field_Fulfillment_s</td>"
 footer=""
