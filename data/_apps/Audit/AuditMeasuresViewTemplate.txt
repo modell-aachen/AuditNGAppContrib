@@ -1,4 +1,6 @@
-%META:TOPICINFO{author="BaseUserMapping_333" date="1425545932" format="1.1" version="2"}%
+%TMPL:INCLUDE{"SystemView"}%
+
+%TMPL:DEF{"content"}%
 <div class="widgetBlockTitle">%MAKETEXT{"Audit measures"}%</div>
 <div class="widgetBlockContent">
 <table class="tablesorter">
@@ -11,7 +13,7 @@
 web="%BASEWEB%"
 fields="web,topic,field_TopicTitle_s,field_Type_s,field_Fulfillment_s"
 header=""
-format="<tr><td>$field_TopicTitle_s&nbsp;<a href=\"%SCRIPTURLPATH{edit}%/$web/$topic?t=$percntGMTIME{\"$epoch\"}$percnt\" title=\"$percntMAKETEXT{Edit}$percnt\">$percntICON{pencil}$percnt</a>%BR%<font size=\"-2\">$percntMAKETEXT{\"$field_Type_s\"}$percnt</font></td><td>$field_Fulfillment_s</td><td>$percntINCLUDE{topic="%TOPIC%" section=\"searchmeasures\" deviation=\"$topic\"}$percnt%BR%%BUTTON{"%MAKETEXT{"Record measures"}%" href="%SCRIPTURL{edit}%/%BASEWEB%/MeasuresAUTOINC0000?templatetopic=%AUDITWEB%.MeasuresTemplate;formtemplate=%AUDITWEB%.MeasuresForm;template=%AUDITWEB%.MeasuresEdit;Deviation=$topic;t=%GMTIME{$epoch}%"}%</td></tr>"
+format="<tr><td>$field_TopicTitle_s&nbsp;<a href=\"%SCRIPTURLPATH{edit}%/$web/$topic?t=$percntGMTIME{\"$epoch\"}$percnt\" title=\"$percntMAKETEXT{Edit}$percnt\">$percntICON{pencil}$percnt</a>%BR%<font size=\"-2\">$percntMAKETEXT{\"$field_Type_s\"}$percnt</font></td><td>$field_Fulfillment_s</td><td>$percntTMPL:P{\"searchmeasures\" deviation=\"$topic\"}$percnt%BR%%BUTTON{"%MAKETEXT{"Record measures"}%" href="%SCRIPTURL{edit}%/%BASEWEB%/MeasuresAUTOINC0000?templatetopic=%AUDITWEB%.MeasuresTemplate;formtemplate=%AUDITWEB%.MeasuresForm;template=%AUDITWEB%.MeasuresEdit;Deviation=$topic;t=%GMTIME{$epoch}%"}%</td></tr>"
 footer=""
 rows="99999"
 sort="field_Description_s asc"
@@ -19,8 +21,9 @@ sort="field_Description_s asc"
 </tbody>
 </table>
 </div>
+%TMPL:END%
 
-<div style="display:none;">
+%TMPL:DEF{"searchmeasures"}%
 %STARTSECTION{"searchmeasures"}%
 %SOLRSEARCH{
 "type:topic form:*MeasuresForm field_Deviation_lst:%deviation%"
@@ -32,5 +35,4 @@ footer=""
 rows="99999"
 sort="topic asc"
 }%
-%ENDSECTION{"searchmeasures"}%
-</div>
+%TMPL:END%
