@@ -30,12 +30,12 @@
   "type:topic form:%AUDITWEB%.DeviationForm field_Block_s:%block%"
   rows="9999"
   format="<tr>
-<td>$count</td><td>$percentQUERY{\"'%AUDITWEB%.$field_Question_s'/AspectCriteria\"}$percent</td><td>$percentQUERY{\"'%WEB%.$field_Question_s'/Chapter\"}$percent</td><td>$field_QualityRating_s</td><td>$field_ActualCondition_s</td><td>$field_Fulfillment_s</td><td>$percentCALC{\"$dollarINT($field_QualityRating_s * $field_Fulfillment_s)\"}$percent</td><td class='modacPrintHide'><a href='%SCRIPTURLPATH{edit}%/%WEB%/$topic?t=%GMTIME{"$epoch"}%' title='%MAKETEXT{"Edit"}%'>$percentICON{pencil}$percent</a></td>
+<td>$count</td><td>$percentQUERY{\"'%AUDITWEB%.$field_Question_s'/AspectCriteria\"}$percent</td><td>$percentQUERY{\"'%WEB%.$field_Question_s'/Chapter\"}$percent</td><td>$field_QualityRating_s</td><td>$field_ActualCondition_s</td><td>$field_Fulfillment_s</td><td>$percentCALC{\"$dollarINT($field_QualityRating_s * $field_Fulfillment_s)\"}$percent</td><td class='modacPrintHide'><a href='%SCRIPTURLPATH{edit}%/%WEB%/$topic?t=%GMTIME{"$epoch"}%;nowysiwyg=1' title='%MAKETEXT{"Edit"}%'>$percentICON{pencil}$percent</a></td>
 </tr>"
   sort="topic"
 }% <!-- /elements -->
 </table>
-<a class="modacPrintHide" href="%SCRIPTURLPATH{"edit"}%/%WEB%/ElementAUTOINC00?Block=%block%;formtemplate=%AUDITWEB%.DeviationForm;template=%AUDITWEB%.DeviationEdit">%MAKETEXT{"Add audit element"}%</a>
+<a class="modacPrintHide" href="%SCRIPTURLPATH{"edit"}%/%WEB%/ElementAUTOINC00?Block=%block%;formtemplate=%AUDITWEB%.DeviationForm;template=%AUDITWEB%.DeviationEdit;nowysiwyg=1">%MAKETEXT{"Add audit element"}%</a>
 </div>
 %TMPL:END%
 
