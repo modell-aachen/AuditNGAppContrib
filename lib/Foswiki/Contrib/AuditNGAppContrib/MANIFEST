@@ -26,10 +26,6 @@ data/_apps/Audit/AuditTemplate/WebTopicList.txt 0644
 data/_apps/Audit/CustomSkinActionformTemplate.txt 0644
 data/_apps/Audit/CustomSkinCommentPluginTemplate.txt 0644
 data/_apps/Audit/CustomSkinModacPrintLayoutTemplate.txt 0644
-data/_apps/Audit/DeviationEditTemplate.txt 0644
-data/_apps/Audit/DeviationForm.txt 0644
-data/_apps/Audit/DeviationTemplate.txt 0644
-data/_apps/Audit/DeviationViewTemplate.txt 0644
 data/_apps/Audit/MeasuresEditTemplate.txt 0644
 data/_apps/Audit/MeasuresForm.txt 0644
 data/_apps/Audit/MeasuresTemplate.txt 0644
