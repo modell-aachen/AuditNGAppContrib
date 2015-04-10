@@ -1,5 +1,8 @@
 %TMPL:INCLUDE{"SystemView"}%
 
+%TMPL:DEF{"script:skinbase"}%%TMPL:PREV%%{
+}%%TMPL:P{"LIBJS" id="AuditNGAppContrib/auditplanning" requires="JQUERYPLUGIN::FOSWIKI"}%%TMPL:END%
+
 %TMPL:DEF{"content"}%%ADDTOZONE{"head" id="printOnlyCss" text="<style type='text/css'>.printOnly{display:none;}</style>"}%
 %FORMATLIST{"%RENDERFORDISPLAY{form="%AUDITWEB%.DeviationForm" format="$values" fields="Block"}%"
   format="$percentTMPL:P{\"block\" block=\"$1\"}$percent"
@@ -14,12 +17,12 @@
 <div class="Princefooter">%TMPL:P{"Princefooter"}%</div>
 %TMPL:END%
 
-%TMPL:DEF{"Princefooter"}%<div style="float:left;">%MAKETEXT{"Page"}% <span style="white-space: nowrap"><span class='pdfPage'></span> %MAKETEXT{"of"}% <span class='pdfPages'></span></span></div>%TMPL:PREV%%TMPL:END%
+%TMPL:DEF{"Princefooter"}%<div style="float:left;">%MAKETEXT{"Page"}% <span style="white-space: nowrap"><span class='pdfPage'></span> %MAKETEXT{"of"}% <span class='pdfPages'></span><br/>%MAKETEXT{"Audit [_1]" args="%WEB%"}%</span></div>%TMPL:PREV%%TMPL:END%
 
 %TMPL:DEF{"printHeaderHeight"}%1.5cm%TMPL:END%
 
-%TMPL:DEF{"block"}%<div class="Princeheader printOnly printme"><div style="float:left"><h1>%MAKETEXT{"Block[_1]" args="%block%"}%</h1></div><div style="float:right"><h1>%MAKETEXT{"Audit [_1]" args="%WEB%"}%</h1></div></div>
-<div class="widgetBlockTitle modacPrintHide">%MAKETEXT{"Block[_1]" args="%block%"}%</div>
+%TMPL:DEF{"block"}%<div class="auditPlanningBlock"><div class="Princeheader printOnly printme"><div style="float:left"><h1>%MAKETEXT{"Block[_1]" args="%block%"}%</h1></div><div style="float:right;white-space:nowrap;"><h1>%MAKETEXT{"Result: [_1]" args="<span class='result'></span>"}%</h1></div></div>
+<div class="widgetBlockTitle modacPrintHide">%MAKETEXT{"Block[_1]" args="%block%"}%<div style='float:right; white-space:nowrap;'>%MAKETEXT{"Result: [_1]" args="<span class='result'></span>"}%</div></div>
 <div class="widgetBlockContent">
 <table class="tablesorter planning">
 <thead>
@@ -38,5 +41,5 @@
 </table>
 <a class="modacPrintHide" href="%SCRIPTURLPATH{"edit"}%/%WEB%/ElementAUTOINC00?Block=%block%;formtemplate=%AUDITWEB%.DeviationForm;template=%AUDITWEB%.DeviationEdit;nowysiwyg=1;t=%GMTIME{"$epoch"}%">%MAKETEXT{"Add audit element"}%</a>
 </div>
-%TMPL:END%
+</div>%TMPL:END%
 
