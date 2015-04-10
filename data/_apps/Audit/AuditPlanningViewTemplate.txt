@@ -36,7 +36,7 @@
   sort="topic"
 }% <!-- /elements -->
 </table>
-<a class="modacPrintHide" href="%SCRIPTURLPATH{"edit"}%/%WEB%/ElementAUTOINC00?Block=%block%;formtemplate=%AUDITWEB%.DeviationForm;template=%AUDITWEB%.DeviationEdit;nowysiwyg=1">%MAKETEXT{"Add audit element"}%</a>
+<a class="modacPrintHide" href="%SCRIPTURLPATH{"edit"}%/%WEB%/ElementAUTOINC00?Block=%block%;formtemplate=%AUDITWEB%.DeviationForm;template=%AUDITWEB%.DeviationEdit;nowysiwyg=1;t=%GMTIME{"$epoch"}%">%MAKETEXT{"Add audit element"}%</a>
 </div>
 %TMPL:END%
 
