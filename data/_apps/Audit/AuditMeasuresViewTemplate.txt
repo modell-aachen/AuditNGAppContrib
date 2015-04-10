@@ -9,11 +9,11 @@
 </thead>
 <tbody>
 %SOLRSEARCH{
-"type:topic form:*DeviationForm Element*"
+"type:topic form:*AuditElementForm Element*"
 web="%BASEWEB%"
-fields="web,topic,field_ActualCondition_s,field_Fulfillment_s,field_QualityRating_s"
+fields="web,topic,field_Situation_s,field_Fulfillment_s,field_QualityRating_s"
 header=""
-format="<tr><td>$field_ActualCondition_s&nbsp;<a href=\"%SCRIPTURLPATH{edit}%/$web/$topic?t=%GMTIME{"$epoch"}%\" title=\"$percntMAKETEXT{Edit}$percnt\">$percntICON{pencil}$percnt</a></td><td>$percentCALC{\"$dollarINT($field_QualityRating_s * $field_Fulfillment_s)\"}$percent</td><td>$percntTMPL:P{\"searchmeasures\" deviation=\"$topic\"}$percnt%BR%%BUTTON{"%MAKETEXT{"Record measures"}%" href="%SCRIPTURL{edit}%/%BASEWEB%/MeasuresAUTOINC0000?templatetopic=%AUDITWEB%.MeasuresTemplate;formtemplate=%AUDITWEB%.MeasuresForm;template=%AUDITWEB%.MeasuresEdit;Deviation=$topic;t=%GMTIME{$epoch}%"}%</td></tr>"
+format="<tr><td>$field_Situation_s&nbsp;<a href=\"%SCRIPTURLPATH{edit}%/$web/$topic?t=%GMTIME{"$epoch"}%\" title=\"$percntMAKETEXT{Edit}$percnt\">$percntICON{pencil}$percnt</a></td><td>$percentCALC{\"$dollarINT($field_QualityRating_s * $field_Fulfillment_s)\"}$percent</td><td>$percntTMPL:P{\"searchmeasures\" deviation=\"$topic\"}$percnt%BR%%BUTTON{"%MAKETEXT{"Record measures"}%" href="%SCRIPTURL{edit}%/%BASEWEB%/MeasuresAUTOINC0000?templatetopic=%AUDITWEB%.MeasuresTemplate;formtemplate=%AUDITWEB%.MeasuresForm;template=%AUDITWEB%.MeasuresEdit;Deviation=$topic;t=%GMTIME{$epoch}%"}%</td></tr>"
 footer=""
 rows="99999"
 sort="field_Description_s asc"

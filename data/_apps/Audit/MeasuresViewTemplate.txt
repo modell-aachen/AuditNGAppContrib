@@ -1,4 +1,4 @@
-%META:TOPICINFO{author="BaseUserMapping_333" date="1417769120" format="1.1" version="1"}%
+%META:TOPICINFO{author="BaseUserMapping_333" date="1428499532" format="1.1" version="2"}%
 %TMPL:INCLUDE{"view"}%
 %TMPL:DEF{"breadcrumb:currentweb"}%%TMPL:P{"breadcrumb:separator"}%<a href='%SCRIPTURLPATH{"view"}%/%AUDITWEB%/%HOMETOPIC%'>%MAKETEXT{"[_1] Web" args="<nop>%AUDITWEB%"}%</a>%TMPL:P{"breadcrumb:separator"}%<a href="%SCRIPTURLPATH{"view"}%/%WEB%/%HOMETOPIC%">%MAKETEXT{"[_1] Web" args="<nop>%WEB%"}%</a>%TMPL:END%
 %JQREQUIRE{"ui::dialog"}%
@@ -34,39 +34,15 @@
 %TMPL:END%
 
 %TMPL:DEF{"tasksmanagement"}%
-<div class="modacPrintHide">%TMPL:P{"addtask"}%</div>
-%TMPL:P{"showtasks"}%
-%TMPL:END%
-
-%TMPL:DEF{"addtask"}%
-%BUTTON{"%MAKETEXT{"Add task"}%" href="#actiondialog" class="jqUIDialogLink"}%
-%STARTSECTION{"actiondialog"}%
-<div id="actiondialog" title="%MAKETEXT{"Add task"}%" class="jqUIDialog {draggable:true, resizable: true, height:400, width:600}">
-%COMMENT{type="audittasks" templatetopic="Audit.CustomSkinCommentPluginTemplate" target="%BASETOPIC%"}%
-</div>
-%ENDSECTION{"actiondialog"}%
-%TMPL:END%
-
-%TMPL:DEF{"showtasks"}%
 <div class="JQTabPrintSelected">
-%TABPANE{class="simple"}%
-%TAB{"%MAKETEXT{"Open tasks"}%" id="open"}%
-%TMPL:P{"printselectedtab" state="open"}%
-<div id="SignalOpenTasks">%TMPL:P{"searchtasks" state="open"}%</div>
-%ENDTAB%
-%TAB{"%MAKETEXT{"Closed tasks"}%" id="closed"}%
-%TMPL:P{"printselectedtab" state="closed"}%
-<div id="SignalClosedMeasures">%TMPL:P{"searchtasks" state="closed"}%</div>
-%ENDTAB%
-%ENDTABPANE%
+%TASKSGRID{
+	context="%BASEWEB%.%BASETOPIC%"
+	allowcreate="1"
+	allowupload="1"
+}%
 </div>
-%AMPEL{"SignalOpenTasks" %AMPEL_OPT%}%
-%AMPEL{"SignalClosedTasks" %AMPEL_OPT%}%
 %TMPL:END%
 
-%TMPL:DEF{"searchtasks"}%
-%ACTIONSEARCH{web="%WEB%"  topic="%BASETOPIC%" state="%state%" sort="$createdate,$who,$due" jqsortable="1" jqsortopts="widgets: ['zebra'], sortList: [[0,1],[0,1]], headers: { 0: { sorter: 'qwikiDate' }, 5: { sorter: 'qwikiDate' }, 6: { sorter: 'qwikiDate' }, 7: { sorter: false }, 8: { sorter: false } }"}%
-%TMPL:END%
 
 %TMPL:DEF{"printselectedtab"}%
 %IF{"context MAPrinceModPluginEnabled" then="<a href=\"%SCRIPTURL{"view"}%/%SYSTEMWEB%/MAPrinceModPrintDialog?skin=text&section=dialog&pweb=%ENCODE{"%INCLUDINGWEB%" type="url"}%&ptopic=%ENCODE{"%INCLUDINGTOPIC%" type="url"}%&landscape=%LANDSCAPE{default="0"}%;printParams=showtab;showtab=%state%\" class=\"jqUIDialogLink modacPrintHide\">$percntICON{\"pdf\"}$percnt</a>
