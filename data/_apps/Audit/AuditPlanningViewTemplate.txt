@@ -28,6 +28,7 @@
 <tbody>
 <!-- elements -->%SOLRSEARCH{
   "type:topic form:%AUDITWEB%.DeviationForm field_Block_s:%block%"
+  web="%WEB%"
   rows="9999"
   format="<tr>
 <td>$count</td><td>$percentQUERY{\"'%AUDITWEB%.$field_Question_s'/AspectCriteria\"}$percent</td><td>$percentQUERY{\"'%WEB%.$field_Question_s'/Chapter\"}$percent</td><td>$field_QualityRating_s</td><td>$field_ActualCondition_s</td><td>$field_Fulfillment_s</td><td>$percentCALC{\"$dollarINT($field_QualityRating_s * $field_Fulfillment_s)\"}$percent</td><td class='modacPrintHide'><a href='%SCRIPTURLPATH{edit}%/%WEB%/$topic?t=%GMTIME{"$epoch"}%;nowysiwyg=1' title='%MAKETEXT{"Edit"}%'>$percentICON{pencil}$percent</a></td>
