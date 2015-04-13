@@ -53,4 +53,6 @@ data/_apps/Audit/WebSearchAdvanced.txt 0644
 data/_apps/Audit/WebTopicList.txt 0644
 data/System/AuditNGAppContrib.txt 0644
 lib/Foswiki/Contrib/AuditNGAppContrib.pm 0644
+pub/System/AuditNGAppContrib/auditelement.js 0644
+pub/System/AuditNGAppContrib/auditplanning.css 0644
 pub/System/AuditNGAppContrib/auditplanning.js 0644
