@@ -22,6 +22,6 @@ jQuery(function($) {
             var n = new Number($td.text());
             if(!isNaN(n)) sum += n;
         }
-        $result.text(new Number(sum/$eachtr.length).toFixed());
+        $result.text(Math.round(sum/$eachtr.length));
     });
 });
