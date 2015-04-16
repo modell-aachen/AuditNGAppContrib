@@ -39,7 +39,7 @@
   sort="topic"
 }% <!-- /elements -->
 </table>
-<a class="modacPrintHide" href="%SCRIPTURLPATH{"edit"}%/%WEB%/ElementAUTOINC00?Block=%block%;formtemplate=%AUDITWEB%.AuditElementForm;template=%AUDITWEB%.AuditElementEdit;nowysiwyg=1;t=%GMTIME{"$epoch"}%">%MAKETEXT{"Add audit element"}%</a>
+%BUTTON{"%MAKETEXT{"Add audit element"}%" icon="new" class="modacPrintHide" href="%SCRIPTURLPATH{"edit"}%/%WEB%/ElementAUTOINC00?Block=%block%;formtemplate=%AUDITWEB%.AuditElementForm;template=%AUDITWEB%.AuditElementEdit;nowysiwyg=1;t=%GMTIME{"$epoch"}%"}%
 </div>
 </div>%TMPL:END%
 

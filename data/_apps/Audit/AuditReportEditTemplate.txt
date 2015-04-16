@@ -17,12 +17,14 @@
 <div class="widgetBlockContent">
 <table class="metaDataHead">
 <tr><td width="150px">%MAKETEXT{"Audit title"}%<font color="red">*</font></td><td>%RENDERFOREDIT{field="TopicTitle" format="$edit"}%</td></tr>
+<tr><td width="150px">%MAKETEXT{"Audit target"}%</td><td>%RENDERFOREDIT{field="AuditTarget" format="$edit"}%</td></tr>
 <tr><td width="150px">%MAKETEXT{"Audited division"}%</td><td>%RENDERFOREDIT{field="Division" format="$edit"}%</td></tr>
 <tr><td>%MAKETEXT{"Auditor"}%</td><td>%RENDERFOREDIT{field="Auditor" format="$edit"}%</td></tr>
 <tr><td>%MAKETEXT{"Audit Team"}%</td><td>%RENDERFOREDIT{field="AuditTeam" format="$edit"}%</td></tr>
 <tr><td>%MAKETEXT{"Date of planning"}%</td><td> %RENDERFOREDIT{field="PlanningDate" format="$edit"}%</td></tr>
-<tr><td> %MAKETEXT{"Date of execution"}%</td><td> %RENDERFOREDIT{field="DateOfExecution" format="$edit"}%</td></tr>
-<tr><td>%MAKETEXT{"Audit type"}%</td><td>%RENDERFOREDIT{field="AuditType" format="$edit"}%</td></tr> 
+<tr><td>%MAKETEXT{"Date of execution"}%</td><td> %RENDERFOREDIT{field="DateOfExecution" format="$edit"}%</td></tr>
+<tr><td>%MAKETEXT{"Audit type"}%</td><td>%RENDERFOREDIT{field="AuditType" format="$edit"}%</td></tr>
+<tr><td>%MAKETEXT{"Audit scope"}%</td><td>%RENDERFOREDIT{field="AuditScope" format="$edit"}%</td></tr>  
 <tr><td>%MAKETEXT{"Used Standards"}%</td><td>%RENDERFOREDIT{field="UsedStandards" format="$edit"}%</td></tr> 
 <tr><td>%MAKETEXT{"Status"}%</td><td>%RENDERFOREDIT{field="Status" format="$edit"}%</td></tr>
 </table> 

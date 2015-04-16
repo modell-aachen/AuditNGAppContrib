@@ -18,7 +18,7 @@ jQuery(function($) {
         var i;
         var sum = 0;
         for(i = 0; i < $eachtr.length; i++) {
-            var $td = $eachtr.eq(i).find('td').eq(6);
+            var $td = $eachtr.eq(i).find('td').eq(5);
             var n = new Number($td.text());
             if(!isNaN(n)) sum += n;
         }

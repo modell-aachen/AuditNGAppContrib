@@ -4,7 +4,7 @@
 | Fulfillment | select | 1 | 10,5,0 | %MAKETEXT{"Fullfilment"}% |  |
 | QualityRating | select | 1 | 0,1,10 | %MAKETEXT{"Rating / Effect"}% | |
 | Block | select | 1 | 1,2,3,4,5 | %MAKETEXT{"Block"}% | |
-| Question | select | 50 | %SCRIPTURL{view}%/%AUDITWEB%/AuditAjaxHelper?contenttype=text/plain;skin=text;section=question;web=%BASEWEB% | %MAKETEXT{"Question"}% | initUrl="%SCRIPTURL{view}%/%AUDITWEB%/AuditAjaxHelper?section=question_init;contenttype=text/plain;skin=text;" |
+| Question | select2 | 50 | %SCRIPTURL{view}%/%AUDITWEB%/AuditAjaxHelper?contenttype=text/plain;skin=text;section=question;web=%BASEWEB% | %MAKETEXT{"Question"}% | initUrl="%SCRIPTURL{view}%/%AUDITWEB%/AuditAjaxHelper?section=question_init;contenttype=text/plain;skin=text;" |
 
    * Set ALLOWTOPICCHANGE = AdminUser
    * Set NOWYSIWYG = 1
