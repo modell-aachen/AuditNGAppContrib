@@ -1,0 +1,32 @@
+<table class="AuditHeader"><tbody>
+    <tr><td rowspan="5">%REPORTTITLE{default="%MAKETEXT{"QM-Report"}%"}%</td><td rowspan="5">%QUERY{"'%BASEWEB%/%HOMETOPIC%'/AuditType"}%<br/>%QUERY{"'%BASEWEB%/%HOMETOPIC%'/TopicTitle"}%</td><td class="l">%MAKETEXT{"Creator:"}%</td><td class="r">%WIKINAME%</td><td rowspan="2" style="text-align: center;"><img src="%WIKILOGOIMG%" /></td></tr>
+    <tr><td class="l">%MAKETEXT{"Document control:"}%</td><td class="r">%QUERY{"'%BASEWEB%/%HOMETOPIC%'/DocumentControl"}%</td></tr>
+    <tr><td class="l">%MAKETEXT{"Approval:"}%</td><td class="r">%QUERY{"'%BASEWEB%/%HOMETOPIC%'/Approval"}%</td><td>%MAKETEXT{"Area of application:"}% %QUERY{"'%BASEWEB%/%HOMETOPIC%'/AreaOfApplication"}%</td></tr>
+    <tr><td class="l">%MAKETEXT{"Date:"}%</td><td class="r">%CALC{"$FORMATTIME($TIME(), $year-$month-$day)"}%</td><td>???</td></tr>
+    <tr><td class="l">%MAKETEXT{"Filing:"}%</td><td class="r">%QUERY{"'%BASEWEB%/%HOMETOPIC%'/Filing"}%</td><td>Protection class: %QUERY{"'%BASEWEB%/%HOMETOPIC%'/ProtectionClass"}%???</td></tr>
+</tbody></table>
+
+<table class="metaDataHead">
+<tr><td width="150px">%MAKETEXT{"Audited division"}%</td><td>%QUERY{"'%BASEWEB%/%HOMETOPIC%'/Division"}%</td></tr>
+<tr><td>%MAKETEXT{"Auditor"}%</td><td>%QUERY{"'%BASEWEB%/%HOMETOPIC%'/Auditor"}%</td></tr>
+<tr><td>%MAKETEXT{"Auditor Team"}%</td><td>%QUERY{"'%BASEWEB%/%HOMETOPIC%'/AuditTeam"}%</td></tr>
+<tr><td>%MAKETEXT{"Date of planning"}%</td><td> %QUERY{"'%BASEWEB%/%HOMETOPIC%'/PlanningDate"}%</td></tr>
+<tr><td> %MAKETEXT{"Date of execution"}%</td><td> %QUERY{"'%BASEWEB%/%HOMETOPIC%'/DateOfExecution"}%</td></tr>
+<tr><td>%MAKETEXT{"Audit type"}%</td><td>%MAKETEXT{"%QUERY{"'%BASEWEB%/%HOMETOPIC%'/AuditType"}%"}%</td></tr> 
+<tr><td>%MAKETEXT{"Used Standards"}%</td><td>%MAKETEXT{"%QUERY{"'%BASEWEB%/%HOMETOPIC%'/UsedStandards"}%"}%</td></tr> 
+<tr><td>%MAKETEXT{"Status"}%</td><td>%MAKETEXT{"%QUERY{"'%BASEWEB%/%HOMETOPIC%'/Status"}%"}%</td></tr>
+</table> 
+
+
+%MAKETEXT{"*Audit - evaluation key* (partial result in % = &&Sigma; individual result / &&Sigma; weight / 10)"}%
+
+<table class="AuditKey"><tbody>
+  <tr><td colspan="2">%MAKETEXT{"weight / effect"}%</td><td colspan="2">%MAKETEXT{"degree of fulfillment"}%</td><td>%MAKETEXT{"Partial result impartial to weight / effect"}%</td></tr>
+  <tr><td>1</td><td>%MAKETEXT{"not relevant / low"}%</td><td style="background-color: green;">10</td><td>%MAKETEXT{"fulfilled"}%</td><td>%MAKETEXT{"when all questions are satisfied = 100%"}%</td></tr>
+  <tr><td>5</td><td>%MAKETEXT{"important / big"}%</td><td style="background-color: yellow;">5</td><td>%MAKETEXT{"partially fulfilled"}%</td><td>%MAKETEXT{"when questions are partially satisfied = 50%"}%</td></tr>
+  <tr><td>10</td><td>%MAKETEXT{"very important / very big"}%</td><td style="background-color: red;">0</td><td>%MAKETEXT{"not fulfilled"}%</td><td>%MAKETEXT{"When all questions are not satisfied = 0%"}%</td></tr>
+</tbody></table>
+
+%RED%%MAKETEXT{"100% only possible, when records are available"}%%ENDCOLOR%
+
+<b>%MAKETEXT{"Regardless of weight / effect, a measure has to be derived when questions are not satisfied. When multiple questions are not met, the measures have to be prioritised according to their weight / effect."}%</b>

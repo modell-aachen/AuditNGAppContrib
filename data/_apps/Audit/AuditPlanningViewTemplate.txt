@@ -4,6 +4,7 @@
 }%%TMPL:P{"LIBJS" id="AuditNGAppContrib/auditplanning" requires="JQUERYPLUGIN::FOSWIKI"}%%TMPL:END%
 
 %TMPL:DEF{"content"}%%ADDTOZONE{"head" id="printOnlyCss" text="<link rel='stylesheet' href='%PUBURLPATH%/%SYSTEMWEB%/AuditNGAppContrib/auditplanning.css' type='text/css' media='all' />"}%
+%IF{"$'URLPARAM{cover}'='print'" then="$percentTMPL:P{FirstPage}$percent" else="<!-- not using print cover -->"}%
 %FORMATLIST{"%RENDERFORDISPLAY{form="%AUDITWEB%.AuditElementForm" format="$values" fields="Block"}%"
   format="$percentTMPL:P{\"block\" block=\"$1\"}$percent"
   separator="<div class='pdfPageBreak'></div>"
@@ -43,3 +44,43 @@
 </div>
 </div>%TMPL:END%
 
+%TMPL:DEF{"FirstPage"}%%INCLUDE{"%WEB%/%HOMETOPIC%"}%
+%IF{"istopic '%AUDITWEB%.AuditPlanningFirstPageInfo'" then="$percentINCLUDE{%AUDITWEB%.AuditPlanningFirstPageInfo}$percent" else="$percentINCLUDE{%AUDITWEB%.AuditPlanningFirstPageInfoDefault}$percent"}%
+%TMPL:P{"pdfPageBreak"}%%TMPL:END%
+
+%TMPL:DEF{"modacExtraPrintStyles"}%%TMPL:PREV%
+table.AuditHeader {
+  white-space: no-wrap;
+}
+table.AuditHeader,
+table.AuditKey {
+  width: 100%;
+  border-collapse: collapse;
+}
+table.AuditHeader td,
+table.AuditKey td {
+  border: 1px solid black;
+}
+table.AuditHeader td.l {
+  border-right: none;
+}
+table.AuditHeader td.r {
+  border-left: none;
+}
+table.AuditKey {
+  text-align: center;
+}
+table.AuditHeader tr:first-child td:first-child,
+table.AuditHeader tr:first-child td:nth-child(2),
+table.AuditKey tr:first-child {
+  text-align: center;
+  font-weight: bold;
+}
+table.AuditHeader td,
+table.AuditKey tr:first-child td {
+  text-align: left;
+}
+table.AuditKey tr:first-child td {
+  width: 33%;
+}
+%TMPL:END%

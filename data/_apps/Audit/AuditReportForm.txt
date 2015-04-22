@@ -8,6 +8,11 @@
 | PlanningDate | date | 15 | | | |
 | DateOfExecution | date | 15 | | | |
 | AuditType | select+values | 1  | %MAKETEXT{"System audit"}%=System audit, %MAKETEXT{"Process audit"}%=Process audit, %MAKETEXT{"Project audit"}%=Project audit, %MAKETEXT{"Product audit"}%=Product audit | | |
+| AreaOfApplication | text | 50 | | | |
+| DocumentControl | text | 50 | | | |
+| Approval | text | 50 | | | |
+| Filing | text | 50 | | | |
+| ProtectionClass | text | 50 | | | |
 | AuditScope | select+values | 1  | %MAKETEXT{"Internal audit"}%=Internal audit, %MAKETEXT{"External audit"}%=External audit,  %MAKETEXT{"Supplier audit"}%=Supplier audit | | |
 | UsedStandards | textboxlist  | 50 mustMatch  | ISO9001,ISO14001,ISO18001,ISO50001 | | |
 | Status | select+values | 1| %MAKETEXT{"new"}%=new, %MAKETEXT{"planned"}%=planned, %MAKETEXT{"Verification"}%=verification, %MAKETEXT{"done"}%=done | | |
