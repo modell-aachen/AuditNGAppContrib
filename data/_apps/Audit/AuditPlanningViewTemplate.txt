@@ -27,7 +27,7 @@
 <div class="widgetBlockContent">
 <table class="tablesorter planning">
 <thead>
-<tr><th>%MAKETEXT{"Bewertungsaspekt/-kriterium"}%</th><th>%MAKETEXT{"Norm"}%</th><th>%MAKETEXT{"Quality rating / effect"}%</th><th>%MAKETEXT{"Audit Finding"}%</th><th>%MAKETEXT{"Fulfillment"}%</th><th>%MAKETEXT{"Result"}%</th><th class='modacPrintHide'></th></tr>
+<tr><th>%MAKETEXT{"Audit criteria"}%</th><th>%MAKETEXT{"Norm"}%</th><th>%MAKETEXT{"Quality rating / effect"}%</th><th>%MAKETEXT{"Audit Finding"}%</th><th>%MAKETEXT{"Fulfillment"}%</th><th>%MAKETEXT{"Result"}%</th><th class='modacPrintHide'></th></tr>
 </thead>
 <tbody>
 <!-- elements -->%SOLRSEARCH{
