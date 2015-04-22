@@ -1,6 +1,6 @@
 %META:TOPICINFO{author="BaseUserMapping_333" date="1428504874" format="1.1" version="2"}%
 | *Name* | *Type* | *Size* | *Values* | *Tool Message* | *Attributes* |
-| Situation| textarea | 50x10 | | %MAKETEXT{"Situation as it is"}% | M |
+| Finding | textarea | 50x10 | | %MAKETEXT{"Situation as it is"}% | M |
 | Fulfillment | select | 1 | 10,5,0 | %MAKETEXT{"Fullfilment"}% |  |
 | QualityRating | select | 1 | 0,1,10 | %MAKETEXT{"Rating / Effect"}% | |
 | Block | select | 1 | 1,2,3,4,5 | %MAKETEXT{"Block"}% | |

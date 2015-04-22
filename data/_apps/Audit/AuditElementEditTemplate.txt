@@ -10,12 +10,12 @@
 %TMPL:END%
 
 %TMPL:DEF{"deviation"}%
-<div class="widgetBlockTitle">%MAKETEXT{"Audit Situation"}%</div>
+<div class="widgetBlockTitle">%MAKETEXT{"Audit Finding"}%</div>
 <div class="widgetBlockContent">
 <table class="metaDataHead">
 <tr><td>%MAKETEXT{"Question"}%:<font color="red">*</font></td><td>%RENDERFOREDIT{field="Question" format="$edit"}%<br/>%BUTTON{"Add new question" class="addQuestion" href="#"}%</td></tr>
 <tr><td width="200px:">%MAKETEXT{"Sigificance of the question"}%:</td><td>%RENDERFOREDIT{field="QualityRating" format="$edit"}%</td></tr>
-<tr><td width="200px:">%MAKETEXT{"Audit Situation"}%:<font color="red">*</font></td><td>%RENDERFOREDIT{field="Situation" format="$edit"}%</td></tr>
+<tr><td width="200px:">%MAKETEXT{"Audit Finding"}%:<font color="red">*</font></td><td>%RENDERFOREDIT{field="Finding" format="$edit"}%</td></tr>
 <tr><td width="200px:">%MAKETEXT{"Fulfillment"}%:</td><td>%RENDERFOREDIT{field="Fulfillment" format="$edit"}%</td></tr>
 <tr><td width="200px:">%MAKETEXT{"Block"}%:</td><td>%RENDERFOREDIT{field="Block" format="$edit"}%</td></tr>
 </table>
