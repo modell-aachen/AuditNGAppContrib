@@ -41,37 +41,3 @@
 </div>
 %TMPL:END%
 
-%TMPL:DEF{"auditreport"}%
-<div class="widgetBlockTitle">%MAKETEXT{"Audit report"}%</div>
-<div class="widgetBlockContent">
-<table class="tablesorter">
-<thead>
-<tr><th>Standard</th><th width="33%">%MAKETEXT{"Bewertungsaspekt"}%</th><th>Wertigkeit</th><th width="33%">%MAKETEXT{"Ist-Situation"}%</th><th>%MAKETEXT{"Erfüllungsgrad"}%</th><th>%MAKETEXT{"Result"}%</th></tr>
-</thead>
-<tbody>
-%SOLRSEARCH{
-"type:topic form:*QuestionForm topic:Question*"
-web="%BASEWEB%"
-fields="web,topic,field_TopicTitle_s,field_Type_s,field_Erfuellung_s,field_Chapter_lst,field_Wertigkeit_s"
-header=""
-format="<tr><td>$field_Chapter_lst</td><td>$field_TopicTitle_s</td><td>$field_Wertigkeit_s</td>$percntTMPL:P{\"searchdeviation\" question=\"$topic\"}$percnt<td>Result</td><td>%BR%%BUTTON{"%MAKETEXT{"Record deviation"}%" href="%SCRIPTURL{edit}%/%BASEWEB%/DeviationAUTOINC0000?templatetopic=%AUDITWEB%.DeviationTemplate;formtemplate=%AUDITWEB%.DeviationForm;template=%AUDITWEB%.DeviationEdit;t=%GMTIME{$epoch}%"}%</td></tr>"
-footer=""
-rows="99999"
-sort="field_Description_s asc"
-}%
-</tbody>
-</table>
-</div>
-%TMPL:END%
-
-%TMPL:DEF{"searchdeviation"}%
-%SOLRSEARCH{
-"field_Question_s:%question% form:AuditPrototype.DeviationForm"
-web="%BASEWEB%"
-fields="web,topic,field_Question_s,field_TopicTitle_s,field_Fulfillment_s"
-header=""
-format="<td>$field_TopicTitle_s</td><td>$field_Fulfillment_s</td>"
-footer=""
-}%
-%TMPL:END%
-
