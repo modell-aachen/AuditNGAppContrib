@@ -42,7 +42,7 @@
   sort="topic"
 }% <!-- /elements -->
 </table>
-%BUTTON{"%MAKETEXT{"Add audit element"}%" icon="new" class="modacPrintHide" href="%SCRIPTURLPATH{"edit"}%/%WEB%/ElementAUTOINC00?Block=%block%;formtemplate=%AUDITWEB%.AuditElementForm;template=%AUDITWEB%.AuditElementEdit;nowysiwyg=1;t=%GMTIME{"$epoch"}%"}%
+<div class="modacPrintHide">%BUTTON{"%MAKETEXT{"Add audit element"}%" icon="new" class="modacPrintHide" href="%SCRIPTURLPATH{"edit"}%/%WEB%/ElementAUTOINC00?Block=%block%;formtemplate=%AUDITWEB%.AuditElementForm;template=%AUDITWEB%.AuditElementEdit;nowysiwyg=1;t=%GMTIME{"$epoch"}%"}%</div>
 </div>
 </div>%TMPL:END%
 
