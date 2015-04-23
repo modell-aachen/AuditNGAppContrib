@@ -57,3 +57,4 @@ lib/Foswiki/Contrib/AuditNGAppContrib.pm 0644
 pub/System/AuditNGAppContrib/auditelement.js 0644
 pub/System/AuditNGAppContrib/auditplanning.css 0644
 pub/System/AuditNGAppContrib/auditplanning.js 0644
+locale/AuditNGAppContrib/de.po 0644
