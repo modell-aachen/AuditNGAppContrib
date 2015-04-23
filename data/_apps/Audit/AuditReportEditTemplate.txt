@@ -24,7 +24,7 @@
 <tr><td>%MAKETEXT{"Date of planning"}%</td><td> %RENDERFOREDIT{field="PlanningDate" format="$edit"}%</td></tr>
 <tr><td>%MAKETEXT{"Date of execution"}%</td><td> %RENDERFOREDIT{field="DateOfExecution" format="$edit"}%</td></tr>
 <tr><td>%MAKETEXT{"Audit type"}%</td><td>%RENDERFOREDIT{field="AuditType" format="$edit"}%</td></tr>
-<tr><td>%MAKETEXT{"Audit scope"}%</td><td>%RENDERFOREDIT{field="AuditScope" format="$edit"}%</td></tr>  
+<tr><td>%MAKETEXT{"Audit class"}%</td><td>%RENDERFOREDIT{field="AuditClass" format="$edit"}%</td></tr>
 <tr><td>%MAKETEXT{"Used Standards"}%</td><td>%RENDERFOREDIT{field="UsedStandards" format="$edit"}%</td></tr> 
 <tr><td>%MAKETEXT{"Status"}%</td><td>%RENDERFOREDIT{field="Status" format="$edit"}%</td></tr>
 </table> 

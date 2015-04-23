@@ -13,7 +13,7 @@
 | Approval | text | 50 | | | |
 | Filing | text | 50 | | | |
 | ProtectionClass | text | 50 | | | |
-| AuditScope | select+values | 1  | %MAKETEXT{"Internal audit"}%=Internal audit, %MAKETEXT{"External audit"}%=External audit,  %MAKETEXT{"Supplier audit"}%=Supplier audit | | |
+| AuditClass | select+values | 1  | %MAKETEXT{"Internal audit"}%=Internal audit, %MAKETEXT{"External audit"}%=External audit,  %MAKETEXT{"Supplier audit"}%=Supplier audit | | |
 | UsedStandards | textboxlist  | 50 mustMatch  | ISO9001,ISO14001,ISO18001,ISO50001 | | |
 | Status | select+values | 1| %MAKETEXT{"new"}%=new, %MAKETEXT{"planned"}%=planned, %MAKETEXT{"Verification"}%=verification, %MAKETEXT{"done"}%=done | | |
 
