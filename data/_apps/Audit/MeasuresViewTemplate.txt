@@ -28,7 +28,7 @@
 <tr><td>%MAKETEXT{"Responsible"}%:</td><td>%RENDERFORDISPLAY{field="Responsible" format="$value"}%</td></tr>
 <tr><td>%MAKETEXT{"Deviation"}%:</td><td>%QUERY{"Deviation/TopicTitle"}%</td></tr>
 <tr><td>%MAKETEXT{"Status"}%:</td><td>%RENDERFORDISPLAY{field="Status" format="$value"}%</td></tr>
-<tr><td>%MAKETEXT{"Proteced"}%:</td><td><input type="checkbox" %IF{"'%TOPIC%'/Protected=~'protected'" then="checked=$quotchecked$quot"}% DISABLED>%MAKETEXT{"protected"}% <i>(%MAKETEXT{"visible only for participants"}%)</i></td></tr>
+<tr><td>%MAKETEXT{"Protected"}%:</td><td><input type="checkbox" %IF{"'%TOPIC%'/Protected=~'protected'" then="checked=$quotchecked$quot"}% DISABLED>%MAKETEXT{"protected"}% <i>(%MAKETEXT{"visible only for participants"}%)</i></td></tr>
 <tr><td>%MAKETEXT{"Participants"}%:</td><td>%RENDERFORDISPLAY{field="Participants" format="$value"}%</td></tr>
 </table>
 %TMPL:END%
