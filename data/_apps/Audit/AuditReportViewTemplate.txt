@@ -27,6 +27,7 @@
 <tr><td>%MAKETEXT{"Date of execution"}%</td><td> %QUERY{"DateOfExecution"}%</td></tr>
 <tr><td>%MAKETEXT{"Audit type"}%</td><td>%MAKETEXT{"%QUERY{"AuditType"}%"}%</td></tr>
 <tr><td>%MAKETEXT{"Audit class"}%</td><td>%MAKETEXT{"%QUERY{"AuditClass"}%"}%</td></tr>
+<tr><td>%MAKETEXT{"Audit scope"}%</td><td>%MAKETEXT{"%QUERY{"AuditScope"}%"}%</td></tr>
 <tr><td>%MAKETEXT{"Protection class"}%</td><td>%MAKETEXT{"%QUERY{"ProtectionClass"}%"}%</td></tr>
 <tr><td>%MAKETEXT{"Used Standards"}%</td><td>%MAKETEXT{"%QUERY{"UsedStandards"}%"}%</td></tr> 
 <tr><td>%MAKETEXT{"Status"}%</td><td>%MAKETEXT{"%QUERY{"Status"}%"}%</td></tr>

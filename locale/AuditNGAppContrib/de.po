@@ -51,8 +51,8 @@ msgid "Archived"
 msgstr "Archiviert"
 
 #: data/_apps/Audit/AuditPlanningFirstPageInfoDefault.txt
-msgid "Area of application:"
-msgstr "Geltungsbereich"
+msgid "Audit scope:"
+msgstr "Betrachtungsbereich:"
 
 #: data/_apps/Audit/AuditCalendar.txt
 msgid "Audit"
@@ -87,6 +87,11 @@ msgstr "Auditplanung"
 #: data/_apps/Audit/AuditOverviewTemplate.txt
 msgid "Audit reports"
 msgstr "Auditreport"
+
+#: data/_apps/Audit/AuditReportEditTemplate.txt
+#: data/_apps/Audit/AuditReportViewTemplate.txt
+msgid "Audit scope"
+msgstr "Betrachtungsbereich"
 
 #: data/_apps/Audit/AuditReportEditTemplate.txt
 #: data/_apps/Audit/AuditReportViewTemplate.txt
