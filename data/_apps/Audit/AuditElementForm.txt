@@ -1,8 +1,8 @@
 %META:TOPICINFO{author="BaseUserMapping_333" date="1428504874" format="1.1" version="2"}%
 | *Name* | *Type* | *Size* | *Values* | *Tool Message* | *Attributes* |
 | Finding | textarea | 50x10 | | %MAKETEXT{"Situation as it is"}% | M |
-| Fulfillment | select | 1 | 10,5,0 | %MAKETEXT{"Fulfilment"}% |  |
-| QualityRating | select | 1 | 0,1,10 | %MAKETEXT{"Rating / Effect"}% | |
+| Fulfillment | select | 1 | 10,5,1,0 | %MAKETEXT{"Fulfilment"}% |  |
+| QualityRating | select | 1 | 1,5,10 | %MAKETEXT{"Rating / Effect"}% | |
 | Block | select | 1 | 1,2,3,4,5 | %MAKETEXT{"Block"}% | |
 | Question | select2 | 50 | %SCRIPTURL{view}%/%AUDITWEB%/AuditAjaxHelper?contenttype=text/plain;skin=text;section=question;web=%BASEWEB% | %MAKETEXT{"Question"}% | initUrl="%SCRIPTURL{view}%/%AUDITWEB%/AuditAjaxHelper?section=question_init;contenttype=text/plain;skin=text;" |
 
