@@ -9,7 +9,7 @@
 <div class="widgetBlockTitle">%MAKETEXT{"Question"}%</div>
 <div class="widgetBlockContent">
 <table class="metaDataHead">
-<tr><td> %MAKETEXT{"Question"}% </td><td> : </td><td> %QUERY{"AspectCriteria"}% </td></tr>
+<tr><td> %MAKETEXT{"Question"}% </td><td> : </td><td class="AspectCriteria"> %QUERY{"AspectCriteria"}% </td></tr>
 <tr><td> %MAKETEXT{"Chapter"}% </td><td> : </td><td> %QUERY{"Chapter"}% </td></tr>
 </table>
 </div>

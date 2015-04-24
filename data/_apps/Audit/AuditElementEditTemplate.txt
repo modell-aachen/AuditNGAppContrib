@@ -28,7 +28,7 @@
 <table class="metaDataHead">
 <tr><td>%MAKETEXT{"Evaluation-aspect / -criterium"}%</td><td>:</td><td>%RENDERFOREDIT{field="AspectCriteria" form="%AUDITWEB%.QuestionForm" format="$edit"}%</td></tr>
 <tr><td>%MAKETEXT{"Norm chapter"}%</td><td>:</td><td>%RENDERFOREDIT{field="Chapter" form="%AUDITWEB%.QuestionForm" format="$edit"}%</td></tr>
-<tr><td colspan="3"><a class="jqUIDialogButton jqUIDialogClose {icon:'ui-icon-circle-check'}">%MAKETEXT{"Ok"}%</a></td></tr>
+<tr><td colspan="3"><a class="jqUIDialogButton jqUIDialogSubmit {icon:'ui-icon-circle-check'}">%MAKETEXT{"Ok"}%</a><a class="jqUIDialogButton jqUIDialogClose {icon:'ui-icon-cancel'}">%MAKETEXT{"Cancel"}%</a></td></tr>
 </table>
 </form>
 </div>%TMPL:END%
