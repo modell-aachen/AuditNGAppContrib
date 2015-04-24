@@ -4,6 +4,7 @@
   "topic:Question* form:*QuestionForm web:%AUDITWEB%%FORMATLIST{"%URLPARAM{"q" default=""}%" split=" " format="$1*" header=" field_AspectCriteria_search:(" separator=" AND " footer=")"}%"
   format="{\"id\":\"$topic\",\"text\":\"$field_AspectCriteria_s\"}"
   separator=", "
+  fields="web,topic,webtopic,field_AspectCriteria_s"
   rows="999999"
 }%]}%ENDSECTION{name="question"}%
 %STARTSECTION{name="question_init"}%[
@@ -19,6 +20,7 @@
 %STARTSECTION{name="deviation"}%{"results":[%SOLRSEARCH{
   "topic:Element* form:*DeviationForm web:%URLPARAM{"web"}%"
   format="{\"id\":\"$topic\",\"text\":\"$field_Finding_s\"}"
+  fields="web,topic,webtopic,field_Finding_s"
   separator=", "
   rows="999999"
 }%]}%ENDSECTION{name="deviation"}%
@@ -26,6 +28,7 @@
 %SOLRSEARCH{
   "topic:%FORMATLIST{"%URLPARAM{id}%" header="(" footer=")" separator=" OR "}% form:*DeviationForm"
   format="{\"id\":\"$topic\",\"text\":\"$field_Finding_s\"}"
+  fields="web,topic,webtopic,field_Finding_s"
   separator=", "
   sort="topic"
 }%

@@ -39,6 +39,7 @@ fields="web,topic,field_TopicTitle_s,field_Division_s,field_Auditor_lst,field_Pl
 header=""
 format="<tr><td>[[$web.$topic]]</td><td>$field_Division_s</td><td>$field_Auditor_lst</td><td>$field_PlannedDate_dt</td><td>$field_DateOfExecution_dt</td><td>$percntMAKETEXT{\"$field_AuditType_s\"}$percnt</td><td>$percntMAKETEXT{\"$field_Status_s\"}$percnt</td><td>$percntTMPL:P{\"auditmeasures\" auditweb=\"$web\"}$percnt</td></tr>"
 footer=""
+fields="web,topic,webtopic,field_Division_s,field_Auditor_lst,field_PlannedDate_dt,field_DateOfExecution_dt,field_AuditType_s,field_Status_s"
 rows="999999"
 sort="field_TopicTitle_s asc"
 }%
