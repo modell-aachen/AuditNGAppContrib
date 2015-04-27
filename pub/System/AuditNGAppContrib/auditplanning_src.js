@@ -14,7 +14,10 @@ jQuery(function($) {
         if(!$result.length) return;
 
         var $eachtr = $this.find('table tbody tr');
-        if(!$eachtr.length) return;
+        if(!$eachtr.length) {
+            $result.text('- ');
+            return;
+        }
         var i;
         var sumResult = 0;
         var sumRating = 0;
