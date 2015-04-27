@@ -34,6 +34,7 @@
 <tbody>
 <!-- elements -->%SOLRSEARCH{
   "type:topic form:%AUDITWEB%.AuditElementForm field_Block_s:%block%"
+  id="searchElements%block%"
   web="%WEB%"
   rows="9999"
   format="<tr>
@@ -42,13 +43,20 @@
   fields="field_Question_s,field_QualityRating_s,field_Finding_s,field_Fulfillment_s,web,topic,webtopic"
   sort="topic"
   footer="%IF{"$'URLPARAM{fillout}'" then="$percentTMPL:P{\"filler\" count=\"1\"}$percent$percentTMPL:P{\"filler\" count=\"2\"}$percent$percentTMPL:P{\"filler\" count=\"3\"}$percent$percentTMPL:P{\"filler\" count=\"4\"}$percent$percentTMPL:P{\"filler\" count=\"5\"}$percent"}%"
-}% <!-- /elements -->
+}% %IF{"$'URLPARAM{fillout}'" then="$percentTMPL:P{\"fillerCheckNoResults\" block=\"%block%\"}$percent"}%<!-- /elements -->
 </table>
 <div class="modacPrintHide">%BUTTON{"%MAKETEXT{"Add audit element"}%" icon="new" class="modacPrintHide" href="%SCRIPTURLPATH{"edit"}%/%WEB%/ElementAUTOINC00?Block=%block%;formtemplate=%AUDITWEB%.AuditElementForm;template=%AUDITWEB%.AuditElementEdit;nowysiwyg=1;t=%GMTIME{"$epoch"}%"}%</div>
 </div>
 </div>%TMPL:END%
 
 %TMPL:DEF{"filoutMinHeight"}%10em%TMPL:END%
+
+%{ This TMPL will check if there are no results and (if this is the case) print a bunch of fillers }%
+%TMPL:DEF{"fillerCheckNoResults"}%%IF{"0%SOLRFORMAT{"searchElements%block%" format="$count" footer="" header=""}%" else="<tr><td></td><td></td><td></td><td><div style='min-height:%TMPL:P{"filoutMinHeight"}%;'></div></td><td></td><td></td><td class='modacPrintHide'></td></tr>
+<tr><td></td><td></td><td></td><td><div style='min-height:%TMPL:P{"filoutMinHeight"}%;'></div></td><td></td><td></td><td class='modacPrintHide'></td></tr>
+<tr><td></td><td></td><td></td><td><div style='min-height:%TMPL:P{"filoutMinHeight"}%;'></div></td><td></td><td></td><td class='modacPrintHide'></td></tr>
+<tr><td></td><td></td><td></td><td><div style='min-height:%TMPL:P{"filoutMinHeight"}%;'></div></td><td></td><td></td><td class='modacPrintHide'></td></tr>
+<tr><td></td><td></td><td></td><td><div style='min-height:%TMPL:P{"filoutMinHeight"}%;'></div></td><td></td><td></td><td class='modacPrintHide'></td></tr>"}%%TMPL:END%
 
 %TMPL:DEF{"filler"}%$percentIF{\"$count < %count%\" then=\"<tr><td></td><td></td><td></td><td><div style='min-height:%TMPL:P{"filoutMinHeight"}%;'></div></td><td></td><td></td><td class='modacPrintHide'></td></tr>\"}$percent%TMPL:END%
 
