@@ -18,7 +18,7 @@
 </table> 
 
 
-%MAKETEXT{"*Audit - evaluation key* (partial result in % = &&Sigma; individual result / &&Sigma; rating / 10)"}%
+%MAKETEXT{"*Audit - evaluation key* (partial result in % = &&Sigma; individual result / (&&Sigma; rating / 10))"}%
 
 <table class="AuditKey"><tbody>
   <tr><td colspan="2">%MAKETEXT{"Rating / effect"}%</td><td colspan="2">%MAKETEXT{"degree of fulfillment"}%</td><td>%MAKETEXT{"Partial result impartial to rating / effect"}%</td></tr>

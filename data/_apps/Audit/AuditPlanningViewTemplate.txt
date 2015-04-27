@@ -24,8 +24,8 @@
 
 %TMPL:DEF{"printHeaderHeight"}%1.5cm%TMPL:END%
 
-%TMPL:DEF{"block"}%<div class="auditPlanningBlock"><div class="Princeheader printOnly printme"><div style="float:left"><h1>%MAKETEXT{"Block[_1]" args="%block%"}%</h1></div><div style="float:right;white-space:nowrap;"><h1>%MAKETEXT{"Result: [_1]" args="<span class='result'></span>"}%</h1></div></div>
-<div class="widgetBlockTitle modacPrintHide">%MAKETEXT{"Block[_1]" args="%block%"}%<div style='float:right; white-space:nowrap;'>%MAKETEXT{"Result: [_1]" args="<span class='result'></span>"}%</div></div>
+%TMPL:DEF{"block"}%<div class="auditPlanningBlock"><div class="Princeheader printOnly printme"><div style="float:left"><h1>%MAKETEXT{"Block[_1]" args="%block%"}%</h1></div><div style="float:right;white-space:nowrap;"><h1>%MAKETEXT{"Result: [_1]%" args="<span class='result'></span>"}%</h1></div></div>
+<div class="widgetBlockTitle modacPrintHide">%MAKETEXT{"Block[_1]" args="%block%"}%<div style='float:right; white-space:nowrap;'>%MAKETEXT{"Result: [_1]%" args="<span class='result'></span>"}%</div></div>
 <div class="widgetBlockContent">
 <table class="tablesorter planning">
 <thead>

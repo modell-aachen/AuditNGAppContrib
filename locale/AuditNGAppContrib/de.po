@@ -23,8 +23,8 @@ msgid "%1 Web"
 msgstr "%1 Bereich"
 
 #: data/_apps/Audit/AuditPlanningFirstPageInfoDefault.txt
-msgid "*Audit - evaluation key* (partial result in % = &&Sigma; individual result / &&Sigma; rating / 10)"
-msgstr "*Audit - Bewertungsschlüssel* (Teilergebis in % = &&Sigma; Einzelergebnisse / &&Sigma; Wertigkeit / 10)"
+msgid "*Audit - evaluation key* (partial result in % = &&Sigma; individual result / (&&Sigma; rating / 10))"
+msgstr "*Audit - Bewertungsschlüssel* (Teilergebis in % = &&Sigma; Einzelergebnisse / (&&Sigma; Wertigkeit / 10))"
 
 #: data/_apps/Audit/AuditPlanningFirstPageInfoDefault.txt
 msgid "100% only possible, when records are available"
@@ -386,8 +386,8 @@ msgid "Result"
 msgstr "Ergebnis"
 
 #: data/_apps/Audit/AuditPlanningViewTemplate.txt
-msgid "Result: %1"
-msgstr "Ergebnis: %1"
+msgid "Result: %1%"
+msgstr "Ergebnis: %1%"
 
 #: data/_apps/Audit/CustomSkinActionformTemplate.txt
 msgid "Save"

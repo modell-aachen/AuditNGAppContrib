@@ -16,12 +16,24 @@ jQuery(function($) {
         var $eachtr = $this.find('table tbody tr');
         if(!$eachtr.length) return;
         var i;
-        var sum = 0;
+        var sumResult = 0;
+        var sumRating = 0;
         for(i = 0; i < $eachtr.length; i++) {
+            // results:
             var $td = $eachtr.eq(i).find('td').eq(5);
             var n = new Number($td.text());
-            if(!isNaN(n)) sum += n;
+            if(!isNaN(n)) sumResult += n;
+
+            // ratings:
+            var $td = $eachtr.eq(i).find('td').eq(2);
+            var n = new Number($td.text());
+            if(!isNaN(n)) sumRating += n;
         }
-        $result.text(Math.round(sum/$eachtr.length));
+        var partialResult = sumResult / sumRating * 10;
+        if(!isNaN(partialResult)) {
+            $result.text(Math.round(partialResult));
+        } else {
+            $result.text('- ');
+        }
     });
 });
