@@ -38,6 +38,7 @@
 %TMPL:DEF{"furtherdetails"}%
 <div class="widgetBlockTitle">%MAKETEXT{"Further details"}%</div>
 <div class="widgetBlockContent">
+<p>%BUTTON{"%MAKETEXT{"Audit preparation"}%" href="WebAuditPreparation"}%</p>
 <p>%BUTTON{"%MAKETEXT{"Audit conducting"}%" href="WebAuditConducting"}%</p>
 <p>%BUTTON{"%MAKETEXT{"Audit measures"}%" href="WebAuditMeasures"}%</p>
 </div>

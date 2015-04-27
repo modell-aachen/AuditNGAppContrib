@@ -10,11 +10,13 @@ data/_apps/Audit/AuditConductingViewTemplate.txt 0644
 data/_apps/Audit/AuditConductingFirstPageInfoDefault.txt 0644
 data/_apps/Audit/AuditMeasuresViewTemplate.txt 0644
 data/_apps/Audit/AuditOverviewTemplate.txt 0644
+data/_apps/Audit/AuditPreparationViewTemplate.txt 0644
 data/_apps/Audit/AuditReportEditTemplate.txt 0644
 data/_apps/Audit/AuditReportForm.txt 0644
 data/_apps/Audit/AuditReportViewTemplate.txt 0644
 data/_apps/Audit/AuditTemplate/WebAuditMeasures.txt 0644
 data/_apps/Audit/AuditTemplate/WebAuditConducting.txt 0644
+data/_apps/Audit/AuditTemplate/WebAuditPreparation.txt 0644
 data/_apps/Audit/AuditTemplate/WebActions.txt 0644
 data/_apps/Audit/AuditTemplate/WebAtom.txt 0644
 data/_apps/Audit/AuditTemplate/WebChanges.txt 0644

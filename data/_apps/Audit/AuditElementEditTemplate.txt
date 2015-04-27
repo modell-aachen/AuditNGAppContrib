@@ -10,6 +10,7 @@
 %TMPL:END%
 
 %TMPL:DEF{"deviation"}%
+%IF{"defined origin" then="<input type='hidden' name='redirectto' value='%URLPARAM{origin}%' />" else="<!-- no origin parameter -->"}%
 <div class="widgetBlockTitle">%MAKETEXT{"Audit Finding"}%</div>
 <div class="widgetBlockContent">
 <table class="metaDataHead">

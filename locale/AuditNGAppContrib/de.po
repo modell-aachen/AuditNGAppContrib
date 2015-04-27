@@ -84,6 +84,10 @@ msgstr "Auditmaßnahmen"
 msgid "Audit conducting"
 msgstr "Auditdurchführung"
 
+#: data/_apps/Audit/AuditReportViewTemplate.txt
+msgid "Audit preparation"
+msgstr "Auditvorbereitung"
+
 #: data/_apps/Audit/AuditOverviewTemplate.txt
 msgid "Audit reports"
 msgstr "Auditreport"
