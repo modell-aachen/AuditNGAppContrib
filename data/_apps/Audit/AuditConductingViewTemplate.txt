@@ -12,7 +12,7 @@
 %TMPL:END%
 
 %TMPL:DEF{"printTab"}%<li>
-<span><a href="%SCRIPTURL{"view"}%/%AUDITWEB%/AuditPlanningPrintDialog?skin=text&section=dialog&pweb=%ENCODE{"%WEB%" type="url"}%&ptopic=%ENCODE{"%TOPIC%" type="url"}%&landscape=1&printParams=" class="jqUIDialogLink">%MAKETEXT{"PDF-Print"}%</a></span>
+<span><a href="%SCRIPTURL{"view"}%/%AUDITWEB%/AuditConductingPrintDialog?skin=text&section=dialog&pweb=%ENCODE{"%WEB%" type="url"}%&ptopic=%ENCODE{"%TOPIC%" type="url"}%&landscape=1&printParams=" class="jqUIDialogLink">%MAKETEXT{"PDF-Print"}%</a></span>
 </li>%TMPL:END%
 %TMPL:DEF{"modacActionButtons"}%<ul id="modacButtonsLEFT" class="modacTabs"><li>%TMPL:P{"modacSystemTab"}%</li></ul><ul id="modacButtonsRIGHT" class="modacTabs"><li>%TMPL:P{"printTab"}%</li><li id="modacSearchBox">%TMPL:P{"SearchBox"}%</li></ul>%TMPL:END%
 
@@ -61,7 +61,7 @@
 %TMPL:DEF{"filler"}%$percentIF{\"$count < %count%\" then=\"<tr><td></td><td></td><td></td><td><div style='min-height:%TMPL:P{"filoutMinHeight"}%;'></div></td><td></td><td></td><td class='modacPrintHide'></td></tr>\"}$percent%TMPL:END%
 
 %TMPL:DEF{"FirstPage"}%%INCLUDE{"%WEB%/%HOMETOPIC%"}%
-%IF{"istopic '%AUDITWEB%.AuditPlanningFirstPageInfo'" then="$percentINCLUDE{%AUDITWEB%.AuditPlanningFirstPageInfo}$percent" else="$percentINCLUDE{%AUDITWEB%.AuditPlanningFirstPageInfoDefault}$percent"}%
+%IF{"istopic '%AUDITWEB%.AuditConductingFirstPageInfo'" then="$percentINCLUDE{%AUDITWEB%.AuditConductingFirstPageInfo}$percent" else="$percentINCLUDE{%AUDITWEB%.AuditConductingFirstPageInfoDefault}$percent"}%
 %TMPL:P{"pdfPageBreak"}%%TMPL:END%
 
 %TMPL:DEF{"modacExtraPrintStyles"}%%TMPL:PREV%

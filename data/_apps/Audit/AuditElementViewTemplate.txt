@@ -2,5 +2,5 @@
 %TMPL:INCLUDE{"view"}%
 
 %TMPL:DEF{"content"}%%TMPL:P{"simpleheader"}%
-%REDIRECT{"%BASEWEB%.WebAuditPlanning"}%
+%REDIRECT{"%BASEWEB%.WebAuditConducting"}%
 %TMPL:END%
