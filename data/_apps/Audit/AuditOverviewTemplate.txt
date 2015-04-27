@@ -49,7 +49,7 @@ sort="field_TopicTitle_s asc"
 
 %TMPL:DEF{"auditmeasures"}%
 %SOLRSEARCH{
-"form:AuditPrototype.MeasuresForm web:%auditweb%"
+"form:%auditweb%.MeasuresForm web:%auditweb%"
 id="%auditweb%"
 facets="field_Status_s"
 rows="999999"
