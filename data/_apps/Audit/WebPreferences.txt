@@ -43,8 +43,6 @@
 
    * Set AUDITWEB = AuditPrototype
 
-   * Set VIEW_TEMPLATE_RULES = Question.* => _apps/Audit.QuestionView
-
 ---++ ActionTracker settings
    * Set ACTIONTRACKERPLUGIN_EXTRAS = |createdate,date|task,text,50|state,select+values,"%MAKETEXT{"open"}%=open","%MAKETEXT{"closed"}%=closed"|
    * Set ACTIONTRACKERPLUGIN_TABLEHEADER = | %MAKETEXT{"Date"}% | %MAKETEXT{"Creator"}% | %MAKETEXT{"Task to"}% | %MAKETEXT{"Task"}% | %MAKETEXT{"Task contents"}% | %MAKETEXT{"Due date"}% | %MAKETEXT{"Closed on"}% | %MAKETEXT{"Signal"}% | |
