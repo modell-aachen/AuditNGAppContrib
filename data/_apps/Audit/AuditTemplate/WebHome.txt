@@ -1,6 +1,6 @@
 %META:TOPICINFO{author="BaseUserMapping_333" date="1424854626" format="1.1" version="2"}%
 
-%META:FORM{name="AuditPrototype.AuditReportForm"}%
+%META:FORM{name="_apps/Audit.AuditReportForm"}%
 %META:FIELD{name="TopicTitle" attributes="M" title="TopicTitle" value=""}%
 %META:FIELD{name="Division" attributes="" title="Division" value=""}%
 %META:FIELD{name="Auditor" attributes="M" title="Auditor" value=""}%
@@ -8,5 +8,5 @@
 %META:FIELD{name="DateOfExecution" attributes="" title="DateOfExecution" value=""}%
 %META:FIELD{name="AuditType" attributes="" title="AuditType" value=""}%
 %META:FIELD{name="Status" attributes="" title="Status" value=""}%
-%META:PREFERENCE{name="VIEW_TEMPLATE" title="VIEW_TEMPLATE" type="Set" value="AuditPrototype.AuditReportView"}%
-%META:PREFERENCE{name="EDIT_TEMPLATE" title="EDIT_TEMPLATE" type="Set" value="AuditPrototype.AuditReportEdit"}%
+%META:PREFERENCE{name="VIEW_TEMPLATE" title="VIEW_TEMPLATE" type="Set" value="_apps/Audit.AuditReportView"}%
+%META:PREFERENCE{name="EDIT_TEMPLATE" title="EDIT_TEMPLATE" type="Set" value="_apps/Audit.AuditReportEdit"}%
