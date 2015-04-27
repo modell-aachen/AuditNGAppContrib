@@ -6,6 +6,8 @@
     <tr><td class="l">%MAKETEXT{"Filing:"}%</td><td class="r">%QUERY{"'%BASEWEB%/%HOMETOPIC%'/Filing"}%</td><td>%MAKETEXT{"Protection class:"}% %QUERY{"'%BASEWEB%/%HOMETOPIC%'/ProtectionClass"}%</td></tr>
 </tbody></table>
 
+---++ %MAKETEXT{"Audit data"}%
+
 <table class="metaDataHead">
 <tr><td width="150px">%MAKETEXT{"Audited division"}%</td><td>%QUERY{"'%BASEWEB%/%HOMETOPIC%'/Division"}%</td></tr>
 <tr><td>%MAKETEXT{"Auditor"}%</td><td>%QUERY{"'%BASEWEB%/%HOMETOPIC%'/Auditor"}%</td></tr>
@@ -18,7 +20,7 @@
 </table> 
 
 
-%MAKETEXT{"*Audit - evaluation key* (partial result in % = &&Sigma; individual result / (&&Sigma; rating / 10))"}%
+---++ %MAKETEXT{"*Audit - evaluation key* (partial result in % = &&Sigma; individual result / (&&Sigma; rating / 10))"}%
 
 <table class="AuditKey"><tbody>
   <tr><td colspan="2">%MAKETEXT{"Rating / effect"}%</td><td colspan="2">%MAKETEXT{"degree of fulfillment"}%</td><td>%MAKETEXT{"Partial result impartial to rating / effect"}%</td></tr>

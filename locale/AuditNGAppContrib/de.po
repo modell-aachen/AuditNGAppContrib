@@ -536,6 +536,10 @@ msgstr "bei Erfüllung aller Fragen = 100%"
 msgid "when questions are partially satisfied = 50%"
 msgstr "bei tw. Erfüllung aller Fragen = 50%"
 
+#: data/_apps/Audit/AuditPlanningFirstPageInfoDefault.txt
+msgid "Audit data"
+msgstr "Auditdaten"
+
 #: data/_apps/Audit/AuditReportForm.txt
 msgid "INTERNAL"
 msgstr "INTERN"
