@@ -12,7 +12,7 @@
 
 %TMPL:DEF{"auditsoverview"}%
 %TABPANE{select="%URLPARAM{"tab"}%" class="simple"}%
-%TAB{"%MAKETEXT{"New"}%" id="audits_open" url="%SCRIPTURL{rest}%/RenderPlugin/template?topic=%WEB%.%TOPIC%;expand=audits;render=on;name=AuditOverview;state=open"}%
+%TAB{"%MAKETEXT{"New"}%" id="audits_open" url="%SCRIPTURL{rest}%/RenderPlugin/template?topic=%WEB%.%TOPIC%;expand=audits;render=on;name=AuditOverview;state=new"}%
 <span class="jqAjaxLoader">&nbsp;</span>
 %ENDTAB%
 %TAB{"%MAKETEXT{"Planned"}%" id="audits_planned" url="%SCRIPTURL{rest}%/RenderPlugin/template?topic=%WEB%.%TOPIC%;expand=audits;render=on;name=AuditOverview;state=planned"}%
@@ -34,7 +34,7 @@
 </thead>
 <tbody>
 %SOLRSEARCH{
-"form:*AuditReportForm topic:WebHome web:%WEB%.* -web:*Template"
+"form:*AuditReportForm topic:WebHome web:%WEB%.* -web:*Template field_Status_s:%URLPARAM{"state"}%"
 fields="web,topic,field_TopicTitle_s,field_Division_s,field_Auditor_lst,field_PlannedDate_dt,field_DateOfExecution_dt,field_AuditType_s,field_Status_s"
 header=""
 format="<tr><td>[[$web.$topic]]</td><td>$field_Division_s</td><td>$field_Auditor_lst</td><td>$field_PlannedDate_dt</td><td>$field_DateOfExecution_dt</td><td>$percntMAKETEXT{\"$field_AuditType_s\"}$percnt</td><td>$percntMAKETEXT{\"$field_Status_s\"}$percnt</td><td>$percntTMPL:P{\"auditmeasures\" auditweb=\"$web\"}$percnt</td></tr>"
