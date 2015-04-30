@@ -20,7 +20,6 @@
 <table class="metaDataHead">
 <tr><td width="150px">%MAKETEXT{"Audit title"}%</td><td>%QUERY{"TopicTitle"}%</td></tr>
 <tr><td width="150px">%MAKETEXT{"Audit target"}%</td><td>%QUERY{"AuditTarget"}%</td></tr>
-<tr><td width="150px">%MAKETEXT{"Audited division"}%</td><td>%QUERY{"Division"}%</td></tr>
 <tr><td>%MAKETEXT{"Auditor"}%</td><td>%QUERY{"Auditor"}%</td></tr>
 <tr><td>%MAKETEXT{"Auditor Team"}%</td><td>%QUERY{"AuditTeam"}%</td></tr>
 <tr><td>%MAKETEXT{"Date of planning"}%</td><td> %QUERY{"PlanningDate"}%</td></tr>

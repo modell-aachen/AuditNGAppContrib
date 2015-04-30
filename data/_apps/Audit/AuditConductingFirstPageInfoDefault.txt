@@ -9,7 +9,6 @@
 ---++ %MAKETEXT{"Audit data"}%
 
 <table class="metaDataHead">
-<tr><td width="150px">%MAKETEXT{"Audited division"}%</td><td>%QUERY{"'%BASEWEB%/%HOMETOPIC%'/Division"}%</td></tr>
 <tr><td>%MAKETEXT{"Auditor"}%</td><td>%QUERY{"'%BASEWEB%/%HOMETOPIC%'/Auditor"}%</td></tr>
 <tr><td>%MAKETEXT{"Auditor Team"}%</td><td>%QUERY{"'%BASEWEB%/%HOMETOPIC%'/AuditTeam"}%</td></tr>
 <tr><td>%MAKETEXT{"Date of planning"}%</td><td> %QUERY{"'%BASEWEB%/%HOMETOPIC%'/PlanningDate"}%</td></tr>

@@ -129,12 +129,6 @@ msgstr "Audittitel"
 msgid "Audit type"
 msgstr "Audittyp"
 
-#: data/_apps/Audit/AuditPlanningFirstPageInfoDefault.txt
-#: data/_apps/Audit/AuditReportEditTemplate.txt
-#: data/_apps/Audit/AuditReportViewTemplate.txt
-msgid "Audited division"
-msgstr "Auditierter Bereich"
-
 #: data/_apps/Audit/AuditOverviewTemplate.txt
 #: data/_apps/Audit/AuditPlanningFirstPageInfoDefault.txt
 #: data/_apps/Audit/AuditReportEditTemplate.txt
