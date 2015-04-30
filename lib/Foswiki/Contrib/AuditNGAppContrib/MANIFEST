@@ -41,7 +41,7 @@ data/_apps/Audit/QuestionEditTemplate.txt 0644
 data/_apps/Audit/QuestionForm.txt 0644
 data/_apps/Audit/QuestionTemplate.txt 0644
 data/_apps/Audit/QuestionViewTemplate.txt 0644
-data/_apps/Audit/UploadDialog.txt 0644
+data/_apps/Audit/UploadDialogTemplate.txt 0644
 data/_apps/Audit/WebActions.txt 0644
 data/_apps/Audit/WebAtom.txt 0644
 data/_apps/Audit/WebChanges.txt 0644
