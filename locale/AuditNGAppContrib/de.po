@@ -108,15 +108,6 @@ msgstr "Audit Klasse"
 
 #: data/_apps/Audit/AuditReportEditTemplate.txt
 #: data/_apps/Audit/AuditReportViewTemplate.txt
-msgid "Protection class"
-msgstr "Schutzklasse"
-
-#: data/_apps/Audit/AuditPlanningFirstPageDefault.txt
-msgid "Protection class:"
-msgstr "Schutzklasse:"
-
-#: data/_apps/Audit/AuditReportEditTemplate.txt
-#: data/_apps/Audit/AuditReportViewTemplate.txt
 msgid "Audit objective"
 msgstr "Auditziel"
 
@@ -538,10 +529,3 @@ msgstr "bei tw. Erfüllung aller Fragen = 50%"
 msgid "Audit data"
 msgstr "Auditdaten"
 
-#: data/_apps/Audit/AuditReportForm.txt
-msgid "INTERNAL"
-msgstr "INTERN"
-
-#: data/_apps/Audit/AuditReportForm.txt
-msgid "EXTERNAL"
-msgstr "EXTERN"
