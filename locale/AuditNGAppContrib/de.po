@@ -113,7 +113,7 @@ msgstr "Schutzklasse:"
 
 #: data/_apps/Audit/AuditReportEditTemplate.txt
 #: data/_apps/Audit/AuditReportViewTemplate.txt
-msgid "Audit target"
+msgid "Audit objective"
 msgstr "Auditziel"
 
 #: data/_apps/Audit/AuditOverviewTemplate.txt

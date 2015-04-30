@@ -17,7 +17,7 @@
 <div class="widgetBlockContent">
 <table class="metaDataHead">
 <tr><td width="150px">%MAKETEXT{"Audit title"}%<font color="red">*</font></td><td>%RENDERFOREDIT{field="TopicTitle" format="$edit"}%</td></tr>
-<tr><td width="150px">%MAKETEXT{"Audit target"}%</td><td>%RENDERFOREDIT{field="AuditTarget" format="$edit"}%</td></tr>
+<tr><td width="150px">%MAKETEXT{"Audit objective"}%</td><td>%RENDERFOREDIT{field="AuditObjective" format="$edit"}%</td></tr>
 <tr><td>%MAKETEXT{"Auditor"}%</td><td>%RENDERFOREDIT{field="Auditor" format="$edit"}%</td></tr>
 <tr><td>%MAKETEXT{"Audit Team"}%</td><td>%RENDERFOREDIT{field="AuditTeam" format="$edit"}%</td></tr>
 <tr><td>%MAKETEXT{"Date of planning"}%</td><td> %RENDERFOREDIT{field="PlanningDate" format="$edit"}%</td></tr>
