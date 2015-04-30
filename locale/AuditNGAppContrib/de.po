@@ -281,10 +281,6 @@ msgstr "Maßnahmencontainer"
 msgid "New"
 msgstr "Neu"
 
-#: data/_apps/Audit/AuditPlanningViewTemplate.txt
-msgid "Norm"
-msgstr "Norm"
-
 #: data/_apps/Audit/AuditElementEditTemplate.txt
 msgid "Norm chapter"
 msgstr "Normkapitel"
