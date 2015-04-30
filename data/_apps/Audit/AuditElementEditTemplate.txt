@@ -14,7 +14,7 @@
 <div class="widgetBlockTitle">%MAKETEXT{"Audit Finding"}%</div>
 <div class="widgetBlockContent">
 <table class="metaDataHead">
-<tr><td>%MAKETEXT{"Question"}%:<font color="red">*</font></td><td>%RENDERFOREDIT{field="Question" format="$edit"}%<br/>%BUTTON{"Add new question" class="addQuestion" href="#"}%</td></tr>
+<tr><td>%MAKETEXT{"Question"}%:<font color="red">*</font></td><td><table><tbody><tr><td><div class='question'>%RENDERFOREDIT{field="Question" format="$edit"}%</div></td><td>%BUTTON{"%MAKETEXT{"Edit this question"}%" class="editQuestion" href="#"}%</td><td>%BUTTON{"%MAKETEXT{"Add new question"}%" class="addQuestion" href="#"}%</td></tr></tbody></table></td></tr>
 <tr><td width="200px:">%MAKETEXT{"Rating of the question"}%:</td><td>%RENDERFOREDIT{field="QualityRating" format="$edit"}%</td></tr>
 <tr><td width="200px:">%MAKETEXT{"Audit Finding"}%:</td><td>%RENDERFOREDIT{field="Finding" format="$edit"}%</td></tr>
 <tr><td width="200px:">%MAKETEXT{"Fulfillment"}%:</td><td>%RENDERFOREDIT{field="Fulfillment" format="$edit"}%</td></tr>
@@ -34,4 +34,14 @@
 </form>
 </div>%TMPL:END%
 
-%TMPL:DEF{"script"}%%JQREQUIRE{"form,ui::dialog"}%%ADDTOZONE{"script" id="AddElementScript" requires="JQUERYPLUGIN::FOSWIKI,JQUERYPLUGIN::SELECT2,JQUERYPLUGIN::BUTTON,JQUERYPLUGIN::BGIFRAME,JQUERYPLUGIN::FORM,JQUERYPLUGIN::UI::DIALOG" text="<script type='text/javascript' src='%PUBURLPATH%/%SYSTEMWEB%/AuditNGAppContrib/auditelement.js'></script>"}%%TMPL:END%
+%TMPL:DEF{"editQuestionDialog"}%<div class="jqUIDialog {width:600, autoOpen:true} editQuestionDialog" style="display:none" title="%MAKETEXT{"Edit an audit question"}%">
+<form action="%SCRIPTURL{save}%/%AUDITWEB%/%URLPARAM{"question"}%" method="post">
+<table class="metaDataHead">
+<tr><td>%MAKETEXT{"Evaluation-aspect / -criterium"}%</td><td>:</td><td>%RENDERFOREDIT{field="AspectCriteria" form="%AUDITWEB%.QuestionForm" format="$edit" topic="%AUDITWEB%.%URLPARAM{"question"}%"}%</td></tr>
+<tr><td>%MAKETEXT{"Norm chapter"}%</td><td>:</td><td>%RENDERFOREDIT{field="Chapter" form="%AUDITWEB%.QuestionForm" format="$edit" topic="%AUDITWEB%.%URLPARAM{"question"}%"}%</td></tr>
+<tr><td colspan="3"><a class="jqUIDialogButton jqUIDialogSubmit {icon:'ui-icon-circle-check'}">%MAKETEXT{"Ok"}%</a><a class="jqUIDialogButton jqUIDialogClose {icon:'ui-icon-cancel'}">%MAKETEXT{"Cancel"}%</a></td></tr>
+</table>
+</form>
+</div>%TMPL:END%
+
+%TMPL:DEF{"script"}%%JQREQUIRE{"form,ui::dialog"}%%ADDTOZONE{"script" id="AddElementScript" requires="JQUERYPLUGIN::FOSWIKI,JQUERYPLUGIN::SELECT2,JQUERYPLUGIN::BUTTON,JQUERYPLUGIN::BGIFRAME,JQUERYPLUGIN::FORM,JQUERYPLUGIN::UI::DIALOG" text="<script type='text/javascript' src='%PUBURLPATH%/%SYSTEMWEB%/AuditNGAppContrib/auditelement.js'></script>"}%%ADDTOZONE{"head" id="AddElementCss" text="<style type='text/css'>@import url('%PUBURLPATH%/%SYSTEMWEB%/AuditNGAppContrib/auditelement.css');></style>"}%%TMPL:END%

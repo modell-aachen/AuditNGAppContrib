@@ -1,0 +1,5 @@
+.jqButton.disabledButton:link,
+.jqButton.disabledButton:visited,
+.jqButton.disabledButton {
+    color: #CCC;
+}

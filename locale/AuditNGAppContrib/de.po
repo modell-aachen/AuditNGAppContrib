@@ -34,6 +34,10 @@ msgstr "100% nur möglich wenn Dokumentennachweis vorhanden"
 msgid "Add a new audit question"
 msgstr "Neue Auditfrage hinzufügen"
 
+#: data/_apps/Audit/AuditElementEditTemplate.txt
+msgid "Edit this question"
+msgstr "Diese Auditfrage bearbeiten"
+
 #: data/_apps/Audit/AuditPlanningViewTemplate.txt
 msgid "Add audit element"
 msgstr "Auditelement hinzufügen"
