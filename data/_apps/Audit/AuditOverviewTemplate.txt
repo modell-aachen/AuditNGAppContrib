@@ -12,16 +12,19 @@
 
 %TMPL:DEF{"auditsoverview"}%
 %TABPANE{select="%URLPARAM{"tab"}%" class="simple"}%
-%TAB{"%MAKETEXT{"New"}%" id="audits_open" url="%SCRIPTURL{rest}%/RenderPlugin/template?topic=%WEB%.%TOPIC%;expand=audits;render=on;name=AuditOverview;state=new"}%
-<span class="jqAjaxLoader">&nbsp;</span>
-%ENDTAB%
 %TAB{"%MAKETEXT{"Planned"}%" id="audits_planned" url="%SCRIPTURL{rest}%/RenderPlugin/template?topic=%WEB%.%TOPIC%;expand=audits;render=on;name=AuditOverview;state=planned"}%
 <span class="jqAjaxLoader">&nbsp;</span>
 %ENDTAB%
-%TAB{"%MAKETEXT{"Verification"}%" id="audits_verification" url="%SCRIPTURL{rest}%/RenderPlugin/template?topic=%WEB%.%TOPIC%;expand=audits;render=on;name=AuditOverview;state=verification"}%
+%TAB{"%MAKETEXT{"Conducted"}%" id="audits_conducted" url="%SCRIPTURL{rest}%/RenderPlugin/template?topic=%WEB%.%TOPIC%;expand=audits;render=on;name=AuditOverview;state=conducted"}%
 <span class="jqAjaxLoader">&nbsp;</span>
 %ENDTAB%
-%TAB{"%MAKETEXT{"Archived"}%" id="audits_archived" url="%SCRIPTURL{rest}%/RenderPlugin/template?topic=%WEB%.%TOPIC%;expand=audits;render=on;name=AuditOverview;state=done"}%
+%TAB{"%MAKETEXT{"Done"}%" id="audits_done" url="%SCRIPTURL{rest}%/RenderPlugin/template?topic=%WEB%.%TOPIC%;expand=audits;render=on;name=AuditOverview;state=done"}%
+<span class="jqAjaxLoader">&nbsp;</span>
+%ENDTAB%
+%TAB{"%MAKETEXT{"Discarded"}%" id="audits_discarded" url="%SCRIPTURL{rest}%/RenderPlugin/template?topic=%WEB%.%TOPIC%;expand=audits;render=on;name=AuditOverview;state=discarded"}%
+<span class="jqAjaxLoader">&nbsp;</span>
+%ENDTAB%
+%TAB{"%MAKETEXT{"All"}%" id="audits_all" url="%SCRIPTURL{rest}%/RenderPlugin/template?topic=%WEB%.%TOPIC%;expand=audits;render=on;name=AuditOverview;state=*"}%
 <span class="jqAjaxLoader">&nbsp;</span>
 %ENDTAB%
 %ENDTABPANE%

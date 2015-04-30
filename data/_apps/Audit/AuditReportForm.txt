@@ -13,7 +13,7 @@
 | Filing | text | 50 | | | |
 | AuditClass | select+values | 1  | %MAKETEXT{"Internal audit"}%=Internal audit, %MAKETEXT{"External audit"}%=External audit,  %MAKETEXT{"Supplier audit"}%=Supplier audit | | |
 | UsedStandards | textboxlist  | 50 mustMatch  | ISO9001,ISO14001,ISO18001,ISO50001 | | |
-| Status | select+values | 1| %MAKETEXT{"new"}%=new, %MAKETEXT{"planned"}%=planned, %MAKETEXT{"Verification"}%=verification, %MAKETEXT{"done"}%=done | | |
+| Status | select+values | 1| %MAKETEXT{"planned"}%=planned, %MAKETEXT{"conducted"}%=conducted, %MAKETEXT{"done"}%=done, %MAKETEXT{"discarded"}%=discarded | | |
 | Private | checkbox+values | 1 | %MAKETEXT{"private"}%=private | | |
 
 

@@ -310,6 +310,22 @@ msgid "Planned"
 msgstr "Geplant"
 
 #: data/_apps/Audit/AuditOverviewTemplate.txt
+msgid "Conducted"
+msgstr "Durchgeführt"
+
+#: data/_apps/Audit/AuditOverviewTemplate.txt
+msgid "Discarded"
+msgstr "Verworfen"
+
+#: data/_apps/Audit/AuditOverviewTemplate.txt
+msgid "All"
+msgstr "Alle"
+
+#: data/_apps/Audit/AuditOverviewTemplate.txt
+msgid "Done"
+msgstr "Abgeschlossen"
+
+#: data/_apps/Audit/AuditOverviewTemplate.txt
 msgid "Planned date"
 msgstr "Geplantes Datum"
 
@@ -500,6 +516,14 @@ msgstr "teilweise erfüllt"
 #: data/_apps/Audit/AuditReportForm.txt
 msgid "planned"
 msgstr "geplant"
+
+#: data/_apps/Audit/AuditReportForm.txt
+msgid "conducted"
+msgstr "durchgeführt"
+
+#: data/_apps/Audit/AuditReportForm.txt
+msgid "discarded"
+msgstr "verworfen"
 
 #: data/_apps/Audit/MeasuresForm.txt data/_apps/Audit/MeasuresViewTemplate.txt
 msgid "protected"
