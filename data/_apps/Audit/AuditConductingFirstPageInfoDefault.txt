@@ -1,9 +1,10 @@
 <table class="AuditHeader"><tbody>
-    <tr><td rowspan="5">%REPORTTITLE{default="%MAKETEXT{"QM-Report"}%"}%</td><td rowspan="5">%QUERY{"'%BASEWEB%/%HOMETOPIC%'/AuditType"}%<br/>%QUERY{"'%BASEWEB%/%HOMETOPIC%'/TopicTitle"}%</td><td class="l">%MAKETEXT{"Creator:"}%</td><td class="r">%WIKINAME%</td><td rowspan="3" style="text-align: center;"><img src="%WIKILOGOIMG%" /></td></tr>
+    <tr><td rowspan="6">%REPORTTITLE{default="%MAKETEXT{"QM-Report"}%"}%</td><td rowspan="6">%QUERY{"'%BASEWEB%/%HOMETOPIC%'/AuditType"}%<br/>%QUERY{"'%BASEWEB%/%HOMETOPIC%'/TopicTitle"}%</td><td class="l">%MAKETEXT{"Creator:"}%</td><td class="r">%WIKINAME%</td><td rowspan="6" style="text-align: center;"><img src="%WIKILOGOIMG%" /></td></tr>
     <tr><td class="l">%MAKETEXT{"Document control:"}%</td><td class="r">%QUERY{"'%BASEWEB%/%HOMETOPIC%'/DocumentControl"}%</td></tr>
     <tr><td class="l">%MAKETEXT{"Approval:"}%</td><td class="r">%QUERY{"'%BASEWEB%/%HOMETOPIC%'/Approval"}%</td></tr>
-    <tr><td class="l">%MAKETEXT{"Date:"}%</td><td class="r">%CALC{"$FORMATTIME($TIME(), $year-$month-$day)"}%</td><td>%MAKETEXT{"Audit scope:"}% %QUERY{"'%BASEWEB%/%HOMETOPIC%'/AuditScope"}%</td></tr>
-    <tr><td class="l">%MAKETEXT{"Filing:"}%</td><td class="r">%QUERY{"'%BASEWEB%/%HOMETOPIC%'/Filing"}%</td><td>%MAKETEXT{"Protection class:"}% %QUERY{"'%BASEWEB%/%HOMETOPIC%'/ProtectionClass"}%</td></tr>
+    <tr><td class="l">%MAKETEXT{"Date:"}%</td><td class="r">%CALC{"$FORMATTIME($TIME(), $year-$month-$day)"}%</td></tr>
+    <tr><td class="l">%MAKETEXT{"Audit scope:"}%</td><td class="r">%QUERY{"'%BASEWEB%/%HOMETOPIC%'/AuditScope"}%</td></tr>
+    <tr><td class="l">%MAKETEXT{"Filing:"}%</td><td class="r">%QUERY{"'%BASEWEB%/%HOMETOPIC%'/Filing"}%</td></tr>
 </tbody></table>
 
 ---++ %MAKETEXT{"Audit data"}%
