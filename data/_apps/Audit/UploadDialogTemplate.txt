@@ -1,5 +1,5 @@
 <div class="jqUIDialog {width:600}" style="display:none" title="%MAKETEXT{"Add a picture"}%">
-<div style='float:left'>%QRUPLOAD{web="%WEB%" topic="%TOPIC%"}%</div>
+<div style='float:left'>%QRUPLOAD{web="%WEB%" topic="%TOPIC%" backlink="[[%URLPARAM{"BACK"}%][%MAKETEXT{"Back to [_1]" args="%URLPARAM{"BACKLABEL"}%"}%]]"}%</div>
 <div style="display:none">
 <form action="%SCRIPTURL{upload}%/%WEB%/%TOPIC%" method="post" enctype="multipart/form-data">
 <!-- TODO: StrikeOne -->

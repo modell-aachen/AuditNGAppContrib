@@ -553,3 +553,6 @@ msgstr "bei tw. Erfüllung aller Fragen = 50%"
 msgid "Audit data"
 msgstr "Auditdaten"
 
+#: data/_apps/Audit/UploadDialogTemplate.txt
+msgid "Back to %1"
+msgstr "Zurück zu %1"
