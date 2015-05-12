@@ -33,7 +33,7 @@
 %TMPL:DEF{"audits"}%
 <table class="tablesorter">
 <thead>
-<tr><th>%MAKETEXT{"Audit title"}%</th><th>%MAKETEXT{"Audit Scope"}%</th><th>%MAKETEXT{"Auditor"}%</th><th>%MAKETEXT{"Planning date"}%</th><th>%MAKETEXT{"Date of execution"}%</th><th>%MAKETEXT{"Audit type"}%</th><th>%MAKETEXT{"Status"}%</th><th>%MAKETEXT{"Measures"}%</th></tr>
+<tr><th>%MAKETEXT{"Audit title"}%</th><th>%MAKETEXT{"Audit scope"}%</th><th>%MAKETEXT{"Auditor"}%</th><th>%MAKETEXT{"Planning date"}%</th><th>%MAKETEXT{"Date of execution"}%</th><th>%MAKETEXT{"Audit type"}%</th><th>%MAKETEXT{"Status"}%</th><th>%MAKETEXT{"Measures"}%</th></tr>
 </thead>
 <tbody>
 %SOLRSEARCH{
