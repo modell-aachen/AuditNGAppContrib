@@ -4,4 +4,5 @@ Foswiki::Plugins::TasksAPIPlugin,>=0.1,perl,Required
 Foswiki::Plugins::MoreFormfieldsPlugin,>=0.1,perl,Required
 Foswiki::Plugins::SetVariablePlugin,>=2.31.1,perl,Required
 Foswiki::Plugins::JQTableSorterPlugin,>=1.0.4,perl,Required
+Foswiki::Plugins::WebAutoIncPlugin,>=0.1,perl,Required
 
