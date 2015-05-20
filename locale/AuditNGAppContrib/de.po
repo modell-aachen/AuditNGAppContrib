@@ -326,8 +326,8 @@ msgid "Done"
 msgstr "Abgeschlossen"
 
 #: data/_apps/Audit/AuditOverviewTemplate.txt
-msgid "Planned date"
-msgstr "Geplantes Datum"
+msgid "Planning date"
+msgstr "Planungs Datum"
 
 #: data/_apps/Audit/AuditPlanningPrintDialog.txt
 msgid "Please choose format:"
