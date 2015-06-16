@@ -15,6 +15,9 @@ table.tablesorter.planning tbody td {
 table.tablesorter.planning {
     border-collapse: collapse;
 }
+.printOnly {
+    display: initial!important;
+}
 .printme.printOnly {
     display: block;
 }
