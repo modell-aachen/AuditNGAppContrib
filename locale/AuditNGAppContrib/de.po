@@ -8,8 +8,8 @@ msgstr ""
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "PO-Revision-Date: 2014-11-11 15:27+0200\n"
 "Last-Translator: Modell Aachen <support@modell-aachen.de>\n"
-"Language-Team: German <http://translate.modell-aachen.de/projects/auditngappcontrib"
-"/releasenew-york/de/>\n"
+"Language-Team: German <http://translate.modell-aachen.de/projects/"
+"auditngappcontrib/releasenew-york/de/>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -17,542 +17,455 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 1.9\n"
 
-#: data/_apps/Audit/AuditReportViewTemplate.txt
-#: data/_apps/Audit/MeasuresViewTemplate.txt
-msgid "%1 Web"
-msgstr "%1 Bereich"
+msgid "0 (not fulfilled)"
+msgstr "0 (nicht erfüllt)"
 
-#: data/_apps/Audit/AuditPlanningFirstPageInfoDefault.txt
-msgid "*Audit - evaluation key* (partial result in % = &&Sigma; individual result / (&&Sigma; rating / 10))"
-msgstr "*Audit - Bewertungsschlüssel* (Teilergebis in % = &&Sigma; Einzelergebnisse / (&&Sigma; Wertigkeit / 10))"
-
-#: data/_apps/Audit/AuditPlanningFirstPageInfoDefault.txt
 msgid "100% only possible, when records are available"
 msgstr "100% nur möglich wenn Dokumentennachweis vorhanden"
 
-#: data/_apps/Audit/AuditElementEditTemplate.txt
+msgid "10 (fulfilled)"
+msgstr "10 (erfüllt)"
+
+msgid "10 (very important / very big)"
+msgstr "10 (sehr wichtig / sehr groß)"
+
+msgid "1 (not relevant / low)"
+msgstr "1 (nicht relevant / gering)"
+
+msgid "5 (important / big)"
+msgstr "5 (wichtig / groß)"
+
+msgid "5 (partially fulfilled)"
+msgstr "5 (teilweise erfüllt)"
+
+msgid "*Abbreviations*"
+msgstr "Abkürzungen"
+
 msgid "Add a new audit question"
 msgstr "Neue Auditfrage hinzufügen"
 
-#: data/_apps/Audit/AuditElementEditTemplate.txt
-msgid "Edit this question"
-msgstr "Diese Auditfrage bearbeiten"
+msgid "Add a picture"
+msgstr "Bild hinzufügen"
 
-#: data/_apps/Audit/AuditPlanningViewTemplate.txt
 msgid "Add audit element"
 msgstr "Auditelement hinzufügen"
 
-#: data/_apps/Audit/CustomSkinCommentPluginTemplate.txt
+msgid "Add new question"
+msgstr "Neue Auditfrage hinzufügen"
+
 msgid "Add task"
 msgstr "Aufgabe hinzufügen"
 
-#: data/_apps/Audit/AuditPlanningFirstPageInfoDefault.txt
-msgid "Approval:"
-msgstr "Freigabe:"
+msgid "all"
+msgstr "alle"
 
-#: data/_apps/Audit/AuditOverviewTemplate.txt
-msgid "Archived"
-msgstr "Archiviert"
-
-#: data/_apps/Audit/AuditPlanningFirstPageInfoDefault.txt
-msgid "Audit scope:"
-msgstr "Betrachtungsbereich:"
-
-#: data/_apps/Audit/AuditCalendar.txt
-msgid "Audit"
-msgstr "Audit"
-
-#: data/_apps/Audit/AuditPlanningViewTemplate.txt
-msgid "Audit %1"
-msgstr "Audit %1"
-
-#: data/_apps/Audit/AuditElementEditTemplate.txt
-#: data/_apps/Audit/AuditPlanningViewTemplate.txt
-msgid "Audit Finding"
-msgstr "Auditfeststellung"
-
-#: data/_apps/Audit/AuditReportEditTemplate.txt
-msgid "Audit Team"
-msgstr "Audit Team"
-
-#: data/_apps/Audit/AuditPlanningViewTemplate.txt
-msgid "Audit criteria"
-msgstr "Auditkriterium"
-
-#: data/_apps/Audit/AuditMeasuresViewTemplate.txt
-#: data/_apps/Audit/AuditReportViewTemplate.txt
-msgid "Audit measures"
-msgstr "Auditmaßnahmen"
-
-#: data/_apps/Audit/AuditReportViewTemplate.txt
-msgid "Audit conducting"
-msgstr "Auditdurchführung"
-
-#: data/_apps/Audit/AuditReportViewTemplate.txt
-msgid "Audit preparation"
-msgstr "Auditvorbereitung"
-
-#: data/_apps/Audit/AuditOverviewTemplate.txt
-msgid "Audit reports"
-msgstr "Auditreport"
-
-#: data/_apps/Audit/AuditReportEditTemplate.txt
-#: data/_apps/Audit/AuditReportViewTemplate.txt
-msgid "Audit scope"
-msgstr "Betrachtungsbereich"
-
-#: data/_apps/Audit/AuditReportEditTemplate.txt
-#: data/_apps/Audit/AuditReportViewTemplate.txt
-msgid "Audit class"
-msgstr "Audit Klasse"
-
-#: data/_apps/Audit/AuditReportEditTemplate.txt
-#: data/_apps/Audit/AuditReportViewTemplate.txt
-msgid "Audit objective"
-msgstr "Auditziel"
-
-#: data/_apps/Audit/AuditOverviewTemplate.txt
-#: data/_apps/Audit/AuditReportEditTemplate.txt
-#: data/_apps/Audit/AuditReportViewTemplate.txt
-msgid "Audit title"
-msgstr "Audittitel"
-
-#: data/_apps/Audit/AuditOverviewTemplate.txt
-#: data/_apps/Audit/AuditPlanningFirstPageInfoDefault.txt
-#: data/_apps/Audit/AuditReportEditTemplate.txt
-#: data/_apps/Audit/AuditReportViewTemplate.txt
-msgid "Audit type"
-msgstr "Audittyp"
-
-#: data/_apps/Audit/AuditOverviewTemplate.txt
-#: data/_apps/Audit/AuditPlanningFirstPageInfoDefault.txt
-#: data/_apps/Audit/AuditReportEditTemplate.txt
-#: data/_apps/Audit/AuditReportViewTemplate.txt
-msgid "Auditor"
-msgstr "Auditor"
-
-#: data/_apps/Audit/AuditPlanningFirstPageInfoDefault.txt
-#: data/_apps/Audit/AuditReportViewTemplate.txt
-msgid "Auditor Team"
-msgstr "Auditteam"
-
-#: data/_apps/Audit/AuditElementEditTemplate.txt
-#: data/_apps/Audit/AuditElementForm.txt
-msgid "Block"
-msgstr "Block"
-
-#: data/_apps/Audit/AuditPlanningViewTemplate.txt
-msgid "Block%1"
-msgstr "Block%1"
-
-#: data/_apps/Audit/AuditPlanningPrintDialog.txt
-msgid "Cancel"
-msgstr "Abbrechen"
-
-#: data/_apps/Audit/QuestionEditTemplate.txt
-#: data/_apps/Audit/QuestionViewTemplate.txt
-msgid "Chapter"
-msgstr "Kapitel"
-
-#: data/_apps/Audit/WebPreferences.txt
-msgid "Closed on"
-msgstr "Geschlossen am"
-
-#: data/_apps/Audit/WebActions.txt
-msgid "Create new audit"
-msgstr "Neues Audit anlegen"
-
-#: data/_apps/Audit/CustomSkinCommentPluginTemplate.txt
-#: data/_apps/Audit/WebPreferences.txt
-msgid "Creator"
-msgstr "Ersteller"
-
-#: data/_apps/Audit/AuditPlanningFirstPageInfoDefault.txt
-msgid "Creator:"
-msgstr "Ersteller:"
-
-#: data/_apps/Audit/AuditCalendar.txt data/_apps/Audit/WebPreferences.txt
-msgid "Date"
-msgstr "Datum"
-
-#: data/_apps/Audit/AuditOverviewTemplate.txt
-#: data/_apps/Audit/AuditPlanningFirstPageInfoDefault.txt
-#: data/_apps/Audit/AuditReportEditTemplate.txt
-#: data/_apps/Audit/AuditReportViewTemplate.txt
-msgid "Date of execution"
-msgstr "Datum der Ausführung"
-
-#: data/_apps/Audit/AuditPlanningFirstPageInfoDefault.txt
-#: data/_apps/Audit/AuditReportEditTemplate.txt
-#: data/_apps/Audit/AuditReportViewTemplate.txt
-msgid "Date of planning"
-msgstr "Planungsdatum"
-
-#: data/_apps/Audit/AuditPlanningFirstPageInfoDefault.txt
-msgid "Date:"
-msgstr "Datum:"
-
-#: data/_apps/Audit/MeasuresEditTemplate.txt data/_apps/Audit/MeasuresForm.txt
-#: data/_apps/Audit/MeasuresViewTemplate.txt
-msgid "Description"
-msgstr "Beschreibung"
-
-#: data/_apps/Audit/AuditMeasuresViewTemplate.txt
-#: data/_apps/Audit/MeasuresEditTemplate.txt data/_apps/Audit/MeasuresForm.txt
-#: data/_apps/Audit/MeasuresViewTemplate.txt
-msgid "Deviation"
-msgstr "Abweichung"
-
-#: data/_apps/Audit/AuditOverviewTemplate.txt
-msgid "Division"
-msgstr "Abteilung"
-
-#: data/_apps/Audit/AuditPlanningFirstPageInfoDefault.txt
-msgid "Document control:"
-msgstr "Dokumentenlenkung:"
-
-#: data/_apps/Audit/CustomSkinCommentPluginTemplate.txt
-#: data/_apps/Audit/WebPreferences.txt
-msgid "Due date"
-msgstr "Termin"
-
-#: data/_apps/Audit/AuditPlanningViewTemplate.txt
-#: data/_apps/Audit/AuditReportViewTemplate.txt
-msgid "Edit"
-msgstr "Bearbeiten"
-
-#: data/_apps/Audit/AuditElementEditTemplate.txt
-#: data/_apps/Audit/QuestionForm.txt
-msgid "Evaluation-aspect / -criterium"
-msgstr "Bewertungsaspekt / -kriterium"
-
-#: data/_apps/Audit/AuditReportForm.txt
-msgid "External audit"
-msgstr "Externes Audit"
-
-#: data/_apps/Audit/AuditPlanningFirstPageInfoDefault.txt
-msgid "Filing:"
-msgstr "Ablage:"
-
-#: data/_apps/Audit/AuditElementEditTemplate.txt
-#: data/_apps/Audit/AuditElementForm.txt
-#: data/_apps/Audit/AuditMeasuresViewTemplate.txt
-#: data/_apps/Audit/AuditPlanningViewTemplate.txt
-msgid "Fulfillment"
-msgstr "Erfüllungsgrad"
-
-#: data/_apps/Audit/AuditReportViewTemplate.txt
-msgid "Further details"
-msgstr "Weitere Details"
-
-#: data/_apps/Audit/AuditReportEditTemplate.txt
-#: data/_apps/Audit/AuditReportViewTemplate.txt
-msgid "General audit information"
-msgstr "Generelle Audit Informationen"
-
-#: data/_apps/Audit/AuditPlanningPrintDialog.txt
-msgid "Generate PDF"
-msgstr "PDF generieren"
-
-#: data/_apps/Audit/AuditReportForm.txt
-msgid "Internal audit"
-msgstr "Internes Audit"
-
-#: data/_apps/Audit/AuditMeasuresViewTemplate.txt
-#: data/_apps/Audit/AuditOverviewTemplate.txt
-#: data/_apps/Audit/MeasuresEditTemplate.txt
-msgid "Measures"
-msgstr "Maßnahme"
-
-#: data/_apps/Audit/MeasuresViewTemplate.txt
-msgid "Measures container"
-msgstr "Maßnahmencontainer"
-
-#: data/_apps/Audit/AuditOverviewTemplate.txt
-msgid "New"
-msgstr "Neu"
-
-#: data/_apps/Audit/AuditElementEditTemplate.txt
-msgid "Norm chapter"
-msgstr "Normkapitel"
-
-#: data/_apps/Audit/QuestionForm.txt
-msgid "Norm classification"
-msgstr "Normklassifizierung"
-
-#: data/_apps/Audit/AuditElementEditTemplate.txt
-msgid "Ok"
-msgstr "Ok"
-
-#: data/_apps/Audit/AuditPlanningPrintDialog.txt
-msgid "PDF-Options"
-msgstr "PDF-Optionen"
-
-#: data/_apps/Audit/AuditPlanningViewTemplate.txt
-msgid "PDF-Print"
-msgstr "PDF-Druck"
-
-#: data/_apps/Audit/AuditPlanningViewTemplate.txt
-msgid "Page"
-msgstr "Seite"
-
-#: data/_apps/Audit/AuditPlanningFirstPageInfoDefault.txt
-msgid "Partial result impartial to rating / effect"
-msgstr "Teilergebnis unabhängig von Wertigkeit / Auswirkung"
-
-#: data/_apps/Audit/MeasuresEditTemplate.txt data/_apps/Audit/MeasuresForm.txt
-#: data/_apps/Audit/MeasuresViewTemplate.txt
-msgid "Participants"
-msgstr "Teilnehmner"
-
-#: data/_apps/Audit/AuditOverviewTemplate.txt
-msgid "Planned"
-msgstr "Geplant"
-
-#: data/_apps/Audit/AuditOverviewTemplate.txt
-msgid "Conducted"
-msgstr "Durchgeführt"
-
-#: data/_apps/Audit/AuditOverviewTemplate.txt
-msgid "Discarded"
-msgstr "Verworfen"
-
-#: data/_apps/Audit/AuditOverviewTemplate.txt
 msgid "All"
 msgstr "Alle"
 
-#: data/_apps/Audit/AuditOverviewTemplate.txt
+msgid "Approval:"
+msgstr "Freigabe:"
+
+msgid "Audit"
+msgstr "Audit"
+
+msgid "Audit class"
+msgstr "Audit Klasse"
+
+msgid "Audit conducting"
+msgstr "Auditdurchführung"
+
+msgid "Audit criteria"
+msgstr "Auditkriterium"
+
+msgid "Audit data"
+msgstr "Auditdaten"
+
+msgid ""
+"*Audit - evaluation key* (partial result in % = &&Sigma; individual result / "
+"(&&Sigma; rating / 10))"
+msgstr ""
+"*Audit - Bewertungsschlüssel* (Teilergebis in % = &&Sigma; "
+"Einzelergebnisse / (&&Sigma; Wertigkeit / 10))"
+
+msgid "Audit Finding"
+msgstr "Auditfeststellung"
+
+msgid "Audit measures"
+msgstr "Auditmaßnahmen"
+
+msgid "Audit objective"
+msgstr "Auditziel"
+
+msgid "Auditor"
+msgstr "Auditor"
+
+msgid "Auditor Team"
+msgstr "Auditteam"
+
+msgid "Audit preparation"
+msgstr "Auditvorbereitung"
+
+msgid "Audit questions"
+msgstr "Diese Auditfrage bearbeiten"
+
+msgid "Audit reports"
+msgstr "Auditreport"
+
+msgid "Audit scope:"
+msgstr "Betrachtungsbereich:"
+
+msgid "Audit scope"
+msgstr "Betrachtungsbereich"
+
+msgid "Audits using this question"
+msgstr "Audits, welche diese Frage benutzen"
+
+msgid "Audit Team"
+msgstr "Audit Team"
+
+msgid "Audit title"
+msgstr "Audittitel"
+
+msgid "Audit type"
+msgstr "Audittyp"
+
+msgid "Block"
+msgstr "Block"
+
+msgid "Cancel"
+msgstr "Abbrechen"
+
+msgid "Chap"
+msgstr "Kptl"
+
+msgid "Chapter"
+msgstr "Kapitel"
+
+msgid "closed"
+msgstr "geschlossen"
+
+msgid "Closed on"
+msgstr "Geschlossen am"
+
+msgid "conducted"
+msgstr "durchgeführt"
+
+msgid "Conducted"
+msgstr "Durchgeführt"
+
+msgid "Copy an audit question"
+msgstr "Auditfrage kopieren"
+
+msgid "Copy audit"
+msgstr "Audit kopieren"
+
+msgid "Copy Audit"
+msgstr "Audit kopieren"
+
+msgid "Copy this question"
+msgstr "Diese Auditfrage kopieren"
+
+msgid "Create new audit"
+msgstr "Neues Audit anlegen"
+
+msgid "Creator:"
+msgstr "Ersteller:"
+
+msgid "Creator"
+msgstr "Ersteller"
+
+msgid "Date:"
+msgstr "Datum:"
+
+msgid "Date"
+msgstr "Datum"
+
+msgid "Date of execution"
+msgstr "Datum der Ausführung"
+
+msgid "Date of planning"
+msgstr "Planungsdatum"
+
+msgid "degree of fulfillment"
+msgstr "Erfüllungsgrad"
+
+msgid "Delete"
+msgstr "Löschen"
+
+msgid "Description"
+msgstr "Beschreibung"
+
+msgid "Deviation"
+msgstr "Abweichung"
+
+msgid "discarded"
+msgstr "verworfen"
+
+msgid "Discarded"
+msgstr "Verworfen"
+
+msgid "Division"
+msgstr "Abteilung"
+
+msgid "Document control:"
+msgstr "Dokumentenlenkung:"
+
+msgid "done"
+msgstr "erledigt"
+
 msgid "Done"
 msgstr "Abgeschlossen"
+
+msgid "Do you really want to delete this question from the audit?"
+msgstr "Wollen Sie diese Frage wirklich aus dem Audit entfernen?"
+
+msgid "Due date"
+msgstr "Termin"
+
+msgid "Edit"
+msgstr "Bearbeiten"
+
+msgid "Evaluation-aspect / -criterium"
+msgstr "Bewertungsaspekt / -kriterium"
+
+msgid "External audit"
+msgstr "Externes Audit"
+
+msgid "Filing:"
+msgstr "Ablage:"
+
+msgid "Filter on chapter:"
+msgstr "Nach Normkapitel filtern:"
+
+msgid "Ful"
+msgstr "Erf"
+
+msgid "fulfilled"
+msgstr "erfüllt"
+
+msgid "Fulfillment"
+msgstr "Erfüllungsgrad"
+
+msgid "Further details"
+msgstr "Weitere Details"
+
+msgid "General audit information"
+msgstr "Generelle Audit Informationen"
+
+msgid "Generate PDF"
+msgstr "PDF generieren"
+
+msgid "important / big"
+msgstr "wichtig / groß"
+
+msgid "in effectiveness check"
+msgstr "in Effektivitätsprüfung"
+
+msgid "in progress"
+msgstr "in Bearbeitung"
+
+msgid "Internal audit"
+msgstr "Internes Audit"
+
+msgid "Measures"
+msgstr "Maßnahme"
+
+msgid "Measures container"
+msgstr "Maßnahmencontainer"
+
+msgid "new"
+msgstr "neu"
+
+msgid "Norm chapter"
+msgstr "Normkapitel"
+
+msgid "Norm classification"
+msgstr "Normklassifizierung"
+
+msgid "not fulfilled"
+msgstr "nicht erfüllt"
+
+msgid "not relevant / low"
+msgstr "nicht relevant / gering"
+
+msgid "of"
+msgstr "von"
+
+msgid "Ok"
+msgstr "Ok"
+
+msgid "open"
+msgstr "offen"
+
+msgid "Overview of audit questions"
+msgstr "Übersicht der Auditfragen"
+
+msgid "Page"
+msgstr "Seite"
+
+msgid "partially fulfilled"
+msgstr "teilweise erfüllt"
+
+msgid "Partial result impartial to rating / effect"
+msgstr "Teilergebnis unabhängig von Wertigkeit / Auswirkung"
+
+msgid "Participants"
+msgstr "Teilnehmner"
+
+msgid "PDF-Options"
+msgstr "PDF-Optionen"
+
+msgid "PDF-Print"
+msgstr "PDF-Druck"
+
+msgid "planned"
+msgstr "geplant"
+
+msgid "Planned"
+msgstr "Geplant"
 
 #: data/_apps/Audit/AuditOverviewTemplate.txt
 msgid "Planning date"
 msgstr "Planungs Datum"
 
-#: data/_apps/Audit/AuditPlanningPrintDialog.txt
 msgid "Please choose format:"
 msgstr "Bitte Format auswählen:"
 
-#: data/_apps/Audit/AuditPlanningPrintDialog.txt
 msgid "Print as report"
 msgstr "Als Bericht drucken"
 
-#: data/_apps/Audit/AuditPlanningPrintDialog.txt
 msgid "Print for auditing"
 msgstr "Zum Auditieren drucken"
 
-#: data/_apps/Audit/AuditReportForm.txt
+msgid "private"
+msgstr "privat"
+
+msgid "Private"
+msgstr "Privat"
+
 msgid "Process audit"
 msgstr "Prozessaudit"
 
-#: data/_apps/Audit/AuditReportForm.txt
 msgid "Product audit"
 msgstr "Produktaudit"
 
-#: data/_apps/Audit/AuditReportForm.txt
 msgid "Project audit"
 msgstr "Projektaudit"
 
-#: data/_apps/Audit/MeasuresEditTemplate.txt data/_apps/Audit/MeasuresForm.txt
-#: data/_apps/Audit/MeasuresViewTemplate.txt
-msgid "Protected"
-msgstr "Geschützt"
-
-#: data/_apps/Audit/AuditPlanningFirstPageInfoDefault.txt
-msgid "QM-Report"
-msgstr "QM-Bericht"
-
-#: data/_apps/Audit/AuditPlanningViewTemplate.txt
-msgid "Quality rating / effect"
-msgstr "Wertigkeit / Auswirkung"
-
-#: data/_apps/Audit/AuditElementEditTemplate.txt
-#: data/_apps/Audit/AuditElementForm.txt
-#: data/_apps/Audit/QuestionEditTemplate.txt
-#: data/_apps/Audit/QuestionViewTemplate.txt
-msgid "Question"
-msgstr "Frage"
-
-#: data/_apps/Audit/AuditElementForm.txt
-msgid "Rating / Effect"
-msgstr "Wertingkeit / Auswirkung"
-
-#: data/_apps/Audit/AuditPlanningFirstPageInfoDefault.txt
-msgid "Regardless of rating / effect, a measure has to be derived when questions are not satisfied. When multiple questions are not met, the measures have to be prioritised according to their rating / effect."
-msgstr "Bei nicht erfüllten Fragen muss unabhängig von der Wertigkeit / Auswirkung eine Maßnahme abgeleitet werden. Bei mehreren nicht erfüllten Fragen müssen nach Wertigkeit / Auswirkung die Maßnahmen priorisiert werden."
-
-#: data/_apps/Audit/MeasuresEditTemplate.txt data/_apps/Audit/MeasuresForm.txt
-#: data/_apps/Audit/MeasuresViewTemplate.txt
-msgid "Responsible"
-msgstr "Verantwortlich"
-
-#: data/_apps/Audit/AuditPlanningViewTemplate.txt
-msgid "Result"
-msgstr "Ergebnis"
-
-#: data/_apps/Audit/AuditPlanningViewTemplate.txt
-msgid "Result: %1%"
-msgstr "Ergebnis: %1%"
-
-#: data/_apps/Audit/CustomSkinActionformTemplate.txt
-msgid "Save"
-msgstr "Speichern"
-
-#: data/_apps/Audit/AuditElementEditTemplate.txt
-msgid "Rating of the question"
-msgstr "Wertigkeit der Frage"
-
-#: data/_apps/Audit/WebPreferences.txt
-msgid "Signal"
-msgstr "Ampel"
-
-#: data/_apps/Audit/AuditElementForm.txt
-msgid "Situation as it is"
-msgstr "Ist-Situation"
-
-#: data/_apps/Audit/AuditCalendar.txt
-#: data/_apps/Audit/AuditOverviewTemplate.txt
-#: data/_apps/Audit/AuditPlanningFirstPageInfoDefault.txt
-#: data/_apps/Audit/AuditReportEditTemplate.txt
-#: data/_apps/Audit/AuditReportViewTemplate.txt
-#: data/_apps/Audit/CustomSkinCommentPluginTemplate.txt
-#: data/_apps/Audit/MeasuresEditTemplate.txt data/_apps/Audit/MeasuresForm.txt
-#: data/_apps/Audit/MeasuresViewTemplate.txt
-msgid "Status"
-msgstr "Status"
-
-#: data/_apps/Audit/AuditReportForm.txt
-msgid "Supplier audit"
-msgstr "Lieferantenaudit"
-
-#: data/_apps/Audit/AuditReportForm.txt
-msgid "System audit"
-msgstr "Systemaudit"
-
-#: data/_apps/Audit/CustomSkinCommentPluginTemplate.txt
-#: data/_apps/Audit/WebPreferences.txt
-msgid "Task"
-msgstr "Aufgabe"
-
-#: data/_apps/Audit/CustomSkinCommentPluginTemplate.txt
-#: data/_apps/Audit/WebPreferences.txt
-msgid "Task contents"
-msgstr "Aufgabeninhalt"
-
-#: data/_apps/Audit/CustomSkinCommentPluginTemplate.txt
-#: data/_apps/Audit/WebPreferences.txt
-msgid "Task to"
-msgstr "Aufgabe an"
-
-#: data/_apps/Audit/AuditPlanningFirstPageInfoDefault.txt
-#: data/_apps/Audit/AuditReportEditTemplate.txt
-#: data/_apps/Audit/AuditReportViewTemplate.txt
-msgid "Used Standards"
-msgstr "benutzte Standards"
-
-#: data/_apps/Audit/AuditOverviewTemplate.txt
-#: data/_apps/Audit/AuditReportForm.txt
-msgid "Verification"
-msgstr "Überprüfung"
-
-#: data/_apps/Audit/AuditPlanningFirstPageInfoDefault.txt
-msgid "When all questions are not satisfied = 0%"
-msgstr "bei nicht Erfüllung aller Fragen = 0%"
-
-#: data/_apps/Audit/CustomSkinCommentPluginTemplate.txt
-#: data/_apps/Audit/MeasuresForm.txt data/_apps/Audit/WebPreferences.txt
-msgid "closed"
-msgstr "geschlossen"
-
-#: data/_apps/Audit/AuditPlanningFirstPageInfoDefault.txt
-msgid "degree of fulfillment"
-msgstr "Erfüllungsgrad"
-
-#: data/_apps/Audit/AuditReportForm.txt
-msgid "done"
-msgstr "erledigt"
-
-#: data/_apps/Audit/AuditPlanningFirstPageInfoDefault.txt
-msgid "fulfilled"
-msgstr "erfüllt"
-
-#: data/_apps/Audit/AuditPlanningFirstPageInfoDefault.txt
-msgid "important / big"
-msgstr "wichtig / groß"
-
-#: data/_apps/Audit/MeasuresForm.txt
-msgid "in effectiveness check"
-msgstr "in Effektivitätsprüfung"
-
-#: data/_apps/Audit/MeasuresForm.txt
-msgid "in progress"
-msgstr "in Bearbeitung"
-
-#: data/_apps/Audit/AuditReportForm.txt data/_apps/Audit/MeasuresForm.txt
-msgid "new"
-msgstr "neu"
-
-#: data/_apps/Audit/AuditPlanningFirstPageInfoDefault.txt
-msgid "not fulfilled"
-msgstr "nicht erfüllt"
-
-#: data/_apps/Audit/AuditPlanningFirstPageInfoDefault.txt
-msgid "not relevant / low"
-msgstr "nicht relevant / gering"
-
-#: data/_apps/Audit/AuditPlanningViewTemplate.txt
-msgid "of"
-msgstr "von"
-
-#: data/_apps/Audit/CustomSkinCommentPluginTemplate.txt
-#: data/_apps/Audit/WebPreferences.txt
-msgid "open"
-msgstr "offen"
-
-#: data/_apps/Audit/AuditPlanningFirstPageInfoDefault.txt
-msgid "partially fulfilled"
-msgstr "teilweise erfüllt"
-
-#: data/_apps/Audit/AuditReportForm.txt
-msgid "planned"
-msgstr "geplant"
-
-#: data/_apps/Audit/AuditReportForm.txt
-msgid "conducted"
-msgstr "durchgeführt"
-
-#: data/_apps/Audit/AuditReportForm.txt
-msgid "discarded"
-msgstr "verworfen"
-
-#: data/_apps/Audit/MeasuresForm.txt data/_apps/Audit/MeasuresViewTemplate.txt
 msgid "protected"
 msgstr "geschützt"
 
-#: data/_apps/Audit/AuditPlanningFirstPageInfoDefault.txt
+msgid "Protected"
+msgstr "Geschützt"
+
+msgid "QM-Report"
+msgstr "QM-Bericht"
+
+msgid "Quality rating / effect"
+msgstr "Wertigkeit / Auswirkung"
+
+msgid "Question"
+msgstr "Frage"
+
+msgid "Rating / Effect"
+msgstr "Wertingkeit / Auswirkung"
+
+msgid "Rating of the question"
+msgstr "Wertigkeit der Frage"
+
+msgid ""
+"Regardless of rating / effect, a measure has to be derived when questions "
+"are not satisfied. When multiple questions are not met, the measures have to "
+"be prioritised according to their rating / effect."
+msgstr ""
+"Bei nicht erfüllten Fragen muss unabhängig von der Wertigkeit / Auswirkung "
+"eine Maßnahme abgeleitet werden. Bei mehreren nicht erfüllten Fragen müssen "
+"nach Wertigkeit / Auswirkung die Maßnahmen priorisiert werden."
+
+msgid "Responsible"
+msgstr "Verantwortlich"
+
+msgid "Result"
+msgstr "Ergebnis"
+
+msgid "Rslt"
+msgstr "Erg"
+
+msgid "Rtg/Eff"
+msgstr "Wrt/Eff"
+
+msgid "Save"
+msgstr "Speichern"
+
+msgid "Signal"
+msgstr "Ampel"
+
+msgid "Situation as it is"
+msgstr "Ist-Situation"
+
+msgid "Status"
+msgstr "Status"
+
+msgid "Supplier audit"
+msgstr "Lieferantenaudit"
+
+msgid "System audit"
+msgstr "Systemaudit"
+
+msgid "Task"
+msgstr "Aufgabe"
+
+msgid "Task contents"
+msgstr "Aufgabeninhalt"
+
+msgid "Task to"
+msgstr "Aufgabe an"
+
+msgid ""
+"The question will still be available in other audits and will only be "
+"removed from this audit."
+msgstr ""
+"Die Frage wird anderen Audits weiterhin zur Verfügung stehen und wird "
+"lediglich aus diesem Audit entfernt."
+
+msgid "Title for block 1"
+msgstr "Titel für Block 1"
+
+msgid "Title for block 2"
+msgstr "Titel für Block 2"
+
+msgid "Title for block 3"
+msgstr "Titel für Block 3"
+
+msgid "Title for block 4"
+msgstr "Titel für Block 4"
+
+msgid "Title for block 5"
+msgstr "Titel für Block 5"
+
+msgid "Upload"
+msgstr "Hochladen"
+
+msgid "Used in"
+msgstr "Verwendet in"
+
+msgid "Used Standards"
+msgstr "benutzte Standards"
+
 msgid "very important / very big"
 msgstr "sehr wichtig / sehr groß"
 
-#: data/_apps/Audit/MeasuresViewTemplate.txt
 msgid "visible only for participants"
 msgstr "nur für Teilnehmer sichtbar"
 
-#: data/_apps/Audit/AuditPlanningFirstPageInfoDefault.txt
-msgid "rating / effect"
-msgstr "Wertigkeit / Auswirkung"
+msgid "When all questions are not satisfied = 0%"
+msgstr "bei nicht Erfüllung aller Fragen = 0%"
 
-#: data/_apps/Audit/AuditPlanningFirstPageInfoDefault.txt
 msgid "when all questions are satisfied = 100%"
 msgstr "bei Erfüllung aller Fragen = 100%"
 
-#: data/_apps/Audit/AuditPlanningFirstPageInfoDefault.txt
 msgid "when questions are partially satisfied = 50%"
 msgstr "bei tw. Erfüllung aller Fragen = 50%"
 
-#: data/_apps/Audit/AuditPlanningFirstPageInfoDefault.txt
-msgid "Audit data"
-msgstr "Auditdaten"
-
-#: data/_apps/Audit/UploadDialogTemplate.txt
-msgid "Back to %1"
-msgstr "Zurück zu %1"
+msgid "You are about to delete the question from this audit."
+msgstr "Sie entfernen gerade eine Frage von dem Audit."
