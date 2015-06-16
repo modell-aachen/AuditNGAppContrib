@@ -10,7 +10,9 @@
 %TMPL:END%
 
 %TMPL:DEF{"auditmanagement"}%
-%INCLUDE{"%SYSTEMWEB%/JSCalendarContribInline"}%
+<input type="hidden" name="WebPreferences_ALLOWWEBVIEW" value="%<nop>IF{$quot$'URLPARAM{Private}'='private'$quot then=$quot%<nop>URLPARAM{AuditTeam}%,%<nop>URLPARAM{Auditor}%$quot else=$quot$quot}%" />
+<input type="hidden" name="WebPreferences_ALLOWWEBCHANGE" value="%<nop>URLPARAM{AuditTeam}%,%<nop>URLPARAM{Auditor}%" />
+<!-- JSCalendarContribInline -->%INCLUDE{"%SYSTEMWEB%/JSCalendarContribInline"}%<!-- /JSCalendarContribInline -->
 <div class="widgetBlockTitle">
 %MAKETEXT{"General audit information"}%
 </div>
