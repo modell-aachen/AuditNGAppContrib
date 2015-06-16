@@ -60,7 +60,7 @@ jQuery(function($){
     var loadEditDialog = function() {
         var question = $('input[name="Question"]').val();
         var $dialogContainer = $('<div></div>').addClass('dialogContainer').hide().appendTo('body');
-        var url = foswiki.getPreference('SCRIPTURL') + '/rest' + foswiki.getPreference('SCRIPTSUFFIX') + '/RenderPlugin/template?render=1;name=AuditElementEdit;expand=copyQuestionDialog;question=' + encodeURIComponent(question) + ';topic=' + encodeURIComponent(foswiki.getPreference('WEB').replace(/\//g, '.').replace(/.[^.]*$/, '') + '.DummyTopic');
+        var url = foswiki.getPreference('SCRIPTURL') + '/rest' + foswiki.getPreference('SCRIPTSUFFIX') + '/RenderPlugin/template?render=1;name=AuditElementEdit;expand=copyQuestionDialog;question=' + encodeURIComponent(question) + ';topic=' + encodeURIComponent(foswiki.getPreference('WEB').replace(/\//g, '.') + '.' + foswiki.getPreference('TOPIC'));
         $dialogContainer.load(url, function() {
             $dialogContainer.find('form').ajaxForm({
                 beforeSerialize: function($form, options) {
