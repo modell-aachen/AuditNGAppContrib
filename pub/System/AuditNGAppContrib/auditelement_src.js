@@ -46,7 +46,7 @@ jQuery(function($){
     });
 
     var updateButton = function() {
-        var $button = $('.editQuestion');
+        var $button = $('.copyQuestion');
         var question = $('input[name="Question"]').val();
         if(question) {
             $button.removeClass('disabledButton');
@@ -60,7 +60,7 @@ jQuery(function($){
     var loadEditDialog = function() {
         var question = $('input[name="Question"]').val();
         var $dialogContainer = $('<div></div>').addClass('dialogContainer').hide().appendTo('body');
-        var url = foswiki.getPreference('SCRIPTURL') + '/rest' + foswiki.getPreference('SCRIPTSUFFIX') + '/RenderPlugin/template?render=1;name=AuditElementEdit;expand=editQuestionDialog;question=' + encodeURIComponent(question) + ';topic=' + encodeURIComponent(foswiki.getPreference('WEB').replace(/\//g, '.').replace(/.[^.]*$/, '') + '.DummyTopic');
+        var url = foswiki.getPreference('SCRIPTURL') + '/rest' + foswiki.getPreference('SCRIPTSUFFIX') + '/RenderPlugin/template?render=1;name=AuditElementEdit;expand=copyQuestionDialog;question=' + encodeURIComponent(question) + ';topic=' + encodeURIComponent(foswiki.getPreference('WEB').replace(/\//g, '.').replace(/.[^.]*$/, '') + '.DummyTopic');
         $dialogContainer.load(url, function() {
             $dialogContainer.find('form').ajaxForm({
                 beforeSerialize: function($form, options) {
@@ -75,7 +75,8 @@ jQuery(function($){
                     var $div = $('<div></div>').addClass('question');
 
                     var $input = $('<input type="hidden" name="Question" />');
-                    $input.val(question);
+                    var created = $data.find('input[name="created"]').val();
+                    $input.val(created);
                     $div.append($input);
 
                     var $title = $('<span></span>');
@@ -89,7 +90,7 @@ jQuery(function($){
                     if(key) {
                         $('input[name="validation_key"]').val(key);
                     }
-                    $('.editQuestionDialog').dialog('close'); // destroy?
+                    $('.copyQuestionDialog').dialog('close'); // destroy?
                 },
                 error: function(data) {
                     if($.blockUI !== undefined) $.unblockUI();
@@ -102,7 +103,7 @@ jQuery(function($){
         });
     };
 
-    $('.editQuestion').click(function() {
+    $('.copyQuestion').click(function() {
         var $this = $(this);
         if(!$this.hasClass('disabledButton')) loadEditDialog();
         return false;

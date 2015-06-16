@@ -2,7 +2,7 @@
 %TMPL:INCLUDE{"view"}%
 
 %TMPL:DEF{"content"}%%TMPL:P{"simpleheader"}%
-%TMPL:DEF{"content"}%<!-- this form will tell the "add new question" popup the actual name of the AUTOINC-->
+<!-- this form will tell the "add new question" popup the actual name of the AUTOINC-->
 <form class="response">
 <input type="hidden" name="created" value="%TOPIC%" />
 </form>
