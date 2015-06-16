@@ -1,8 +1,8 @@
 %META:TOPICINFO{author="BaseUserMapping_333" date="1428504874" format="1.1" version="2"}%
 | *Name* | *Type* | *Size* | *Values* | *Tool Message* | *Attributes* |
 | Finding | textarea | 50x10 | | %MAKETEXT{"Situation as it is"}% | |
-| Fulfillment | select | 1 | 10,5,1,0 | %MAKETEXT{"Fulfilment"}% |  |
-| QualityRating | select | 1 | 1,5,10 | %MAKETEXT{"Rating / Effect"}% | |
+| Fulfillment | select+values | 1 | %MAKETEXT{"10 (fulfilled)"}%=10,%MAKETEXT{"5 (partially fulfilled)"}%=5,%MAKETEXT{"0 (not fulfilled)"}%=0 | %MAKETEXT{"Fulfillment"}% |  |
+| QualityRating | select+values | 1 | %MAKETEXT{"1 (not relevant / low)"}%=1,%MAKETEXT{"5 (important / big)"}%=5,%MAKETEXT{"10 (very important / very big)"}%=10 | %MAKETEXT{"Rating / Effect"}% | |
 | Block | select+values | 1 | %QUERY{"'%BASEWEB%.WebHome'/Block1Title"}%=1,%QUERY{"'%BASEWEB%.WebHome'/Block2Title"}%=2,%QUERY{"'%BASEWEB%.WebHome'/Block3Title"}%=3,%QUERY{"'%BASEWEB%.WebHome'/Block4Title"}%=4,%QUERY{"'%BASEWEB%.WebHome'/Block5Title"}%=5 | %MAKETEXT{"Block"}% | |
 | Question | select2 | 50 | %SCRIPTURL{view}%/%AUDITWEB%/AuditAjaxHelper?contenttype=text/plain;skin=text;section=question;web=%BASEWEB% | %MAKETEXT{"Question"}% | initUrl="%SCRIPTURL{view}%/%AUDITWEB%/AuditAjaxHelper?section=question_init;contenttype=text/plain;skin=text;" |
 
