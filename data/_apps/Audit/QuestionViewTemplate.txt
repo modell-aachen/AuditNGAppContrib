@@ -13,4 +13,16 @@
 <tr><td> %MAKETEXT{"Chapter"}% </td><td> : </td><td> %QUERY{"Chapter"}% </td></tr>
 </table>
 </div>
+<div class="widgetBlockTitle">%MAKETEXT{"Audits using this question"}%</div>
+<div class="widgetBlockContent">
+%SOLRSEARCH{"field_Question_s:(%BASETOPIC% OR %BASEWEB%.%BASETOPIC%)"
+ facets="web"
+ limit="999"
+ rows="1"
+ format="<nop>"
+ format_web="<tr><td>[[$key.WebAuditConducting]]</td></table>"
+ header_web="<table class='metaDataHead'><tbody>"
+ footer_web="</tbody></table>"
+}%
+</div>
 %TMPL:END%
