@@ -1,0 +1,27 @@
+%{<verbatim class="tml"/>}%
+%TMPL:INCLUDE{"view"}%
+%{</verbatim>}%
+
+%{<verbatim class="tml"/>}%
+%TMPL:DEF{"content"}%
+<div class="widgetBlockTitle">
+%MAKETEXT{"Copy Audit"}%
+</div>
+<div class="widgetBlockContent">
+<form action="%SCRIPTURLPATH{rest}%/CustomerPlugin/copyautoinc" method="post" name="%WEB%">
+<input type="hidden" name="targetweb" value="%AUDITWEB%.AuditAUTOINC0000" />
+<input type="hidden" name="clearpref" value="Finding" />
+<input type="hidden" name="setpref" value="Fulfillment=0" />
+<input type="hidden" name="setpref" value="Status=planned" />
+%SOLRSEARCH{"web:%AUDITWEB%.* form:*AuditReportForm topic:WebHome -web:*AuditTemplate"
+  rows="999"
+  fields="web,topic,title"
+  format="<option value='$web'>$title ($web)</option>"
+  header="<select name='srcweb'>"
+  separator="$n"
+  footer="</select><input type='submit' />"
+  sort="web"
+}%
+</form>
+</div>%TMPL:END%
+%{</verbatim>}%

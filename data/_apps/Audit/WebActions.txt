@@ -1,1 +1,2 @@
    * <a href="%SCRIPTURL{rest}%/WebAutoIncPlugin/create?newweb=%AUDITWEB%.AuditAUTOINC0000&baseweb=%AUDITWEB%.AuditTemplate&nosearchall=off&redirectto=newweb">%MAKETEXT{"Create new audit"}%</a>
+   * [[%AUDITWEB%.AuditCopy][%MAKETEXT{"Copy audit"}%]]
