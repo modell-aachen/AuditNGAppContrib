@@ -29,7 +29,7 @@
 <div class="widgetBlockContent">
 <table class="tablesorter planning">
 <thead>
-<tr style='white-space:nowrap;'><th>%MAKETEXT{"Audit criteria"}%</th><th>%MAKETEXT{"Norm chapter"}%</th><th>%MAKETEXT{"Quality rating / effect"}%</th><th>%MAKETEXT{"Audit Finding"}%</th><th>%MAKETEXT{"Fulfillment"}%</th><th>%MAKETEXT{"Result"}%</th><th %IF{"$'URLPARAM{fillout}' and context QRUploadPluginEnabled" else="class='modacPrintHide'"}%></th></tr>
+<tr style='white-space:nowrap;'><th>%MAKETEXT{"Audit criteria"}%</th><th><span class="modacPrintHide">%MAKETEXT{"Norm chapter"}%</span><span class="printOnly">%MAKETEXT{"Chap"}%</span></th><th><span class="modacPrintHide">%MAKETEXT{"Quality rating / effect"}%</span><span class="printOnly">%MAKETEXT{"Rtg/Eff"}%</span></th><th>%MAKETEXT{"Audit Finding"}%</th><th><span class="modacPrintHide">%MAKETEXT{"Fulfillment"}%</span><span class="printOnly">%MAKETEXT{"Ful"}%</span></th><th><span class="modacPrintHide">%MAKETEXT{"Result"}%</span><span class="printOnly">%MAKETEXT{"Rslt"}%</span></th><th %IF{"$'URLPARAM{fillout}' and context QRUploadPluginEnabled" else="class='modacPrintHide'"}%></th></tr>
 </thead>
 <tbody>
 <!-- elements -->%SOLRSEARCH{

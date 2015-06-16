@@ -33,3 +33,9 @@
 %RED%%MAKETEXT{"100% only possible, when records are available"}%%ENDCOLOR%
 
 <b>%MAKETEXT{"Regardless of rating / effect, a measure has to be derived when questions are not satisfied. When multiple questions are not met, the measures have to be prioritised according to their rating / effect."}%</b>
+
+---++ %MAKETEXT{"*Abbreviations*"}%
+
+<table class="AuditAbbr"><tbody>
+<tr><td>%MAKETEXT{"Chap"}% = %MAKETEXT{"Norm chapter"}%</td><td>%MAKETEXT{"Rtg/Eff"}% = %MAKETEXT{"Rating / Effect"}%</td><td>%MAKETEXT{"Ful"}% = %MAKETEXT{"Fulfillment"}%</td><td>%MAKETEXT{"Rslt"}% = %MAKETEXT{"Result"}%</td></tr>
+</tbody></table>
