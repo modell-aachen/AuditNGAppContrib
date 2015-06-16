@@ -5,7 +5,7 @@
 <div class="widgetBlockContent">
 <table class="tablesorter">
 <thead>
-<tr><th width="33%">%MAKETEXT{"Deviation"}%</th><th>%MAKETEXT{"Fulfillment"}%</th><th>%MAKETEXT{"Measures"}%</th></tr>
+<tr><th width="33%">%MAKETEXT{"Deviation"}%</th><th>%MAKETEXT{"Result"}%</th><th>%MAKETEXT{"Measures"}%</th></tr>
 </thead>
 <tbody>
 %SOLRSEARCH{
