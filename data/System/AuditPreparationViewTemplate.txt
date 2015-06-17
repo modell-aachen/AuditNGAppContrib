@@ -22,12 +22,12 @@
   web="%WEB%"
   rows="9999"
   format="<tr>
-<td style='width: 50%;'>$percentQUERY{\"'%AUDITWEB%.$field_Question_s'/AspectCriteria\"}$percent</td><td>$percentQUERY{\"'%AUDITWEB%.$field_Question_s'/Chapter\"}$percent</td><td>$field_QualityRating_s</td><td class='modacPrintHide'><a href='%SCRIPTURLPATH{edit}%/%WEB%/$topic?t=%GMTIME{"$epoch"}%;nowysiwyg=1' title='%MAKETEXT{"Edit"}%'>$percentICON{pencil}$percent</a>&nbsp;<a class='jqUIDialogLink' href='%SCRIPTURL{rest}%/RenderPlugin/template?name=AuditElementView;topic=%WEB%.$topic;render=1;expand=QuestionDelete' title='%MAKETEXT{"Delete"}%'>$percentICON{remove}$percent</a></td>
+<td style='width: 50%;'>$percentQUERY{\"'%AUDITWEB%.$field_Question_s'/AspectCriteria\"}$percent</td><td>$percentQUERY{\"'%AUDITWEB%.$field_Question_s'/Chapter\"}$percent</td><td>$field_QualityRating_s</td><td class='modacPrintHide'><a href='%SCRIPTURLPATH{edit}%/%WEB%/$topic?t=%GMTIME{"$epoch"}%' title='%MAKETEXT{"Edit"}%'>$percentICON{pencil}$percent</a>&nbsp;<a class='jqUIDialogLink' href='%SCRIPTURL{rest}%/RenderPlugin/template?name=AuditElementView;topic=%WEB%.$topic;render=1;expand=QuestionDelete' title='%MAKETEXT{"Delete"}%'>$percentICON{remove}$percent</a></td>
 </tr>"
   fields="field_Question_s,field_QualityRating_s,web,topic,webtopic"
   sort="topic"
   footer=""
 }%<!-- /elements -->
 </table>
-<div class="modacPrintHide">%BUTTON{"%MAKETEXT{"Add audit element"}%" icon="new" class="modacPrintHide" href="%SCRIPTURLPATH{"edit"}%/%WEB%/ElementAUTOINC00?Block=%block%;formtemplate=%AUDITWEB%.AuditElementForm;template=%AUDITWEB%.AuditElementEdit;nowysiwyg=1;Fulfillment=0;origin=%BASEWEB%.%BASETOPIC%;t=%GMTIME{"$epoch"}%"}%</div>
+<div class="modacPrintHide">%BUTTON{"%MAKETEXT{"Add audit element"}%" icon="new" class="modacPrintHide" href="%SCRIPTURLPATH{"edit"}%/%WEB%/ElementAUTOINC00?Block=%block%;formtemplate=%AUDITWEB%.AuditElementForm;template=%AUDITWEB%.AuditElementEdit;Fulfillment=0;origin=%BASEWEB%.%BASETOPIC%;t=%GMTIME{"$epoch"}%"}%</div>
 </div>%TMPL:END%

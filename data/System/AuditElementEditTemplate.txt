@@ -23,23 +23,23 @@
 </div>
 %TMPL:END%
 
-%TMPL:DEF{"addQuestionDialog"}%<div class="jqUIDialog {width:600}" style="display:none" id="addQuestionDialog" title="%MAKETEXT{"Add a new audit question"}%">
+%TMPL:DEF{"addQuestionDialog"}%<div class="jqUIDialog {width:700}" style="display:none" id="addQuestionDialog" title="%MAKETEXT{"Add a new audit question"}%">
 <form action="%SCRIPTURL{save}%/%AUDITWEB%/QuestionAUTOINC0000" method="post" id="addForm">
-<input type="hidden" name="formtemplate" value="%AUDITWEB%.QuestionForm" />
+<input type="hidden" name="formtemplate" value="%AUDITWEB%.AuditQuestionForm" />
 <table class="metaDataHead">
-<tr><td>%MAKETEXT{"Evaluation-aspect / -criterium"}%</td><td>:</td><td>%RENDERFOREDIT{field="AspectCriteria" form="%AUDITWEB%.QuestionForm" format="$edit"}%</td></tr>
-<tr><td>%MAKETEXT{"Norm chapter"}%</td><td>:</td><td>%RENDERFOREDIT{field="Chapter" form="%AUDITWEB%.QuestionForm" format="$edit"}%</td></tr>
+<tr><td>%MAKETEXT{"Evaluation-aspect / -criterium"}%</td><td>:</td><td>%RENDERFOREDIT{field="AspectCriteria" form="%AUDITWEB%.AuditQuestionForm" format="$edit"}%</td></tr>
+<tr><td>%MAKETEXT{"Norm chapter"}%</td><td>:</td><td>%RENDERFOREDIT{field="Chapter" form="%AUDITWEB%.AuditQuestionForm" format="$edit"}%</td></tr>
 <tr><td colspan="3"><a class="jqUIDialogButton jqUIDialogSubmit {icon:'ui-icon-circle-check'}">%MAKETEXT{"Ok"}%</a><a class="jqUIDialogButton jqUIDialogClose {icon:'ui-icon-cancel'}">%MAKETEXT{"Cancel"}%</a></td></tr>
 </table>
 </form>
 </div>%TMPL:END%
 
-%TMPL:DEF{"copyQuestionDialog"}%<div class="jqUIDialog {width:600, autoOpen:true} copyQuestionDialog" style="display:none" title="%MAKETEXT{"Copy an audit question"}%">
+%TMPL:DEF{"copyQuestionDialog"}%<div class="jqUIDialog {width:700, autoOpen:true} copyQuestionDialog" style="display:none" title="%MAKETEXT{"Copy an audit question"}%">
 <form action="%SCRIPTURL{save}%/%AUDITWEB%/QuestionAUTOINC0000" method="post">
-<input type="hidden" name="formtemplate" value="%AUDITWEB%.QuestionForm" />
+<input type="hidden" name="formtemplate" value="%AUDITWEB%.AuditQuestionForm" />
 <table class="metaDataHead">
-<tr><td>%MAKETEXT{"Evaluation-aspect / -criterium"}%</td><td>:</td><td>%RENDERFOREDIT{field="AspectCriteria" form="%AUDITWEB%.QuestionForm" format="$edit" topic="%AUDITWEB%.%URLPARAM{"question"}%"}%</td></tr>
-<tr><td>%MAKETEXT{"Norm chapter"}%</td><td>:</td><td>%RENDERFOREDIT{field="Chapter" form="%AUDITWEB%.QuestionForm" format="$edit" topic="%AUDITWEB%.%URLPARAM{"question"}%"}%</td></tr>
+<tr><td>%MAKETEXT{"Evaluation-aspect / -criterium"}%</td><td>:</td><td>%RENDERFOREDIT{field="AspectCriteria" form="%AUDITWEB%.AuditQuestionForm" format="$edit" topic="%AUDITWEB%.%URLPARAM{"question"}%"}%</td></tr>
+<tr><td>%MAKETEXT{"Norm chapter"}%</td><td>:</td><td>%RENDERFOREDIT{field="Chapter" form="%AUDITWEB%.AuditQuestionForm" format="$edit" topic="%AUDITWEB%.%URLPARAM{"question"}%"}%</td></tr>
 <tr><td colspan="3"><a class="jqUIDialogButton jqUIDialogSubmit {icon:'ui-icon-circle-check'}">%MAKETEXT{"Ok"}%</a><a class="jqUIDialogButton jqUIDialogClose {icon:'ui-icon-cancel'}">%MAKETEXT{"Cancel"}%</a></td></tr>
 </table>
 </form>

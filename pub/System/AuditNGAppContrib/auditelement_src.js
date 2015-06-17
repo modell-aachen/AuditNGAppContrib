@@ -100,6 +100,9 @@ jQuery(function($){
                     alert('An error occured while saving');
                 }
             });
+
+            // Init editor formfield
+            $('textarea.ma-textarea-cke').ckeditor($('body').getCommonPrefs().config.formfield);
         });
     };
 
