@@ -45,7 +45,7 @@
   footer="%IF{"$'URLPARAM{fillout}'" then="$percentTMPL:P{\"filler\" count=\"1\"}$percent$percentTMPL:P{\"filler\" count=\"2\"}$percent$percentTMPL:P{\"filler\" count=\"3\"}$percent$percentTMPL:P{\"filler\" count=\"4\"}$percent$percentTMPL:P{\"filler\" count=\"5\"}$percent"}%"
 }% %IF{"$'URLPARAM{fillout}'" then="$percentTMPL:P{\"fillerCheckNoResults\" block=\"%block%\"}$percent"}%<!-- /elements -->
 </table>
-<div class="modacPrintHide">%BUTTON{"%MAKETEXT{"Add audit element"}%" icon="new" class="modacPrintHide" href="%SCRIPTURLPATH{"edit"}%/%WEB%/ElementAUTOINC00?Block=%block%;formtemplate=%AUDITWEB%.AuditElementForm;template=%AUDITWEB%.AuditElementEdit;t=%GMTIME{"$epoch"}%"}%</div>
+<div class="modacPrintHide">%BUTTON{"%MAKETEXT{"Add audit element"}%" icon="new" class="modacPrintHide" href="%SCRIPTURLPATH{"edit"}%/%WEB%/ElementAUTOINC00?Block=%block%;formtemplate=%AUDITWEB%.AuditElementForm;template=%AUDITWEB%.AuditElementEdit;origin=%WEB%.%TOPIC%;t=%GMTIME{"$epoch"}%"}%</div>
 </div>
 </div>%TMPL:END%
 
