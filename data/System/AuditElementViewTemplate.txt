@@ -8,7 +8,7 @@
 %TMPL:DEF{"QuestionDelete"}%<div class="jqUIDialog" title="%MAKETEXT{"Do you really want to delete this question from the audit?"}%">
 <form name="rename" class="modacDialogAppendable modacHideDialog" action="%SCRIPTURLPATH{"rename"}%/%WEB%/%TOPIC%" method="post">
 <input type="hidden" name="newweb" value="%TRASHWEB%" />
-<input type="hidden" name="newtopic" value="%TOPIC%" />
+<input type="hidden" name="newtopic" value="%SUBST{text="%BASEWEB%" pattern="\." format="_"}%_%TOPIC%_%GMTIME{"$epoch"}%" />
 <input type="hidden" name="nonwikiword" value="on" />
 <div class="foswikiFormSteps">
 <div class="foswikiFormStep foswikiLast">
