@@ -20,7 +20,7 @@
  limit="999"
  rows="1"
  format="<nop>"
- format_web="<tr><td>[[$key.WebAuditConducting]]</td></table>"
+ format_web="<tr><td>[[$key.WebAuditConducting][$key: $percentTOPICTITLE{$key.%HOMETOPIC%}$percent]]</td></tr>"
  header_web="<table class='metaDataHead'><tbody>"
  footer_web="</tbody></table>"
 }%

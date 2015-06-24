@@ -28,6 +28,6 @@
  limit=\"999\"
  rows=\"1\"
  format=\"<nop>\"
- format_web=\"[[$dollarkey.WebAuditConducting][$dollarkey]]\"
- separator_web=\", \"
+ format_web=\"[[$dollarkey.WebAuditConducting][$dollarkey: $dollarpercentTOPICTITLE{$dollarkey.%HOMETOPIC%}$dollarpercent]]\"
+ separator_web=\"<br/>\"
 }$percent%TMPL:END%
