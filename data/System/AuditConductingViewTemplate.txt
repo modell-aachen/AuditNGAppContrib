@@ -25,7 +25,7 @@
 
 %TMPL:DEF{"printHeaderHeight"}%1.5cm%TMPL:END%
 
-%TMPL:DEF{"block"}%<div class="auditPlanningBlock"><div class="Princeheader printOnly printme"><div style="float:left"><h1>%RENDERFORDISPLAY{field="Block%block%Title" topic="%WEB%.WebHome" format="$value"}%</h1></div><div style="float:right;white-space:nowrap;"><h1>%MAKETEXT{"Result: [_1]%" args="<span class='result'></span>"}%</h1></div></div>
+%TMPL:DEF{"block"}%<div class="auditPlanningBlock"><div class="Princeheader printOnly printme"><div style="float:left"><h1>%QUERY{"'%WEB%/%HOMETOPIC%'/Block%block%Title"}%</h1></div><div style="float:right;white-space:nowrap;"><h1>%MAKETEXT{"Result: [_1]%" args="<span class='result'></span>"}%</h1></div></div>
 <div class="widgetBlockTitle modacPrintHide">%RENDERFORDISPLAY{field="Block%block%Title" topic="%WEB%.WebHome" format="$value"}%<div style='float:right; white-space:nowrap;'>%MAKETEXT{"Result: [_1]%" args="<span class='result'></span>"}%</div></div>
 <div class="widgetBlockContent">
 <table class="tablesorter planning">
