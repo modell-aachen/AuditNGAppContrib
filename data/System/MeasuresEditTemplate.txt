@@ -1,5 +1,6 @@
 %META:TOPICINFO{author="BaseUserMapping_333" date="1417776135" format="1.1" version="1"}%
 %TMPL:INCLUDE{edit}%
+%TMPL:INCLUDE{"AuditBreadcrumbs"}%
 
 %TMPL:DEF{"content"}%%TMPL:P{"simpleheader"}%
 %TMPL:P{"formstart"}%%TMPL:P{"formtop"}%

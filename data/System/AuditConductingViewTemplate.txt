@@ -1,4 +1,5 @@
 %TMPL:INCLUDE{"SystemView"}%
+%TMPL:INCLUDE{"AuditBreadcrumbs"}%
 
 %TMPL:DEF{"script:skinbase"}%%TMPL:PREV%%{
 }%%TMPL:P{"LIBJS" id="AuditNGAppContrib/auditplanning" requires="JQUERYPLUGIN::FOSWIKI"}%%TMPL:END%

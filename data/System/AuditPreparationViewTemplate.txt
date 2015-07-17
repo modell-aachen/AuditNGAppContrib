@@ -1,4 +1,5 @@
 %TMPL:INCLUDE{"SystemView"}%
+%TMPL:INCLUDE{"AuditBreadcrumbs"}%
 
 %TMPL:DEF{"content"}%
 %FORMATLIST{"%FORMATLIST{"%RENDERFORDISPLAY{form="%AUDITWEB%.AuditElementForm" format="$origvalues" fields="Block"}%" format="$percentIF{\"'%WEB%.%HOMETOPIC%'/Block$1Title != ''\" then=\"$1\"}$percent"}%"

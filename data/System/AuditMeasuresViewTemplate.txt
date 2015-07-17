@@ -1,4 +1,5 @@
 %TMPL:INCLUDE{"SystemView"}%
+%TMPL:INCLUDE{"AuditBreadcrumbs"}%
 
 %TMPL:DEF{"content"}%
 <div class="widgetBlockTitle">%MAKETEXT{"Audit measures"}%</div>

@@ -1,5 +1,6 @@
 %{<verbatim class="tml"/>}%
 %TMPL:INCLUDE{"view"}%
+%TMPL:INCLUDE{"AuditBreadcrumbs"}%
 %{</verbatim>}%
 
 %{<verbatim class="tml"/>}%

@@ -1,4 +1,5 @@
 %TMPL:INCLUDE{"view"}%
+%TMPL:INCLUDE{"AuditBreadcrumbs"}%
 
 %TMPL:DEF{"script"}%%TMPL:P{"LIBJS" id="AuditNGAppContrib/auditquestion" requires="JQUERYPLUGIN::FOSWIKI"}%%TMPL:END%
 

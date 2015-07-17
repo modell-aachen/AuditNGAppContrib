@@ -1,7 +1,6 @@
 %META:TOPICINFO{author="BaseUserMapping_333" date="1425545935" format="1.1" version="8"}%
 %TMPL:INCLUDE{"PrintOnlyView"}%
-
-%TMPL:DEF{"breadcrumb:currentweb"}%%TMPL:P{"breadcrumb:separator"}%<a href='%SCRIPTURLPATH{"view"}%/%AUDITWEB%/%HOMETOPIC%'>%MAKETEXT{"[_1] Web" args="<nop>%AUDITWEB%"}%</a>%TMPL:P{"breadcrumb:separator"}%<a href="%SCRIPTURLPATH{"view"}%/%WEB%/%HOMETOPIC%">%MAKETEXT{"[_1] Web" args="<nop>%WEB%"}%</a>%TMPL:END%
+%TMPL:INCLUDE{"AuditBreadcrumbs"}%
 
 %TMPL:DEF{"content"}%%TMPL:P{"simpleheader"}%
 <div style="width: 70%; float:left;margin-right:1%;">
