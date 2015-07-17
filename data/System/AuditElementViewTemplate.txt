@@ -10,6 +10,7 @@
 <input type="hidden" name="newweb" value="%TRASHWEB%" />
 <input type="hidden" name="newtopic" value="%SUBST{text="%BASEWEB%" pattern="\." format="_"}%_%TOPIC%_%GMTIME{"$epoch"}%" />
 <input type="hidden" name="nonwikiword" value="on" />
+<input type="hidden" name="redirectto" value="%BASEWEB%/WebAuditPreparation" />
 <div class="foswikiFormSteps">
 <div class="foswikiFormStep foswikiLast">
 %MAKETEXT{"You are about to delete the question from this audit."}%
