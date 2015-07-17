@@ -1,7 +1,7 @@
 %TMPL:INCLUDE{"SystemView"}%
 
 %TMPL:DEF{"content"}%
-%FORMATLIST{"%RENDERFORDISPLAY{form="%AUDITWEB%.AuditElementForm" format="$origvalues" fields="Block"}%"
+%FORMATLIST{"%FORMATLIST{"%RENDERFORDISPLAY{form="%AUDITWEB%.AuditElementForm" format="$origvalues" fields="Block"}%" format="$percentIF{\"'%WEB%.%HOMETOPIC%'/Block$1Title != ''\" then=\"$1\"}$percent"}%"
   format="$percentTMPL:P{\"block\" block=\"$1\"}$percent"
   separator="<div class='pdfPageBreak'></div>"
 }%

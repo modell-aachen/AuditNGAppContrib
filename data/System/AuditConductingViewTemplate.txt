@@ -5,7 +5,7 @@
 
 %TMPL:DEF{"content"}%%ADDTOZONE{"head" id="printOnlyCss" text="<link rel='stylesheet' href='%PUBURLPATH%/%SYSTEMWEB%/AuditNGAppContrib/auditplanning.css' type='text/css' media='all' />"}%
 %IF{"$'URLPARAM{cover}'='print'" then="$percentTMPL:P{FirstPage}$percent" else="<!-- not using print cover -->"}%
-%FORMATLIST{"%RENDERFORDISPLAY{form="%AUDITWEB%.AuditElementForm" format="$origvalues" fields="Block"}%"
+%FORMATLIST{"%FORMATLIST{"%RENDERFORDISPLAY{form="%AUDITWEB%.AuditElementForm" format="$origvalues" fields="Block"}%" format="$percentIF{\"'%WEB%.%HOMETOPIC%'/Block$1Title != ''\" then=\"$1\"}$percent"}%"
   format="$percentTMPL:P{\"block\" block=\"$1\"}$percent"
   separator="<div class='pdfPageBreak'></div>"
 }%
