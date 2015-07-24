@@ -64,4 +64,7 @@ pub/System/AuditNGAppContrib/auditelement.js 0644
 pub/System/AuditNGAppContrib/auditplanning.css 0644
 pub/System/AuditNGAppContrib/auditplanning.js 0644
 pub/System/AuditNGAppContrib/auditquestion.js 0644
+pub/System/AuditNGAppContrib/page_misc_de.png 0644
+pub/System/AuditNGAppContrib/page_misc_en.png 0644
+pub/System/AuditNGAppContrib/page_pdf.png 0644
 locale/AuditNGAppContrib/de.po 0644

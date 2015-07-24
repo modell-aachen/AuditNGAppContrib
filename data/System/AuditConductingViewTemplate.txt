@@ -11,7 +11,7 @@
   separator="<div class='pdfPageBreak'></div>"
 }%
 ---++ %MAKETEXT{"Attach files to this audit"}%
-<div>%DNDUPLOAD{width="100%"}%</div>
+<-- Note: this also loads the js/css files for the popups --><div>%DNDUPLOAD{width="100%"}%</div>
 %TMPL:END%
 
 %TMPL:DEF{"printTab"}%<li>
@@ -41,7 +41,7 @@
   web="%WEB%"
   rows="9999"
   format="<tr>
-<td style='width: 50%;'>$percentQUERY{\"'%AUDITWEB%.$field_Question_s'/AspectCriteria\"}$percent</td><td>$percentQUERY{\"'%AUDITWEB%.$field_Question_s'/Chapter\"}$percent</td><td>$field_QualityRating_s</td><td style='vertical-align:top;width: 50%;%IF{"$'URLPARAM{fillout}'" then="min-height:%TMPL:P{"filoutMinHeight"}%;"}%'>$field_Finding_s</td><td>$field_Fulfillment_s</td><td>$percentCALC{\"$dollarINT($field_QualityRating_s * $field_Fulfillment_s)\"}$percent</td><td %IF{"$'URLPARAM{fillout}' and context QRUploadPluginEnabled" else="class='modacPrintHide'"}%><a class='modacPrintHide' href='%SCRIPTURLPATH{edit}%/%WEB%/$topic?t=%GMTIME{"$epoch"}%' title='%MAKETEXT{"Edit"}%'>$percentICON{pencil}$percent</a><a href='%SCRIPTURL{view}%/$web/$topic?skin=text;template=%AUDITWEB%.UploadDialog;BACK=%WEB%.%TOPIC%;BACKLABEL=%ENCODE{"%MAKETEXT{"Audit conducting"}%" type="url"}%' class='modacPrintHide jqUIDialogLink {cache:false}'><img src='%PUBURLPATH%/%SYSTEMWEB%/FamFamFamSilkIcons/camera.png' /></a>%IF{"$'URLPARAM{fillout}' and context QRUploadPluginEnabled" then="<div class='qrupload'>$dollarpercentQRUPLOAD{web=\\"$web\\" topic=\\"$topic\\" backlink=\\"[[%WEB%.%TOPIC%]]\\"}$dollarpercent</div>"}%</td>
+<td style='width: 50%;'>$percentQUERY{\"'%AUDITWEB%.$field_Question_s'/AspectCriteria\"}$percent</td><td>$percentQUERY{\"'%AUDITWEB%.$field_Question_s'/Chapter\"}$percent</td><td>$field_QualityRating_s</td><td style='vertical-align:top;width: 50%;%IF{"$'URLPARAM{fillout}'" then="min-height:%TMPL:P{"filoutMinHeight"}%;"}%'>$field_Finding_s</td><td>$field_Fulfillment_s</td><td>$percentCALC{\"$dollarINT($field_QualityRating_s * $field_Fulfillment_s)\"}$percent</td><td %IF{"$'URLPARAM{fillout}' and context QRUploadPluginEnabled" else="class='modacPrintHide'"}%><a class='modacPrintHide' href='%SCRIPTURLPATH{edit}%/%WEB%/$topic?t=%GMTIME{"$epoch"}%' title='%MAKETEXT{"Edit"}%'>$percentICON{pencil}$percent</a><a href='%SCRIPTURL{view}%/$web/$topic?skin=text;template=%AUDITWEB%.UploadDialog;BACK=%WEB%.%TOPIC%;accept=*;BACKLABEL=%ENCODE{"%MAKETEXT{"Audit conducting"}%" type="url"}%' class='modacPrintHide jqUIDialogLink {cache:false}'><img src='%PUBURLPATH%/%SYSTEMWEB%/FamFamFamSilkIcons/page.png' /></a><a href='%SCRIPTURL{view}%/$web/$topic?skin=text;template=%AUDITWEB%.UploadDialog;BACK=%WEB%.%TOPIC%;BACKLABEL=%ENCODE{"%MAKETEXT{"Audit conducting"}%" type="url"}%' class='modacPrintHide jqUIDialogLink {cache:false}'><img src='%PUBURLPATH%/%SYSTEMWEB%/FamFamFamSilkIcons/camera.png' /></a>%IF{"$'URLPARAM{fillout}' and context QRUploadPluginEnabled" then="<div class='qrupload'>$dollarpercentQRUPLOAD{web=\\"$web\\" topic=\\"$topic\\" backlink=\\"[[%WEB%.%TOPIC%]]\\"}$dollarpercent</div>"}%</td>
 </tr>"
   fields="field_Question_s,field_QualityRating_s,field_Finding_s,field_Fulfillment_s,web,topic,webtopic"
   sort="topic"
