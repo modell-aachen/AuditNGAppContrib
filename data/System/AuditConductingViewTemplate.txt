@@ -10,6 +10,8 @@
   format="$percentTMPL:P{\"block\" block=\"$1\"}$percent"
   separator="<div class='pdfPageBreak'></div>"
 }%
+---++ %MAKETEXT{"Attach files to this audit"}%
+<div>%DNDUPLOAD{width="100%"}%</div>
 %TMPL:END%
 
 %TMPL:DEF{"printTab"}%<li>

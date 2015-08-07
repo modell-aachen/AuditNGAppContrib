@@ -469,3 +469,6 @@ msgstr "bei tw. Erfüllung aller Fragen = 50%"
 
 msgid "You are about to delete the question from this audit."
 msgstr "Sie entfernen gerade eine Frage von dem Audit."
+
+msgid "Attach files to this audit"
+msgstr "Dateien an dieses Audit anhängen"
