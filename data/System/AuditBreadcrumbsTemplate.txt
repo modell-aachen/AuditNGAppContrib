@@ -1,0 +1,3 @@
+%TMPL:DEF{"breadcrumb:currentweb"}%%TMPL:P{"breadcrumb:separator"}%[[%SUBST{text="%BASEWEB%" pattern="(.*)[/.](.*)" format="$1.%HOMETOPIC%]]%TMPL:P{"breadcrumb:separator"}%[[$1/$2"}%.%HOMETOPIC%]]%TMPL:END%
+
+%TMPL:DEF{"breadcrumb:topic"}%<nop>%TOPICTITLE%%TMPL:END%
