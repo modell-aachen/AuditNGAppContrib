@@ -1,6 +1,7 @@
 %META:TOPICINFO{author="BaseUserMapping_333" date="1425545935" format="1.1" version="8"}%
 %TMPL:INCLUDE{"PrintOnlyView"}%
 %TMPL:INCLUDE{"AuditBreadcrumbs"}%
+%TMPL:INCLUDE{"AuditReportFormData"}%
 
 %TMPL:DEF{"content"}%%TMPL:P{"simpleheader"}%
 <div style="width: 70%; float:left;margin-right:1%;">
@@ -17,18 +18,13 @@
 </div>
 <div class="widgetBlockContent">
 <table class="metaDataHead">
-<tr><td width="150px">%MAKETEXT{"Audit title"}%</td><td>%QUERY{"TopicTitle"}%</td></tr>
-<tr><td width="150px">%MAKETEXT{"Audit objective"}%</td><td>%QUERY{"AuditObjective"}%</td></tr>
-<tr><td>%MAKETEXT{"Auditor"}%</td><td>%QUERY{"Auditor"}%</td></tr>
-<tr><td>%MAKETEXT{"Auditor Team"}%</td><td>%QUERY{"AuditTeam"}%</td></tr>
-<tr><td>%MAKETEXT{"Date of planning"}%</td><td> %QUERY{"PlanningDate"}%</td></tr>
-<tr><td>%MAKETEXT{"Date of execution"}%</td><td> %QUERY{"DateOfExecution"}%</td></tr>
-<tr><td>%MAKETEXT{"Audit type"}%</td><td>%MAKETEXT{"%QUERY{"AuditType"}%"}%</td></tr>
-<tr><td>%MAKETEXT{"Audit class"}%</td><td>%MAKETEXT{"%QUERY{"AuditClass"}%"}%</td></tr>
-<tr><td>%MAKETEXT{"Audit scope"}%</td><td>%MAKETEXT{"%QUERY{"AuditScope"}%"}%</td></tr>
-<tr><td>%MAKETEXT{"Used Standards"}%</td><td>%MAKETEXT{"%QUERY{"UsedStandards"}%"}%</td></tr> 
-<tr><td>%MAKETEXT{"Status"}%</td><td>%MAKETEXT{"%QUERY{"Status"}%"}%</td></tr>
-<tr><td>%MAKETEXT{"Private"}%</td><td><input type='checkbox' disabled='disabled' %IF{"'%RENDERFORDISPLAY{field="Private" format="$origvalue"}%'='private'" then="checked='checked'"}% /></td></tr>
+%RENDERFORDISPLAY{
+    %TMPL:P{"audit_report_view_extraparams"}%
+    format="<tr class='modacForm'><td><span class='title'>$title</span></td><td>$value</td></tr>"
+    map="%TMPL:P{"auditformtable_mappings"}%"
+    mandatory="&nbsp;<span class='foswikiAlert'>*</span>"
+    Private_format="<tr><td>$title</td><td><input type='checkbox' disabled='disabled' $percentIF{\"'$origvalue'='private'\" then=\"checked='checked'\"}$percent /></td></tr>"
+}%
 </table> 
 </div>
 %TMPL:END%

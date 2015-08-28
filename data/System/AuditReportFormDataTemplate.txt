@@ -1,0 +1,8 @@
+%{ Mappings for AuditReportForm: }%
+%TMPL:DEF{"auditformtable_mappings"}%Auditor=%MAKETEXT{"Auditor"}%,AuditTeam=%MAKETEXT{"Audit team"}%,PlanningDate=%MAKETEXT{"Date of planning"}%,DateOfExecution=%MAKETEXT{"Date of execution"}%,AuditType=%MAKETEXT{"Audit type"}%,AuditClass=%MAKETEXT{"Audit class"}%,AuditScope=%MAKETEXT{"Audit scope"}%,AuditReport=%MAKETEXT{"Audit report"}%,Block1Title=%MAKETEXT{"Title for block 1"}%,Block2Title=%MAKETEXT{"Title for block 2"}%,Block3Title=%MAKETEXT{"Title for block 3"}%,Block4Title=%MAKETEXT{"Title for block 4"}%,Block5Title=%MAKETEXT{"Title for block 5"}%,UsedStandards=%MAKETEXT{"Used Standards"}%,Status=%MAKETEXT{"Status"}%,Private=%MAKETEXT{"Private"}%,AuditEvidence=%MAKETEXT{"Audit evidence"}%,Supplements=%MAKETEXT{"Supplements"}%,TopicTitle=%MAKETEXT{"Audit title"}%,AuditObjective=%MAKETEXT{"Audit objective"}%%TMPL:END%
+
+%{ For further customization of the view: }%
+%TMPL:DEF{"audit_report_view_extraparams"}%%TMPL:END%
+
+%{ For further customization of the edit: }%
+%TMPL:DEF{"audit_report_edit_extraparams"}%%TMPL:END%

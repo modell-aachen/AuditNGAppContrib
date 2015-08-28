@@ -4,6 +4,7 @@ data/System/AuditConductingViewTemplate.txt 0755
 data/System/AuditCopyViewTemplate.txt 0644
 data/System/AuditElementEditTemplate.txt 0755
 data/System/AuditElementViewTemplate.txt 0755
+data/System/AuditReportFormDataTemplate.txt 0755
 data/System/AuditMeasuresViewTemplate.txt 0644
 data/System/AuditNGAppContrib.txt 0644
 data/System/AuditPreparationViewTemplate.txt 0755
