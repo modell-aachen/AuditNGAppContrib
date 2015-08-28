@@ -10,8 +10,10 @@
   format="$percentTMPL:P{\"block\" block=\"$1\"}$percent"
   separator="<div class='pdfPageBreak'></div>"
 }%
+<div class="modacPrintHide">
 ---++ %MAKETEXT{"Attach files to this audit"}%
-<-- Note: this also loads the js/css files for the popups --><div>%DNDUPLOAD{width="100%"}%</div>
+<!-- Note: this also loads the js/css files for the popups --><div>%DNDUPLOAD{width="100%"}%</div>
+</div>
 %TMPL:END%
 
 %TMPL:DEF{"printTab"}%<li>
