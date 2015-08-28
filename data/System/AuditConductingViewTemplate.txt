@@ -1,11 +1,14 @@
 %TMPL:INCLUDE{"SystemView"}%
 %TMPL:INCLUDE{"AuditBreadcrumbs"}%
 
+%{ we need this for the "second page" in printouts: }%
+%TMPL:INCLUDE{"AuditReportFormData"}%
+
 %TMPL:DEF{"script:skinbase"}%%TMPL:PREV%%{
 }%%TMPL:P{"LIBJS" id="AuditNGAppContrib/auditplanning" requires="JQUERYPLUGIN::FOSWIKI"}%%TMPL:END%
 
 %TMPL:DEF{"content"}%%ADDTOZONE{"head" id="printOnlyCss" text="<link rel='stylesheet' href='%PUBURLPATH%/%SYSTEMWEB%/AuditNGAppContrib/auditplanning.css' type='text/css' media='all' />"}%
-%IF{"$'URLPARAM{cover}'='print'" then="$percentTMPL:P{FirstPage}$percent" else="<!-- not using print cover -->"}%
+%IF{"$'URLPARAM{cover}'='print'" then="$percentTMPL:P{FirstPage}$percent$percentTMPL:P{SecondPage}$percent" else="<!-- not using print cover -->"}%
 %FORMATLIST{"%FORMATLIST{"%RENDERFORDISPLAY{form="%AUDITWEB%.AuditElementForm" format="$origvalues" fields="Block"}%" format="$percentIF{\"'%WEB%.%HOMETOPIC%'/Block$1Title != ''\" then=\"$1\"}$percent"}%"
   format="$percentTMPL:P{\"block\" block=\"$1\"}$percent"
   separator="<div class='pdfPageBreak'></div>"
@@ -68,6 +71,16 @@
 %TMPL:DEF{"FirstPage"}%%INCLUDE{"%WEB%/%HOMETOPIC%"}%
 %IF{"istopic '%AUDITWEB%.AuditConductingFirstPageInfo'" then="$percentINCLUDE{%AUDITWEB%.AuditConductingFirstPageInfo}$percent" else="$percentINCLUDE{%AUDITWEB%.AuditConductingFirstPageInfoDefault}$percent"}%
 %TMPL:P{"pdfPageBreak"}%%TMPL:END%
+
+%TMPL:DEF{"SecondPage"}%
+%RENDERFORDISPLAY{
+    %TMPL:P{"audit_second_page_extraparams"}%
+    topic="%WEB%/%HOMETOPIC%"
+    fields="%TMPL:P{"audit_second_page_fields"}%"
+    format="<table class='planning tablesorter'><thead><tr><th>$title</th></tr></thead><tbody><tr><td>$value</td></tr></tbody></table>"
+    map="%TMPL:P{"auditformtable_mappings"}%"
+}%
+<div class="pdfPageBreak"></div>%TMPL:END%
 
 %TMPL:DEF{"modacExtraPrintStyles"}%%TMPL:PREV%
 @media print {
