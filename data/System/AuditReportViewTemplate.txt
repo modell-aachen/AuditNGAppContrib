@@ -13,7 +13,7 @@
 
 %TMPL:DEF{"data"}%
 <div class="widgetBlockTitle">
-%MAKETEXT{"General audit information"}%&nbsp;<a href="%SCRIPTURLPATH{"edit"}%/%WEB%/%TOPIC%?t=%GMTIME{"$epoch"}%\" title="%MAKETEXT{"Edit"}%">%ICON{pencil}%</a>
+%MAKETEXT{"General audit information"}%&nbsp;<a href="%SCRIPTURLPATH{"edit"}%/%WEB%/%TOPIC%?t=%GMTIME{"$epoch"}%" title="%MAKETEXT{"Edit"}%">%ICON{pencil}%</a>
 </div>
 <div class="widgetBlockContent">
 <table class="metaDataHead">
