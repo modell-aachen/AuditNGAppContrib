@@ -1,0 +1,54 @@
+%TMPL:INCLUDE{"TasksAPI"}%
+
+%TMPL:DEF{"tasksapi::grid::caption"}%<tr>
+%IF{"context task_showexpandercol" then="<th></th>" else="<!-- (no expander) -->"}%
+  <th>%MAKETEXT{"Created"}%</th>
+  <th>%MAKETEXT{"Author"}%</th>
+  <th>%MAKETEXT{"Audit"}%</th>
+  <th>%MAKETEXT{"Type"}%</th>
+  <th>%MAKETEXT{"Assigned to"}%</th>
+  <th>%MAKETEXT{"Title"}%</th>
+  <th>%MAKETEXT{"Due date"}%</th>
+  <th>%MAKETEXT{"Status"}%</th>
+  <th class="hidden"></th>
+  <th class="hidden"></th>
+  <th class="hidden"></th>
+  <th class="hidden"></th>
+</tr>%TMPL:END%
+
+%TMPL:DEF{"tasksapi::task"}%%{
+}%<tr class="task prioritized-%TASKINFO{field="Prioritize"}%">
+%IF{"context task_showexpander and '%TASKINFO{taskcfg="HAS_CHILDREN"}%'='1'" then="<td class=\"expander\"><span class=\"open\">$percntICON{\"toggleopen\"}$percnt</span><span class=\"close\">$percntICON{\"toggleclose\"}$percnt</span></td>"}%%{
+}%<td class="created" data-value="%TASKINFO{field="Created"}%">
+    <span>%TASKINFO{field="Created" format="$day $month $year"}%</span>
+  </td>
+  <td class="author">
+    <span>%TASKINFO{field="Author"}%</span>
+  </td>
+  <td class="audit">
+    <span>%SUBST{text="%TASKINFO{field="Context"}%" pattern="%AUDITWEB{default="%BASEWEB%}%\.(.*)\..*" format="$1"}%</span><br />
+    <span>%TOPICTITLE{"%SUBST{text="%TASKINFO{field="Context"}%" pattern="(%AUDITWEB{default="%BASEWEB%}%\..*)\..*" format="$1"}%.%HOMETOPIC%"}%</span>
+  </td>
+  <td class="type">
+    <span>%MAKETEXT{%TASKINFO{field="Type"}%}%</span>
+  </td>
+  <td class="assigned">
+    <span>%TASKINFO{field="AssignedTo"}%</span>
+  </td>
+  <td class="title">
+    <span class="title">%TASKINFO{field="Title" shorten="160"}%</span>
+    <span class="attachments %IF{"'%TASKINFO{meta="AttachCount"}%'='0'" then="hidden"}%">%TASKINFO{meta="AttachCount"}%</span>
+  </td>
+  <td class="due" data-value="%TASKINFO{field="DueDate"}%">
+    <span>%TASKINFO{field="DueDate" format="$day $month $year"}%</span>
+  </td>
+  <td class="ampel">%TASKSAMPEL{"%TASKINFO{field="DueDate"}%" warn="7" status="%TASKINFO{field="Status"}%"}%</td>
+  <td class="hidden task-data-container"><div class="task-data"><literal>%TASKINFO{meta="json"}%</literal></div></td>
+  <td class="hidden task-fullview-container"><div class="task-fullview">%TMPL:P{"tasksapi::viewer"}%</div></td>
+  <td class="hidden task-controls">
+    <div class="controls">%TMPL:P{"tasksapi::task::controls::right"}%</div>
+  </td>
+  <td class="hidden task-children">%TMPL:P{"tasksapi::task::children"}%</td>
+</tr>%{
+}%%TMPL:END%
+

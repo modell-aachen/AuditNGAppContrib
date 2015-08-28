@@ -9,6 +9,8 @@
 <div class="widgetBlockContent">
 %TMPL:P{"auditsoverview"}%
 </div>
+[[AuditMeasuresOverview][%MAKETEXT{"Overview of audit measures"}%]]
+
 [[AuditQuestions][%MAKETEXT{"Overview of audit questions"}%]]
 %TMPL:END%
 

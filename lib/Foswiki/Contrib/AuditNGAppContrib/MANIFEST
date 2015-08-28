@@ -5,6 +5,7 @@ data/System/AuditCopyViewTemplate.txt 0644
 data/System/AuditElementEditTemplate.txt 0755
 data/System/AuditElementViewTemplate.txt 0755
 data/System/AuditReportFormDataTemplate.txt 0755
+data/System/AuditMeasuresOverviewTemplate.txt 0644
 data/System/AuditMeasuresViewTemplate.txt 0644
 data/System/AuditNGAppContrib.txt 0644
 data/System/AuditPreparationViewTemplate.txt 0755
@@ -12,6 +13,7 @@ data/System/AuditQuestionEditTemplate.txt 0644
 data/System/AuditQuestionViewTemplate.txt 0644
 data/System/AuditReportEditTemplate.txt 0755
 data/System/AuditReportViewTemplate.txt 0755
+data/System/AuditTaskApiOverviewTemplate.txt 0755
 data/System/MeasuresEditTemplate.txt 0644
 data/System/MeasuresViewTemplate.txt 0644
 data/System/QuestionEditTemplate.txt 0644
@@ -22,11 +24,13 @@ data/_apps/Audit/AuditConductingPrintDialog.txt 0644
 data/_apps/Audit/AuditCopy.txt 0644
 data/_apps/Audit/AuditElementForm.txt 0755
 data/_apps/Audit/AuditElementTemplate.txt 0755
+data/_apps/Audit/AuditMeasuresOverview.txt 0644
 data/_apps/Audit/AuditOverviewTemplate.txt 0644
 data/_apps/Audit/AuditQuestionForm.txt 0644
 data/_apps/Audit/AuditQuestions.txt 0644
 data/_apps/Audit/AuditQuestionsViewTemplate.txt 0644
 data/_apps/Audit/AuditReportForm.txt 0755
+data/_apps/Audit/AuditTaskForm.txt 0755
 data/_apps/Audit/AuditTemplate/WebActions.txt 0644
 data/_apps/Audit/AuditTemplate/WebAtom.txt 0644
 data/_apps/Audit/AuditTemplate/WebAuditConducting.txt 0644
