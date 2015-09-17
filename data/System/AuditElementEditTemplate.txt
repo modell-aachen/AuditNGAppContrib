@@ -20,7 +20,7 @@
 <tr><td width="200px:">%MAKETEXT{"Audit Finding"}%:</td><td>%RENDERFOREDIT{field="Finding" format="$edit"}%</td></tr>
 <tr><td width="200px:">%MAKETEXT{"Fulfillment"}%:</td><td>%RENDERFOREDIT{field="Fulfillment" format="$edit"}%</td></tr>
 <tr><td width="200px:">%MAKETEXT{"Block"}%:</td><td><select name="Block">%FORMATLIST{"%RENDERFORDISPLAY{form="%AUDITWEB%.AuditElementForm" format="$origvalues" fields="Block"}%"
-format="$percentIF{\"'%WEB%.%HOMETOPIC%'/Block$1Title != ''\" then=\"<option value='$1' $dollarpercentIF{\\"'%URLPARAM{"Block"}%" default="QUERY{"Block"}%"}%'='$1'\\" then=\\"selected='selected'\\"}$dollarpercent>$dollarpercentQUERY{\\"'%WEB%.%HOMETOPIC%'/Block$1Title\\"}$dollarpercent</option>\"}$percent" separator=""}%</select></td></tr>
+format="$percentIF{\"'%WEB%.%HOMETOPIC%'/Block$1Title != ''\" then=\"<option value='$1' $dollarpercentIF{\\"'%URLPARAM{"Block" default="%QUERY{"Block"}%"}%'='$1'\\" then=\\"selected='selected'\\"}$dollarpercent>$dollarpercentQUERY{\\"'%WEB%.%HOMETOPIC%'/Block$1Title\\"}$dollarpercent</option>\"}$percent" separator=""}%</select></td></tr>
 </table>
 </div>
 %TMPL:END%
