@@ -6,6 +6,7 @@
     query="{\"form\":\"%AUDITTASKFORM%\"}"
     fiorm="%AUDITTASKFORM%"
     allowcreate="0"
+    keepclosed="1"
 }%%TMPL:END%
 
 %TMPL:DEF{"printTab"}%<li>

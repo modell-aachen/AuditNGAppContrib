@@ -25,7 +25,7 @@ sort="field_Description_s asc"
 </div>
 %TMPL:END%
 
-%TMPL:DEF{"searchmeasures"}%%TASKSGRID{"%deviation%" allowcreate="%IF{"$'URLPARAM{cover}'!='print'" then="1" else="0"}%" allowupload="1" stateless="1" title="<nop>" form="%AUDITTASKFORM%"}%%TMPL:END%
+%TMPL:DEF{"searchmeasures"}%%TASKSGRID{"%deviation%" allowcreate="%IF{"$'URLPARAM{cover}'!='print'" then="1" else="0"}%" allowupload="1" stateless="1" title="<nop>" form="%AUDITTASKFORM%" keepclosed="1"}%%TMPL:END%
 
 %TMPL:DEF{"printTab"}%<li>
 <span><a href="%SCRIPTURL{"view"}%/%BASEWEB%/%BASETOPIC%?landscape=1&cover=print&contenttype=application/pdf">%MAKETEXT{"PDF-Print"}%</a></span>

@@ -40,6 +40,7 @@
 	context="%BASEWEB%.%BASETOPIC%"
 	allowcreate="1"
 	allowupload="1"
+	keepclosed="1"
 }%
 </div>
 %TMPL:END%
