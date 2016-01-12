@@ -1,0 +1,31 @@
+%META:TOPICINFO{author="BaseUserMapping_333" date="1417769120" format="1.1" version="1"}%
+%TMPL:INCLUDE{"view"}%
+%TMPL:INCLUDE{"AuditBreadcrumbs"}%
+
+%TMPL:DEF{"breadcrumb:parents"}%%TMPL:P{"breadcrumb:separator"}%[[%AUDITWEB%.AuditQuestions]]%TMPL:END%
+
+%TMPL:DEF{"content"}%%TMPL:P{"simpleheader"}%
+<!-- this form will tell the "add new question" popup the actual name of the AUTOINC-->
+<form class="response">
+<input type="hidden" name="created" value="%TOPIC%" />
+</form>
+<div class="widgetBlockTitle">%MAKETEXT{"Question"}%</div>
+<div class="widgetBlockContent">
+<table class="metaDataHead">
+<tr><td> %MAKETEXT{"Question"}% </td><td> : </td><td class="AspectCriteria"> %QUERY{"AspectCriteria"}% </td></tr>
+<tr><td> %MAKETEXT{"Chapter"}% </td><td> : </td><td> %QUERY{"Chapter"}% </td></tr>
+</table>
+</div>
+<div class="widgetBlockTitle">%MAKETEXT{"Audits using this question"}%</div>
+<div class="widgetBlockContent">
+%SOLRSEARCH{"field_Question_s:(%BASETOPIC% OR %BASEWEB%.%BASETOPIC%)"
+ facets="web"
+ limit="999"
+ rows="1"
+ format="<nop>"
+ format_web="<tr><td>[[$key.WebAuditConducting][$key: $percentTOPICTITLE{$key.%HOMETOPIC%}$percent]]</td></tr>"
+ header_web="<table class='metaDataHead'><tbody>"
+ footer_web="</tbody></table>"
+}%
+</div>
+%TMPL:END%

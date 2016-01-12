@@ -1,0 +1,15 @@
+%TMPL:INCLUDE{"SystemView"}%
+
+%TMPL:DEF{"content"}%%TASKSGRID{
+    context="any"
+    templatefile="AuditTaskApiOverview"
+    query="{\"form\":\"%AUDITTASKFORM%\"}"
+    fiorm="%AUDITTASKFORM%"
+    allowcreate="0"
+    keepclosed="1"
+}%%TMPL:END%
+
+%TMPL:DEF{"printTab"}%<li>
+<span><a href="%SCRIPTURL{"view"}%/%BASEWEB%/%BASETOPIC%?landscape=1&cover=print&contenttype=application/pdf">%MAKETEXT{"PDF-Print"}%</a></span>
+</li>%TMPL:END%
+%TMPL:DEF{"modacActionButtons"}%<ul id="modacButtonsLEFT" class="modacTabs"><li>%TMPL:P{"modacSystemTab"}%</li></ul><ul id="modacButtonsRIGHT" class="modacTabs"><li>%TMPL:P{"printTab"}%</li><li id="modacSearchBox">%TMPL:P{"SearchBox"}%</li></ul>%TMPL:END%

@@ -1,0 +1,136 @@
+%TMPL:INCLUDE{"SystemView"}%
+%TMPL:INCLUDE{"AuditBreadcrumbs"}%
+
+%{ we need this for the "second page" in printouts: }%
+%TMPL:INCLUDE{"AuditReportFormData"}%
+
+%TMPL:DEF{"script:skinbase"}%%TMPL:PREV%%{
+}%%TMPL:P{"LIBJS" id="AuditNGAppContrib/auditplanning" requires="JQUERYPLUGIN::FOSWIKI"}%%TMPL:END%
+
+%TMPL:DEF{"content"}%%ADDTOZONE{"head" id="printOnlyCss" text="<link rel='stylesheet' href='%PUBURLPATH%/%SYSTEMWEB%/AuditNGAppContrib/auditplanning.css' type='text/css' media='all' />"}%
+%IF{"$'URLPARAM{cover}'='print'" then="$percentTMPL:P{FirstPage}$percent$percentTMPL:P{SecondPage}$percent" else="<!-- not using print cover -->"}%
+%FORMATLIST{"%FORMATLIST{"%RENDERFORDISPLAY{form="%AUDITWEB%.AuditElementForm" format="$origvalues" fields="Block"}%" format="$percentIF{\"'%WEB%.%HOMETOPIC%'/Block$1Title != ''\" then=\"$1\"}$percent"}%"
+  format="$percentTMPL:P{\"block\" block=\"$1\"}$percent"
+  separator="<div class='pdfPageBreak'></div>"
+}%
+<div class="modacPrintHide">
+---++ %MAKETEXT{"Attach files to this audit"}%
+<!-- Note: this also loads the js/css files for the popups --><div>%DNDUPLOAD{width="100%"}%</div>
+</div>
+%TMPL:END%
+
+%TMPL:DEF{"printTab"}%<li>
+<span><a href="%SCRIPTURL{"view"}%/%AUDITWEB%/AuditConductingPrintDialog?skin=text&section=dialog&pweb=%ENCODE{"%WEB%" type="url"}%&ptopic=%ENCODE{"%TOPIC%" type="url"}%&landscape=1&printParams=" class="jqUIDialogLink">%MAKETEXT{"PDF-Print"}%</a></span>
+</li>%TMPL:END%
+%TMPL:DEF{"modacActionButtons"}%<ul id="modacButtonsLEFT" class="modacTabs"><li>%TMPL:P{"modacSystemTab"}%</li></ul><ul id="modacButtonsRIGHT" class="modacTabs"><li>%TMPL:P{"printTab"}%</li><li id="modacSearchBox">%TMPL:P{"SearchBox"}%</li></ul>%TMPL:END%
+
+%TMPL:DEF{"topheaderbody"}%
+<div class="Princefooter">%TMPL:P{"Princefooter"}%</div>
+%TMPL:END%
+
+%TMPL:DEF{"Princefooter"}%<div style="float:left;">%MAKETEXT{"Page"}% <span style="white-space: nowrap"><span class='pdfPage'></span> %MAKETEXT{"of"}% <span class='pdfPages'></span><br/>%MAKETEXT{"Audit [_1]" args="%WEB%"}%</span></div>%TMPL:PREV%%TMPL:END%
+
+%TMPL:DEF{"printHeaderHeight"}%1.5cm%TMPL:END%
+
+%TMPL:DEF{"block"}%<div class="auditPlanningBlock"><div class="Princeheader printOnly printme"><div style="float:left"><h1>%QUERY{"'%WEB%/%HOMETOPIC%'/Block%block%Title"}%</h1></div><div style="float:right;white-space:nowrap;"><h1>%MAKETEXT{"Result: [_1]%" args="<span class='result'></span>"}%</h1></div></div>
+<div class="widgetBlockTitle modacPrintHide">%RENDERFORDISPLAY{field="Block%block%Title" topic="%WEB%.WebHome" format="$value"}%<div style='float:right; white-space:nowrap;'>%MAKETEXT{"Result: [_1]%" args="<span class='result'></span>"}%</div></div>
+<div class="widgetBlockContent">
+<table class="tablesorter planning">
+<thead>
+<tr style='white-space:nowrap;'><th>%MAKETEXT{"Audit criteria"}%</th><th><span class="modacPrintHide">%MAKETEXT{"Norm chapter"}%</span><span class="printOnly">%MAKETEXT{"Chap"}%</span></th><th><span class="modacPrintHide">%MAKETEXT{"Quality rating / effect"}%</span><span class="printOnly">%MAKETEXT{"Rtg/Eff"}%</span></th><th>%MAKETEXT{"Audit Finding"}%</th><th><span class="modacPrintHide">%MAKETEXT{"Fulfillment"}%</span><span class="printOnly">%MAKETEXT{"Ful"}%</span></th><th><span class="modacPrintHide">%MAKETEXT{"Result"}%</span><span class="printOnly">%MAKETEXT{"Rslt"}%</span></th><th %IF{"$'URLPARAM{fillout}' and context QRUploadPluginEnabled" else="class='modacPrintHide'"}%></th></tr>
+</thead>
+<tbody>
+<!-- elements -->%SOLRSEARCH{
+  "type:topic form:%AUDITWEB%.AuditElementForm field_Block_s:%block%"
+  id="searchElements%block%"
+  web="%WEB%"
+  rows="9999"
+  format="<tr>
+<td style='width: 50%;'>$percentQUERY{\"'%AUDITWEB%.$field_Question_s'/AspectCriteria\"}$percent</td><td>$percentQUERY{\"'%AUDITWEB%.$field_Question_s'/Chapter\"}$percent</td><td>$field_QualityRating_s</td><td style='vertical-align:top;width: 50%;%IF{"$'URLPARAM{fillout}'" then="min-height:%TMPL:P{"filoutMinHeight"}%;"}%'>$field_Finding_s</td><td>$field_Fulfillment_s</td><td>$percentCALC{\"$dollarINT($field_QualityRating_s * $field_Fulfillment_s)\"}$percent</td><td %IF{"$'URLPARAM{fillout}' and context QRUploadPluginEnabled" else="class='modacPrintHide'"}%><a class='modacPrintHide' href='%SCRIPTURLPATH{edit}%/%WEB%/$topic?t=%GMTIME{"$epoch"}%' title='%MAKETEXT{"Edit"}%'>$percentICON{pencil}$percent</a><a href='%SCRIPTURL{view}%/$web/$topic?skin=text;template=%AUDITWEB%.UploadDialog;BACK=%WEB%.%TOPIC%;accept=*;BACKLABEL=%ENCODE{"%MAKETEXT{"Audit conducting"}%" type="url"}%' class='modacPrintHide jqUIDialogLink {cache:false}'><img src='%PUBURLPATH%/%SYSTEMWEB%/FamFamFamSilkIcons/page.png' /></a><a href='%SCRIPTURL{view}%/$web/$topic?skin=text;template=%AUDITWEB%.UploadDialog;BACK=%WEB%.%TOPIC%;BACKLABEL=%ENCODE{"%MAKETEXT{"Audit conducting"}%" type="url"}%' class='modacPrintHide jqUIDialogLink {cache:false}'><img src='%PUBURLPATH%/%SYSTEMWEB%/FamFamFamSilkIcons/camera.png' /></a>%IF{"$'URLPARAM{fillout}' and context QRUploadPluginEnabled" then="<div class='qrupload'>$dollarpercentQRUPLOAD{web=\\"$web\\" topic=\\"$topic\\" backlink=\\"[[%WEB%.%TOPIC%]]\\"}$dollarpercent</div>"}%</td>
+</tr>"
+  fields="field_Question_s,field_QualityRating_s,field_Finding_s,field_Fulfillment_s,web,topic,webtopic"
+  sort="topic"
+  footer="%IF{"$'URLPARAM{fillout}'" then="$percentTMPL:P{\"filler\" count=\"1\"}$percent$percentTMPL:P{\"filler\" count=\"2\"}$percent$percentTMPL:P{\"filler\" count=\"3\"}$percent$percentTMPL:P{\"filler\" count=\"4\"}$percent$percentTMPL:P{\"filler\" count=\"5\"}$percent"}%"
+}% %IF{"$'URLPARAM{fillout}'" then="$percentTMPL:P{\"fillerCheckNoResults\" block=\"%block%\"}$percent"}%<!-- /elements -->
+</table>
+<div class="modacPrintHide">%BUTTON{"%MAKETEXT{"Add audit element"}%" icon="new" class="modacPrintHide" href="%SCRIPTURLPATH{"edit"}%/%WEB%/ElementAUTOINC00?Block=%block%;formtemplate=%AUDITWEB%.AuditElementForm;template=%AUDITWEB%.AuditElementEdit;origin=%WEB%.%TOPIC%;t=%GMTIME{"$epoch"}%"}%</div>
+</div>
+</div>%TMPL:END%
+
+%TMPL:DEF{"filoutMinHeight"}%10em%TMPL:END%
+
+%{ This TMPL will check if there are no results and (if this is the case) print a bunch of fillers }%
+%TMPL:DEF{"fillerCheckNoResults"}%%IF{"0%SOLRFORMAT{"searchElements%block%" format="$count" footer="" header=""}%" else="<tr><td></td><td></td><td></td><td><div style='min-height:%TMPL:P{"filoutMinHeight"}%;'></div></td><td></td><td></td><td class='modacPrintHide'></td></tr>
+<tr><td></td><td></td><td></td><td><div style='min-height:%TMPL:P{"filoutMinHeight"}%;'></div></td><td></td><td></td><td class='modacPrintHide'></td></tr>
+<tr><td></td><td></td><td></td><td><div style='min-height:%TMPL:P{"filoutMinHeight"}%;'></div></td><td></td><td></td><td class='modacPrintHide'></td></tr>
+<tr><td></td><td></td><td></td><td><div style='min-height:%TMPL:P{"filoutMinHeight"}%;'></div></td><td></td><td></td><td class='modacPrintHide'></td></tr>
+<tr><td></td><td></td><td></td><td><div style='min-height:%TMPL:P{"filoutMinHeight"}%;'></div></td><td></td><td></td><td class='modacPrintHide'></td></tr>"}%%TMPL:END%
+
+%TMPL:DEF{"filler"}%$percentIF{\"$count < %count%\" then=\"<tr><td></td><td></td><td></td><td><div style='min-height:%TMPL:P{"filoutMinHeight"}%;'></div></td><td></td><td></td><td %IF{"$'URLPARAM{fillout}' and context QRUploadPluginEnabled" else="class='modacPrintHide'"}%></td></tr>\"}$percent%TMPL:END%
+
+%TMPL:DEF{"FirstPage"}%%INCLUDE{"%WEB%/%HOMETOPIC%"}%
+%IF{"istopic '%AUDITWEB%.AuditConductingFirstPageInfo'" then="$percentINCLUDE{%AUDITWEB%.AuditConductingFirstPageInfo}$percent" else="$percentINCLUDE{%AUDITWEB%.AuditConductingFirstPageInfoDefault}$percent"}%
+%TMPL:P{"pdfPageBreak"}%%TMPL:END%
+
+%TMPL:DEF{"SecondPage"}%
+%RENDERFORDISPLAY{
+    %TMPL:P{"audit_second_page_extraparams"}%
+    topic="%WEB%/%HOMETOPIC%"
+    fields="%TMPL:P{"audit_second_page_fields"}%"
+    format="<table class='planning tablesorter'><thead><tr><th>$title</th></tr></thead><tbody><tr><td>$value</td></tr></tbody></table>"
+    map="%TMPL:P{"auditformtable_mappings"}%"
+}%
+<div class="pdfPageBreak"></div>%TMPL:END%
+
+%TMPL:DEF{"modacExtraPrintStyles"}%%TMPL:PREV%
+@media print {
+    .tablesorter.planning {
+        border-collapse: collapse;
+    }
+    .tablesorter.planning tr td {
+        color: black;
+        background-color: white;
+        border: 1px solid #CCC;
+    }
+}
+.qrupload a,
+.qrupload img {
+    height: 9em;
+    padding: 0px;
+    margin: 0px;
+}
+table.AuditHeader {
+  white-space: no-wrap;
+}
+table.AuditHeader,
+table.AuditKey {
+  width: 100%;
+  border-collapse: collapse;
+}
+table.AuditHeader td,
+table.AuditKey td {
+  border: 1px solid black;
+}
+table.AuditHeader td.l {
+  border-right: none;
+}
+table.AuditHeader td.r {
+  border-left: none;
+}
+table.AuditKey {
+  text-align: center;
+}
+table.AuditHeader tr:first-child td:first-child,
+table.AuditHeader tr:first-child td:nth-child(2),
+table.AuditKey tr:first-child {
+  text-align: center;
+  font-weight: bold;
+}
+table.AuditHeader td,
+table.AuditKey tr:first-child td {
+  text-align: left;
+}
+table.AuditKey tr:first-child td {
+  width: 33%;
+}
+%TMPL:END%

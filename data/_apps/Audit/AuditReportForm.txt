@@ -1,0 +1,25 @@
+%META:TOPICINFO{author="BaseUserMapping_333" comment="reprev" date="1424854367" format="1.1" reprev="4" version="3"}%
+| *Name* | *Type* | *Size* | *Values* | *Tooltip message* | *Attributes* |
+| TopicTitle | text | 50 | | | M |
+| AuditObjective | textarea | 50x4 | | | |
+| Auditor | textboxlist | 50 mustMatch limit="1" | %USERAUTOCOMPLETE% | | M |
+| AuditTeam | textboxlist | 50 mustMatch | %USERAUTOCOMPLETE% | | M |
+| PlanningDate | date | 15 | | | |
+| DateOfExecution | date | 15 | | | |
+| AuditType | select+values | 1  | %MAKETEXT{"System audit"}%=System audit, %MAKETEXT{"Process audit"}%=Process audit, %MAKETEXT{"Project audit"}%=Project audit, %MAKETEXT{"Product audit"}%=Product audit | | |
+| AuditClass | select+values | 1  | %MAKETEXT{"Internal audit"}%=Internal audit, %MAKETEXT{"External audit"}%=External audit,  %MAKETEXT{"Supplier audit"}%=Supplier audit | | |
+| AuditScope | text | 50 | | | |
+| AuditReport | editor | 50 | | | |
+| AuditEvidence | editor | 50 | | | |
+| Supplements | editor | 50 | | | |
+| Block1Title | text | 50 | | %MAKETEXT{"Title for block 1"}% | |
+| Block2Title | text | 50 | | %MAKETEXT{"Title for block 2"}% | |
+| Block3Title | text | 50 | | %MAKETEXT{"Title for block 3"}% | |
+| Block4Title | text | 50 | | %MAKETEXT{"Title for block 4"}% | |
+| Block5Title | text | 50 | | %MAKETEXT{"Title for block 5"}% | |
+| UsedStandards | textboxlist  | 50 mustMatch  | ISO9001,ISO14001,ISO18001,ISO50001 | | |
+| Status | select+values | 1| %MAKETEXT{"planned"}%=planned, %MAKETEXT{"conducted"}%=conducted, %MAKETEXT{"done"}%=done, %MAKETEXT{"discarded"}%=discarded | | |
+| Private | checkbox+values | 1 | %MAKETEXT{"private"}%=private | | |
+
+   * Set ALLOWTOPICCHANGE = AdminUser
+   * Set NOWYSIWYG = 1

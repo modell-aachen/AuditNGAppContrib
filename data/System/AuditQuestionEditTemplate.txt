@@ -1,0 +1,4 @@
+%TMPL:INCLUDE{"edit"}%
+%TMPL:INCLUDE{"AuditBreadcrumbs"}%
+
+%TMPL:DEF{"breadcrumb:parents"}%%TMPL:P{"breadcrumb:separator"}%[[%AUDITWEB%.AuditQuestions]]%TMPL:END%

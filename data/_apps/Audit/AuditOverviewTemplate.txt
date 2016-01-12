@@ -1,0 +1,71 @@
+%META:TOPICINFO{author="BaseUserMapping_333" date="1424852504" format="1.1" version="25"}%
+%TMPL:INCLUDE{"SystemView"}%
+%TMPL:INCLUDE{"AuditBreadcrumbs"}%
+
+%TMPL:DEF{"content"}%
+%JQREQUIRE{livequery}%
+
+<div class="widgetBlockTitle">%MAKETEXT{"Audit reports"}%</div>
+<div class="widgetBlockContent">
+%TMPL:P{"auditsoverview"}%
+</div>
+[[AuditMeasuresOverview][%MAKETEXT{"Overview of audit measures"}%]]
+
+[[AuditQuestions][%MAKETEXT{"Overview of audit questions"}%]]
+%TMPL:END%
+
+%TMPL:DEF{"auditsoverview"}%
+%TABPANE{select="%URLPARAM{"tab"}%" class="simple"}%
+%TAB{"%MAKETEXT{"Planned"}%" id="audits_planned" url="%SCRIPTURL{rest}%/RenderPlugin/template?topic=%WEB%.%TOPIC%;expand=audits;render=on;name=AuditOverview;state=planned"}%
+<span class="jqAjaxLoader">&nbsp;</span>
+%ENDTAB%
+%TAB{"%MAKETEXT{"Conducted"}%" id="audits_conducted" url="%SCRIPTURL{rest}%/RenderPlugin/template?topic=%WEB%.%TOPIC%;expand=audits;render=on;name=AuditOverview;state=conducted"}%
+<span class="jqAjaxLoader">&nbsp;</span>
+%ENDTAB%
+%TAB{"%MAKETEXT{"Done"}%" id="audits_done" url="%SCRIPTURL{rest}%/RenderPlugin/template?topic=%WEB%.%TOPIC%;expand=audits;render=on;name=AuditOverview;state=done"}%
+<span class="jqAjaxLoader">&nbsp;</span>
+%ENDTAB%
+%TAB{"%MAKETEXT{"Discarded"}%" id="audits_discarded" url="%SCRIPTURL{rest}%/RenderPlugin/template?topic=%WEB%.%TOPIC%;expand=audits;render=on;name=AuditOverview;state=discarded"}%
+<span class="jqAjaxLoader">&nbsp;</span>
+%ENDTAB%
+%TAB{"%MAKETEXT{"All"}%" id="audits_all" url="%SCRIPTURL{rest}%/RenderPlugin/template?topic=%WEB%.%TOPIC%;expand=audits;render=on;name=AuditOverview;state=*"}%
+<span class="jqAjaxLoader">&nbsp;</span>
+%ENDTAB%
+%ENDTABPANE%
+%TMPL:END%
+
+%TMPL:DEF{"audits"}%
+<table class="tablesorter">
+<thead>
+<tr><th>%MAKETEXT{"Audit title"}%</th><th>%MAKETEXT{"Audit scope"}%</th><th>%MAKETEXT{"Auditor"}%</th><th>%MAKETEXT{"Planning date"}%</th><th>%MAKETEXT{"Date of execution"}%</th><th>%MAKETEXT{"Audit type"}%</th><th>%MAKETEXT{"Status"}%</th><th>%MAKETEXT{"Measures"}%</th></tr>
+</thead>
+<tbody>
+%SOLRSEARCH{
+"form:*AuditReportForm topic:WebHome web:%WEB%.* -web:*Template field_Status_s:%URLPARAM{"state"}%"
+fields="web,topic,title,field_AuditScope_s,field_Auditor_lst,field_PlanningDate_dt,field_DateOfExecution_dt,field_AuditType_s,field_Status_s"
+header=""
+format="<tr><td>[[$web.$topic]]</td><td>$field_AuditScope_s</td><td>$field_Auditor_lst</td><td>$field_PlanningDate_dt</td><td>$field_DateOfExecution_dt</td><td>$percntMAKETEXT{\"$field_AuditType_s\"}$percnt</td><td>$percntMAKETEXT{\"$field_Status_s\"}$percnt</td><td>$percntTMPL:P{\"auditmeasures\" auditweb=\"$web\"}$percnt</td></tr>"
+footer=""
+rows="999999"
+sort="title asc"
+}%
+</tbody>
+</table>
+%TMPL:END%
+
+%TMPL:DEF{"auditmeasures"}%
+%SOLRSEARCH{
+"form:%auditweb%.MeasuresForm web:%auditweb%"
+id="%auditweb%"
+facets="field_Status_s"
+rows="999999"
+sort="field_TopicTitle_s asc"
+}%
+
+%SOLRFORMAT{"%auditweb%"
+  header_field_Status_s="<div class=\"count\">"
+  format_field_Status_s="<span href=\"%auditweb%.WebAuditMeasures\" class=\"measures\" title=\"$key\"> $key ($count) </span>$n"
+  footer_field_Status_s="</div>"
+}%
+
+%TMPL:END%

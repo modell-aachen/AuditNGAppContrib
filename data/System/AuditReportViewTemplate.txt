@@ -1,0 +1,40 @@
+%META:TOPICINFO{author="BaseUserMapping_333" date="1425545935" format="1.1" version="8"}%
+%TMPL:INCLUDE{"PrintOnlyView"}%
+%TMPL:INCLUDE{"AuditBreadcrumbs"}%
+%TMPL:INCLUDE{"AuditReportFormData"}%
+
+%TMPL:DEF{"content"}%%TMPL:P{"simpleheader"}%
+<div style="width: 70%; float:left;margin-right:1%;">
+%TMPL:P{"data"}%
+</div>
+<div style="width: 29%; float:left;">
+%TMPL:P{"furtherdetails"}%
+</div>
+%TMPL:END%
+
+%TMPL:DEF{"data"}%
+<div class="widgetBlockTitle">
+%MAKETEXT{"General audit information"}%&nbsp;<a href="%SCRIPTURLPATH{"edit"}%/%WEB%/%TOPIC%?t=%GMTIME{"$epoch"}%" title="%MAKETEXT{"Edit"}%">%ICON{pencil}%</a>
+</div>
+<div class="widgetBlockContent">
+<table class="metaDataHead">
+%RENDERFORDISPLAY{
+    %TMPL:P{"audit_report_view_extraparams"}%
+    format="<tr class='modacForm'><td><span class='title'>$title</span></td><td>$value</td></tr>"
+    map="%TMPL:P{"auditformtable_mappings"}%"
+    mandatory="&nbsp;<span class='foswikiAlert'>*</span>"
+    Private_format="<tr><td>$title</td><td><input type='checkbox' disabled='disabled' $percentIF{\"'$origvalue'='private'\" then=\"checked='checked'\"}$percent /></td></tr>"
+}%
+</table> 
+</div>
+%TMPL:END%
+
+%TMPL:DEF{"furtherdetails"}%
+<div class="widgetBlockTitle">%MAKETEXT{"Further details"}%</div>
+<div class="widgetBlockContent">
+<p>%BUTTON{"%MAKETEXT{"Audit preparation"}%" href="WebAuditPreparation"}%</p>
+<p>%BUTTON{"%MAKETEXT{"Audit conducting"}%" href="WebAuditConducting"}%</p>
+<p>%BUTTON{"%MAKETEXT{"Audit measures"}%" href="WebAuditMeasures"}%</p>
+</div>
+%TMPL:END%
+

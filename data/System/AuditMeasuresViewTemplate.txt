@@ -1,0 +1,33 @@
+%TMPL:INCLUDE{"SystemView"}%
+%TMPL:INCLUDE{"AuditBreadcrumbs"}%
+
+%TMPL:DEF{"content"}%
+<div class="widgetBlockTitle">%MAKETEXT{"Audit measures"}%</div>
+<div class="widgetBlockContent">
+<table class="tablesorter">
+<thead>
+<tr><th width="33%">%MAKETEXT{"Deviation"}%</th><th>%MAKETEXT{"Result"}%</th><th>%MAKETEXT{"Measures"}%</th></tr>
+</thead>
+<tbody>
+%SOLRSEARCH{
+"type:topic form:*AuditElementForm Element*"
+web="%BASEWEB%"
+fields="web,topic,field_Finding_s,field_Fulfillment_s,field_QualityRating_s"
+header=""
+format="<tr><td>$field_Finding_s&nbsp;<a class=\"modacPrintHide\" href=\"%SCRIPTURLPATH{edit}%/$web/$topic?t=%GMTIME{"$epoch"}%\" title=\"$percntMAKETEXT{Edit}$percnt\">$percntICON{pencil}$percnt</a></td><td>$percentCALC{\"$dollarINT($field_QualityRating_s * $field_Fulfillment_s)\"}$percent</td><td>$percntTMPL:P{\"searchmeasures\" deviation=\"$web.$topic\"}$percnt</td></tr>"
+fields="web,topic,webtopic,field_Finding_s,field_QualityRating_s,field_Fulfillment_s"
+footer=""
+rows="99999"
+sort="field_Description_s asc"
+}%
+</tbody>
+</table>
+</div>
+%TMPL:END%
+
+%TMPL:DEF{"searchmeasures"}%%TASKSGRID{"%deviation%" allowcreate="%IF{"$'URLPARAM{cover}'!='print'" then="1" else="0"}%" allowupload="1" stateless="1" title="<nop>" form="%AUDITTASKFORM%" keepclosed="1"}%%TMPL:END%
+
+%TMPL:DEF{"printTab"}%<li>
+<span><a href="%SCRIPTURL{"view"}%/%BASEWEB%/%BASETOPIC%?landscape=1&cover=print&contenttype=application/pdf">%MAKETEXT{"PDF-Print"}%</a></span>
+</li>%TMPL:END%
+%TMPL:DEF{"modacActionButtons"}%<ul id="modacButtonsLEFT" class="modacTabs"><li>%TMPL:P{"modacSystemTab"}%</li></ul><ul id="modacButtonsRIGHT" class="modacTabs"><li>%TMPL:P{"printTab"}%</li><li id="modacSearchBox">%TMPL:P{"SearchBox"}%</li></ul>%TMPL:END%

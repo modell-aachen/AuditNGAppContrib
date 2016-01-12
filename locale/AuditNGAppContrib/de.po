@@ -1,0 +1,474 @@
+# AuditNGAppContrib translation for German
+# Translators:
+# ModellAachen
+msgid ""
+msgstr ""
+"Project-Id-Version: AuditNGAppContrib $Id\n"
+"Report-Msgid-Bugs-To: support@modell-aachen.de\n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2014-11-11 15:27+0200\n"
+"Last-Translator: Modell Aachen <support@modell-aachen.de>\n"
+"Language-Team: German <http://translate.modell-aachen.de/projects/"
+"auditngappcontrib/releasenew-york/de/>\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 1.9\n"
+
+msgid "0 (not fulfilled)"
+msgstr "0 (nicht erfüllt)"
+
+msgid "100% only possible, when records are available"
+msgstr "100% nur möglich wenn Dokumentennachweis vorhanden"
+
+msgid "10 (fulfilled)"
+msgstr "10 (erfüllt)"
+
+msgid "10 (very important / very big)"
+msgstr "10 (sehr wichtig / sehr groß)"
+
+msgid "1 (not relevant / low)"
+msgstr "1 (nicht relevant / gering)"
+
+msgid "5 (important / big)"
+msgstr "5 (wichtig / groß)"
+
+msgid "5 (partially fulfilled)"
+msgstr "5 (teilweise erfüllt)"
+
+msgid "*Abbreviations*"
+msgstr "Abkürzungen"
+
+msgid "Add a new audit question"
+msgstr "Neue Auditfrage hinzufügen"
+
+msgid "Add a picture"
+msgstr "Bild hinzufügen"
+
+msgid "Add audit element"
+msgstr "Auditelement hinzufügen"
+
+msgid "Add new question"
+msgstr "Neue Auditfrage hinzufügen"
+
+msgid "Add task"
+msgstr "Aufgabe hinzufügen"
+
+msgid "all"
+msgstr "alle"
+
+msgid "All"
+msgstr "Alle"
+
+msgid "Approval:"
+msgstr "Freigabe:"
+
+msgid "Audit"
+msgstr "Audit"
+
+msgid "Audit class"
+msgstr "Audit Klasse"
+
+msgid "Audit conducting"
+msgstr "Auditdurchführung"
+
+msgid "Audit criteria"
+msgstr "Auditkriterium"
+
+msgid "Audit data"
+msgstr "Auditdaten"
+
+msgid ""
+"*Audit - evaluation key* (partial result in % = &&Sigma; individual result / "
+"(&&Sigma; rating / 10))"
+msgstr ""
+"*Audit - Bewertungsschlüssel* (Teilergebis in % = &&Sigma; "
+"Einzelergebnisse / (&&Sigma; Wertigkeit / 10))"
+
+msgid "Audit Finding"
+msgstr "Auditfeststellung"
+
+msgid "Audit measures"
+msgstr "Auditmaßnahmen"
+
+msgid "Audit objective"
+msgstr "Auditziel"
+
+msgid "Auditor"
+msgstr "Auditor"
+
+msgid "Auditor Team"
+msgstr "Auditteam"
+
+msgid "Audit preparation"
+msgstr "Auditvorbereitung"
+
+msgid "Audit questions"
+msgstr "Diese Auditfrage bearbeiten"
+
+msgid "Audit reports"
+msgstr "Auditreport"
+
+msgid "Audit scope:"
+msgstr "Betrachtungsbereich:"
+
+msgid "Audit scope"
+msgstr "Betrachtungsbereich"
+
+msgid "Audits using this question"
+msgstr "Audits, welche diese Frage benutzen"
+
+msgid "Audit Team"
+msgstr "Audit Team"
+
+msgid "Audit title"
+msgstr "Audittitel"
+
+msgid "Audit type"
+msgstr "Audittyp"
+
+msgid "Block"
+msgstr "Block"
+
+msgid "Cancel"
+msgstr "Abbrechen"
+
+msgid "Chap"
+msgstr "Kptl"
+
+msgid "Chapter"
+msgstr "Kapitel"
+
+msgid "closed"
+msgstr "geschlossen"
+
+msgid "Closed on"
+msgstr "Geschlossen am"
+
+msgid "conducted"
+msgstr "durchgeführt"
+
+msgid "Conducted"
+msgstr "Durchgeführt"
+
+msgid "Copy an audit question"
+msgstr "Auditfrage kopieren"
+
+msgid "Copy audit"
+msgstr "Audit kopieren"
+
+msgid "Copy Audit"
+msgstr "Audit kopieren"
+
+msgid "Copy this question"
+msgstr "Diese Auditfrage kopieren"
+
+msgid "Create new audit"
+msgstr "Neues Audit anlegen"
+
+msgid "Creator:"
+msgstr "Ersteller:"
+
+msgid "Creator"
+msgstr "Ersteller"
+
+msgid "Date:"
+msgstr "Datum:"
+
+msgid "Date"
+msgstr "Datum"
+
+msgid "Date of execution"
+msgstr "Datum der Ausführung"
+
+msgid "Date of planning"
+msgstr "Planungsdatum"
+
+msgid "degree of fulfillment"
+msgstr "Erfüllungsgrad"
+
+msgid "Delete"
+msgstr "Löschen"
+
+msgid "Description"
+msgstr "Beschreibung"
+
+msgid "Deviation"
+msgstr "Abweichung"
+
+msgid "discarded"
+msgstr "verworfen"
+
+msgid "Discarded"
+msgstr "Verworfen"
+
+msgid "Division"
+msgstr "Abteilung"
+
+msgid "Document control:"
+msgstr "Dokumentenlenkung:"
+
+msgid "done"
+msgstr "erledigt"
+
+msgid "Done"
+msgstr "Abgeschlossen"
+
+msgid "Do you really want to delete this question from the audit?"
+msgstr "Wollen Sie diese Frage wirklich aus dem Audit entfernen?"
+
+msgid "Due date"
+msgstr "Termin"
+
+msgid "Edit"
+msgstr "Bearbeiten"
+
+msgid "Evaluation-aspect / -criterium"
+msgstr "Bewertungsaspekt / -kriterium"
+
+msgid "External audit"
+msgstr "Externes Audit"
+
+msgid "Filing:"
+msgstr "Ablage:"
+
+msgid "Filter on chapter:"
+msgstr "Nach Normkapitel filtern:"
+
+msgid "Ful"
+msgstr "Erf"
+
+msgid "fulfilled"
+msgstr "erfüllt"
+
+msgid "Fulfillment"
+msgstr "Erfüllungsgrad"
+
+msgid "Further details"
+msgstr "Weitere Details"
+
+msgid "General audit information"
+msgstr "Generelle Audit Informationen"
+
+msgid "Generate PDF"
+msgstr "PDF generieren"
+
+msgid "important / big"
+msgstr "wichtig / groß"
+
+msgid "in effectiveness check"
+msgstr "in Effektivitätsprüfung"
+
+msgid "in progress"
+msgstr "in Bearbeitung"
+
+msgid "Internal audit"
+msgstr "Internes Audit"
+
+msgid "Measures"
+msgstr "Maßnahme"
+
+msgid "Measures container"
+msgstr "Maßnahmencontainer"
+
+msgid "new"
+msgstr "neu"
+
+msgid "Norm chapter"
+msgstr "Normkapitel"
+
+msgid "Norm classification"
+msgstr "Normklassifizierung"
+
+msgid "not fulfilled"
+msgstr "nicht erfüllt"
+
+msgid "not relevant / low"
+msgstr "nicht relevant / gering"
+
+msgid "of"
+msgstr "von"
+
+msgid "Ok"
+msgstr "Ok"
+
+msgid "open"
+msgstr "offen"
+
+msgid "Overview of audit questions"
+msgstr "Übersicht der Auditfragen"
+
+msgid "Page"
+msgstr "Seite"
+
+msgid "partially fulfilled"
+msgstr "teilweise erfüllt"
+
+msgid "Partial result impartial to rating / effect"
+msgstr "Teilergebnis unabhängig von Wertigkeit / Auswirkung"
+
+msgid "Participants"
+msgstr "Teilnehmner"
+
+msgid "PDF-Options"
+msgstr "PDF-Optionen"
+
+msgid "PDF-Print"
+msgstr "PDF-Druck"
+
+msgid "planned"
+msgstr "geplant"
+
+msgid "Planned"
+msgstr "Geplant"
+
+#: data/_apps/Audit/AuditOverviewTemplate.txt
+msgid "Planning date"
+msgstr "Planungs Datum"
+
+msgid "Please choose format:"
+msgstr "Bitte Format auswählen:"
+
+msgid "Print as report"
+msgstr "Als Bericht drucken"
+
+msgid "Print for auditing"
+msgstr "Zum Auditieren drucken"
+
+msgid "private"
+msgstr "privat"
+
+msgid "Private"
+msgstr "Privat"
+
+msgid "Process audit"
+msgstr "Prozessaudit"
+
+msgid "Product audit"
+msgstr "Produktaudit"
+
+msgid "Project audit"
+msgstr "Projektaudit"
+
+msgid "protected"
+msgstr "geschützt"
+
+msgid "Protected"
+msgstr "Geschützt"
+
+msgid "QM-Report"
+msgstr "QM-Bericht"
+
+msgid "Quality rating / effect"
+msgstr "Wertigkeit / Auswirkung"
+
+msgid "Question"
+msgstr "Frage"
+
+msgid "Rating / Effect"
+msgstr "Wertingkeit / Auswirkung"
+
+msgid "Rating of the question"
+msgstr "Wertigkeit der Frage"
+
+msgid ""
+"Regardless of rating / effect, a measure has to be derived when questions "
+"are not satisfied. When multiple questions are not met, the measures have to "
+"be prioritised according to their rating / effect."
+msgstr ""
+"Bei nicht erfüllten Fragen muss unabhängig von der Wertigkeit / Auswirkung "
+"eine Maßnahme abgeleitet werden. Bei mehreren nicht erfüllten Fragen müssen "
+"nach Wertigkeit / Auswirkung die Maßnahmen priorisiert werden."
+
+msgid "Responsible"
+msgstr "Verantwortlich"
+
+msgid "Result"
+msgstr "Ergebnis"
+
+msgid "Rslt"
+msgstr "Erg"
+
+msgid "Rtg/Eff"
+msgstr "Wrt/Eff"
+
+msgid "Save"
+msgstr "Speichern"
+
+msgid "Signal"
+msgstr "Ampel"
+
+msgid "Situation as it is"
+msgstr "Ist-Situation"
+
+msgid "Status"
+msgstr "Status"
+
+msgid "Supplier audit"
+msgstr "Lieferantenaudit"
+
+msgid "System audit"
+msgstr "Systemaudit"
+
+msgid "Task"
+msgstr "Aufgabe"
+
+msgid "Task contents"
+msgstr "Aufgabeninhalt"
+
+msgid "Task to"
+msgstr "Aufgabe an"
+
+msgid ""
+"The question will still be available in other audits and will only be "
+"removed from this audit."
+msgstr ""
+"Die Frage wird anderen Audits weiterhin zur Verfügung stehen und wird "
+"lediglich aus diesem Audit entfernt."
+
+msgid "Title for block 1"
+msgstr "Titel für Block 1"
+
+msgid "Title for block 2"
+msgstr "Titel für Block 2"
+
+msgid "Title for block 3"
+msgstr "Titel für Block 3"
+
+msgid "Title for block 4"
+msgstr "Titel für Block 4"
+
+msgid "Title for block 5"
+msgstr "Titel für Block 5"
+
+msgid "Upload"
+msgstr "Hochladen"
+
+msgid "Used in"
+msgstr "Verwendet in"
+
+msgid "Used Standards"
+msgstr "benutzte Standards"
+
+msgid "very important / very big"
+msgstr "sehr wichtig / sehr groß"
+
+msgid "visible only for participants"
+msgstr "nur für Teilnehmer sichtbar"
+
+msgid "When all questions are not satisfied = 0%"
+msgstr "bei nicht Erfüllung aller Fragen = 0%"
+
+msgid "when all questions are satisfied = 100%"
+msgstr "bei Erfüllung aller Fragen = 100%"
+
+msgid "when questions are partially satisfied = 50%"
+msgstr "bei tw. Erfüllung aller Fragen = 50%"
+
+msgid "You are about to delete the question from this audit."
+msgstr "Sie entfernen gerade eine Frage von dem Audit."
+
+msgid "Attach files to this audit"
+msgstr "Dateien an dieses Audit anhängen"

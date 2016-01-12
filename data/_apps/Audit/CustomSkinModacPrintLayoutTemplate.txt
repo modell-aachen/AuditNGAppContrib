@@ -1,0 +1,26 @@
+%TMPL:INCLUDE{"ModacPrintLayout"}%
+
+%TMPL:DEF{"modacExtraPrintStyles"}%%TMPL:PREV%
+table.tablesorter.planning thead tr .header,
+table.tablesorter.planning thead tr th {
+    background-color: #EEF;
+    background-image: none;
+    color: black;
+}
+table.tablesorter.planning thead th,
+table.tablesorter.planning tbody td {
+    border: 1px solid #EEE;
+    margin: 0;
+}
+table.tablesorter.planning {
+    border-collapse: collapse;
+}
+.printOnly {
+    display: initial!important;
+}
+.printme.printOnly {
+    display: block;
+}
+table.AuditAbbr td:not(:first-child) {
+    padding-left: 30px;
+}

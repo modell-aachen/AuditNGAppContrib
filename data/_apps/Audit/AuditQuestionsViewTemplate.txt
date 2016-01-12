@@ -1,0 +1,34 @@
+%TMPL:INCLUDE{"view"}%
+%TMPL:INCLUDE{"AuditBreadcrumbs"}%
+
+%TMPL:DEF{"script"}%%TMPL:P{"LIBJS" id="AuditNGAppContrib/auditquestion" requires="JQUERYPLUGIN::FOSWIKI"}%%TMPL:END%
+
+%TMPL:DEF{"content"}%<div class="widgetBlockTitle">%MAKETEXT{"Audit questions"}%</div>
+<div class="widgetBlockContent">
+%SOLRSEARCH{"form:*AuditQuestionForm web:%AUDITWEB%"
+  facets="field_Chapter_lst"
+  rows="1"
+  header_field_Chapter_lst="<form><label for='chapter'>%MAKETEXT{"Filter on chapter:"}%</label><select name='chapter' class='submitOnChange'><option value='' %IF{"$'URLPARAM{chapter}'=''" then="selected='selected'"}%>%MAKETEXT{"all"}%</option>"
+  footer_field_Chapter_lst="</select></form>"
+  format_field_Chapter_lst="<option %IF{"$'URLPARAM{chapter}'!=''" then="$dollarpercentIF{\\"$dollarchapter='$key'\\" then=\\"selected='selected'\\"}$percent"}%>$key</option>"
+}%
+<!-- SOLRSEARCH -->%SOLRSEARCH{
+  "topic:Question* form:*AuditQuestionForm web:%AUDITWEB%%FORMATLIST{"%URLPARAM{"q" default=""}%" split=" " format="$1*" header=" field_AspectCriteria_search:(" separator=" AND " footer=")"}%%FORMATLIST{"%URLPARAM{"chapter" default=""}%" split=" " format="$1" header=" field_Chapter_lst:(" separator=" AND " footer=")"}%"
+  header="<table><thead><tr><th>%MAKETEXT{"Question"}%</th><th>%MAKETEXT{"Chapter"}%</th><th>%MAKETEXT{"Used in"}%</th></tr></thead><tbody>"
+  format="<tr><td>[[$webtopic][$field_AspectCriteria_s]]</td><td>$field_Chapter_lst</td><td>%TMPL:P{"NestedSolrSearch"}%</td></tr>"
+  footer="</tbody></table>"
+  separator=""
+  fields="web,topic,webtopic,field_AspectCriteria_s,field_Chapter_lst"
+  rows="999999"
+}%<!-- /SOLRSEARCH -->
+</div>
+%TMPL:END%
+
+%TMPL:DEF{"NestedSolrSearch"}%$percentSOLRSEARCH{\"field_Question_s:($topic OR $webtopic) web:%BASEWEB%*\"
+ facets=\"web\"
+ limit=\"999\"
+ rows=\"1\"
+ format=\"<nop>\"
+ format_web=\"[[$dollarkey.WebAuditConducting][$dollarkey: $dollarpercentTOPICTITLE{$dollarkey.%HOMETOPIC%}$dollarpercent]]\"
+ separator_web=\"<br/>\"
+}$percent%TMPL:END%

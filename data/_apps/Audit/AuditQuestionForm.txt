@@ -1,0 +1,10 @@
+%META:TOPICINFO{author="BaseUserMapping_333" comment="pending" date="1424771176" format="1.1" version="7"}%
+| *Name* | *Type* | *Size* | *Values* | *Tool Message* | *Attributes* |
+| AspectCriteria | editor | 50x5 | | %MAKETEXT{"Evaluation-aspect / -criterium"}% |
+| Chapter | select2+multi | 50 | %SCRIPTURL{view}%/NormClassifications/NormAjaxHelper?contenttype=text/plain;skin=text;section=norm;norm=ISO9001 | %MAKETEXT{"Norm classification"}% | initUrl="%SCRIPTURL{view}%/NormClassifications/NormAjaxHelper?section=norm_init;contenttype=text/plain;skin=text;norm=ISO9001" |
+
+
+
+   * Set ALLOWTOPICCHANGE = AdminUser
+   * Set NOWYSIWYG = 1
+

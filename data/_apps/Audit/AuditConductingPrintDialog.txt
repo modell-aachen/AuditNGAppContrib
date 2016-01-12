@@ -1,0 +1,21 @@
+%STARTSECTION{"dialog"}%
+<div id="printDialog" title="%MAKETEXT{"PDF-Options"}%" class="jqUIDialog { modal:true, resizable:true, draggable:true, height:240, width:300}">
+<div id="printSelection">
+---++ %MAKETEXT{"Please choose format:"}%
+<form id="printDialogForm" action="%SCRIPTURLPATH{"view"}%/%URLPARAM{"pweb" default="%USERSWEB%"}%/%URLPARAM{"ptopic"}%" onsubmit="jQuery('#printDialog').dialog('close');"> <!-- It seems I can't use both, jqUIDialogSubmit and jqUIDialogClose together, so I'll need the onsubmit -->
+<p>
+    <input type="hidden" name="contenttype" value="application/pdf" />
+    <input type="hidden" name="cover" value="print" />
+    <input type="hidden" name="attachment" value="1" />
+    <input type="hidden" name="landscape" value="1" />
+    <input type="radio" name="fillout" value="0" checked='checked'> %MAKETEXT{"Print as report"}% </input>
+    <br />
+    <input type="radio" name="fillout" value="1" > %MAKETEXT{"Print for auditing"}% </input>
+</p><p>
+    <a class="jqUIDialogButton jqUIDialogSubmit {icon: 'ui-icon-circle-check'}">%MAKETEXT{"Generate PDF"}%</a>
+    <a class="jqUIDialogButton jqUIDialogClose {icon: 'ui-icon-cancel'}">%MAKETEXT{"Cancel"}%</a>
+</p>
+</form>
+</div>
+</div>
+%ENDSECTION{"dialog"}%

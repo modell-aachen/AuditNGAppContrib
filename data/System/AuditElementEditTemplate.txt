@@ -1,0 +1,50 @@
+%META:TOPICINFO{author="BaseUserMapping_333" date="1424774279" format="1.1" version="3"}%
+%TMPL:INCLUDE{edit}%
+%TMPL:INCLUDE{"AuditBreadcrumbs"}%
+
+%TMPL:DEF{"content"}%%TMPL:P{"simpleheader"}%
+%TMPL:P{"formstart"}%%TMPL:P{"formtop"}%
+%TMPL:P{"deviation"}%
+%TMPL:P{"topicinfo"}%
+%TMPL:P{"formend"}%
+%TMPL:P{"addQuestionDialog"}%
+%TMPL:END%
+
+%TMPL:DEF{"deviation"}%
+%IF{"defined origin" then="<input type='hidden' name='redirectto' value='%URLPARAM{origin}%' />" else="<!-- no origin parameter -->"}%
+<div class="widgetBlockTitle">%MAKETEXT{"Audit Finding"}%</div>
+<div class="widgetBlockContent">
+<table class="metaDataHead">
+<tr><td>%MAKETEXT{"Question"}%:<font color="red">*</font></td><td><table><tbody><tr><td><div class='question'>%RENDERFOREDIT{field="Question" format="$edit"}%</div></td><td>%BUTTON{"%MAKETEXT{"Copy this question"}%" class="copyQuestion" href="#"}%</td><td>%BUTTON{"%MAKETEXT{"Add new question"}%" class="addQuestion" href="#"}%</td></tr></tbody></table></td></tr>
+<tr><td width="200px:">%MAKETEXT{"Rating of the question"}%:</td><td>%RENDERFOREDIT{field="QualityRating" format="$edit"}%</td></tr>
+<tr><td width="200px:">%MAKETEXT{"Audit Finding"}%:</td><td>%RENDERFOREDIT{field="Finding" format="$edit"}%</td></tr>
+<tr><td width="200px:">%MAKETEXT{"Fulfillment"}%:</td><td>%RENDERFOREDIT{field="Fulfillment" format="$edit"}%</td></tr>
+<tr><td width="200px:">%MAKETEXT{"Block"}%:</td><td><select name="Block">%FORMATLIST{"%RENDERFORDISPLAY{form="%AUDITWEB%.AuditElementForm" format="$origvalues" fields="Block"}%"
+format="$percentIF{\"'%WEB%.%HOMETOPIC%'/Block$1Title != ''\" then=\"<option value='$1' $dollarpercentIF{\\"'%URLPARAM{"Block" default="%QUERY{"Block"}%"}%'='$1'\\" then=\\"selected='selected'\\"}$dollarpercent>$dollarpercentQUERY{\\"'%WEB%.%HOMETOPIC%'/Block$1Title\\"}$dollarpercent</option>\"}$percent" separator=""}%</select></td></tr>
+</table>
+</div>
+%TMPL:END%
+
+%TMPL:DEF{"addQuestionDialog"}%<div class="jqUIDialog {width:700}" style="display:none" id="addQuestionDialog" title="%MAKETEXT{"Add a new audit question"}%">
+<form action="%SCRIPTURL{save}%/%AUDITWEB%/QuestionAUTOINC0000" method="post" id="addForm">
+<input type="hidden" name="formtemplate" value="%AUDITWEB%.AuditQuestionForm" />
+<table class="metaDataHead">
+<tr><td>%MAKETEXT{"Evaluation-aspect / -criterium"}%</td><td>:</td><td>%RENDERFOREDIT{field="AspectCriteria" form="%AUDITWEB%.AuditQuestionForm" format="$edit"}%</td></tr>
+<tr><td>%MAKETEXT{"Norm chapter"}%</td><td>:</td><td>%RENDERFOREDIT{field="Chapter" form="%AUDITWEB%.AuditQuestionForm" format="$edit"}%</td></tr>
+<tr><td colspan="3"><a class="jqUIDialogButton jqUIDialogSubmit {icon:'ui-icon-circle-check'}">%MAKETEXT{"Ok"}%</a><a class="jqUIDialogButton jqUIDialogClose {icon:'ui-icon-cancel'}">%MAKETEXT{"Cancel"}%</a></td></tr>
+</table>
+</form>
+</div>%TMPL:END%
+
+%TMPL:DEF{"copyQuestionDialog"}%<div class="jqUIDialog {width:700, autoOpen:true} copyQuestionDialog" style="display:none" title="%MAKETEXT{"Copy an audit question"}%">
+<form action="%SCRIPTURL{save}%/%AUDITWEB%/QuestionAUTOINC0000" method="post">
+<input type="hidden" name="formtemplate" value="%AUDITWEB%.AuditQuestionForm" />
+<table class="metaDataHead">
+<tr><td>%MAKETEXT{"Evaluation-aspect / -criterium"}%</td><td>:</td><td>%RENDERFOREDIT{field="AspectCriteria" form="%AUDITWEB%.AuditQuestionForm" format="$edit" topic="%AUDITWEB%.%URLPARAM{"question"}%"}%</td></tr>
+<tr><td>%MAKETEXT{"Norm chapter"}%</td><td>:</td><td>%RENDERFOREDIT{field="Chapter" form="%AUDITWEB%.AuditQuestionForm" format="$edit" topic="%AUDITWEB%.%URLPARAM{"question"}%"}%</td></tr>
+<tr><td colspan="3"><a class="jqUIDialogButton jqUIDialogSubmit {icon:'ui-icon-circle-check'}">%MAKETEXT{"Ok"}%</a><a class="jqUIDialogButton jqUIDialogClose {icon:'ui-icon-cancel'}">%MAKETEXT{"Cancel"}%</a></td></tr>
+</table>
+</form>
+</div>%TMPL:END%
+
+%TMPL:DEF{"script"}%%JQREQUIRE{"form,ui::dialog"}%%ADDTOZONE{"script" id="AddElementScript" requires="JQUERYPLUGIN::FOSWIKI,JQUERYPLUGIN::SELECT2,JQUERYPLUGIN::BUTTON,JQUERYPLUGIN::BGIFRAME,JQUERYPLUGIN::FORM,JQUERYPLUGIN::UI::DIALOG" text="<script type='text/javascript' src='%PUBURLPATH%/%SYSTEMWEB%/AuditNGAppContrib/auditelement.js'></script>"}%%ADDTOZONE{"head" id="AddElementCss" text="<style type='text/css'>@import url('%PUBURLPATH%/%SYSTEMWEB%/AuditNGAppContrib/auditelement.css');></style>"}%%TMPL:END%

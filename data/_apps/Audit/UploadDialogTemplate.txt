@@ -1,0 +1,16 @@
+<div class="jqUIDialog {width:600}" style="display:none" title="%IF{"'%URLPARAM{"accept" default="image/*"}%'='image/*'" then="%MAKETEXT{"Add a picture"}%" else="%MAKETEXT{"Add a file"}%"}%">
+<div style='float:left'>%QRUPLOAD{web="%WEB%" topic="%TOPIC%" accept="%URLPARAM{"accept" default="image/*"}%" backlink="[[%SCRIPTURL{view}%/%URLPARAM{"BACK"}%][%MAKETEXT{"Back to [_1]" args="%URLPARAM{"BACKLABEL"}%"}%]]"}%</div>
+<div style="clear: both;"></div>
+<div>%DNDUPLOAD{web="%WEB%" topic="%TOPIC%" width="100%"}%</div>
+<div style="display:none">
+<form action="%SCRIPTURL{upload}%/%WEB%/%TOPIC%" method="post" enctype="multipart/form-data">
+<!-- TODO: StrikeOne -->
+<input type="hidden" value="" name="filename" />
+<input class="foswikiInputField" type="file" value="" name="filepath" accept="%URLPARAM{"accept" default="image/*"}%" />
+<input type="submit" value="%MAKETEXT{"Upload"}%" />
+</form>
+</div>
+<div style="clear: both;"></div>
+%FORMATLIST{"%QUERY{"attachments.name"}%" separator="" format="<div style='float:left; margin: 3px;'><a href='%ATTACHURLPATH%/$1' class='noSymbol'><img src='$percentIF{\"'$1'=~'\.(?:png|jpe?g|bmp|gif)$'\" then=\"%ATTACHURLPATH%/$1\" else=\"%PUBURLPATH%/%SYSTEMWEB%/AuditNGAppContrib/page_misc_%IF{"$LANGUAGE='de'" then="de" else="en"}%.png\"}$percent' style='max-width:150px;max-height:150px;' /></a></div>"}%
+</div>%TMPL:END%
+

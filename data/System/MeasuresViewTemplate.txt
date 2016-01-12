@@ -1,0 +1,52 @@
+%META:TOPICINFO{author="BaseUserMapping_333" date="1428499532" format="1.1" version="2"}%
+%TMPL:INCLUDE{"view"}%
+%TMPL:INCLUDE{"AuditBreadcrumbs"}%
+
+%JQREQUIRE{"ui::dialog"}%
+
+%TMPL:DEF{"content"}%
+%TMPL:P{"simpleheader"}%
+%TMPL:P{"policy"}%
+<div class="widgetBlockTitle">%MAKETEXT{"Measures container"}%</div>
+<div class="widgetBlockContent">
+%TMPL:P{"data"}%
+<hr>
+%TMPL:P{"tasksmanagement"}%
+</div>
+%TMPL:END%
+
+%TMPL:DEF{"policy"}%
+%SETVAR{var="ALLOWTOPICVIEW" value="$percntURLPARAM{\"Responsible\" default=\"$percntQUERY{\"Responsible\"}$percnt\"}$percnt,$percntURLPARAM{\"Participants\" default=\"$percntQUERY{\"Participants\"}$percnt\"}$percnt" field="Protected" type="Set" matches="^protected$"}%
+%SETVAR{var="ALLOWTOPICVIEW" value="" field="Protected" type="Set" matches="^$"}%
+%SETVAR{var="ALLOWTOPICCHANGE" value="$percntURLPARAM{\"Responsible\" default=\"$percntQUERY{\"Responsible\"}$percnt\"}$percnt,$percntURLPARAM{\"Participants\" default=\"$percntQUERY{\"Participants\"}$percnt\"}$percnt" field="Protected" type="Set" matches="^protected$"}%
+%SETVAR{var="ALLOWTOPICCHANGE" value="" field="Protected" type="Set" matches="^$"}%
+%TMPL:END%
+
+
+%TMPL:DEF{"data"}%
+<table class="metaDataHead">
+<tr><td width="200px;">%MAKETEXT{"Description"}%:</td><td>%RENDERFORDISPLAY{field="TopicTitle" format="$value"}%</td></tr>
+<tr><td>%MAKETEXT{"Responsible"}%:</td><td>%RENDERFORDISPLAY{field="Responsible" format="$value"}%</td></tr>
+<tr><td>%MAKETEXT{"Deviation"}%:</td><td>%QUERY{"Deviation/TopicTitle"}%</td></tr>
+<tr><td>%MAKETEXT{"Status"}%:</td><td>%RENDERFORDISPLAY{field="Status" format="$value"}%</td></tr>
+<tr><td>%MAKETEXT{"Protected"}%:</td><td><input type="checkbox" %IF{"'%TOPIC%'/Protected=~'protected'" then="checked=$quotchecked$quot"}% DISABLED>%MAKETEXT{"protected"}% <i>(%MAKETEXT{"visible only for participants"}%)</i></td></tr>
+<tr><td>%MAKETEXT{"Participants"}%:</td><td>%RENDERFORDISPLAY{field="Participants" format="$value"}%</td></tr>
+</table>
+%TMPL:END%
+
+%TMPL:DEF{"tasksmanagement"}%
+<div class="JQTabPrintSelected">
+%TASKSGRID{
+	context="%BASEWEB%.%BASETOPIC%"
+	allowcreate="1"
+	allowupload="1"
+	keepclosed="1"
+}%
+</div>
+%TMPL:END%
+
+
+%TMPL:DEF{"printselectedtab"}%
+%IF{"context MAPrinceModPluginEnabled" then="<a href=\"%SCRIPTURL{"view"}%/%SYSTEMWEB%/MAPrinceModPrintDialog?skin=text&section=dialog&pweb=%ENCODE{"%INCLUDINGWEB%" type="url"}%&ptopic=%ENCODE{"%INCLUDINGTOPIC%" type="url"}%&landscape=%LANDSCAPE{default="0"}%;printParams=showtab;showtab=%state%\" class=\"jqUIDialogLink modacPrintHide\">$percntICON{\"pdf\"}$percnt</a>
+"}%
+%TMPL:END%

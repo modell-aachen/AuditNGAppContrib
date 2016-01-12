@@ -1,0 +1,11 @@
+%META:TOPICINFO{author="BaseUserMapping_333" date="1418053557" format="1.1" version="1"}%
+| *Name* | *Type* | *Size* | *Values* | *Tool Message* | *Attributes* |
+| TopicTitle | text | 50 | | %MAKETEXT{"Description"}% | M |
+| Responsible | textboxlist | 50 mustMatch limit="1" | %USERAUTOCOMPLETE% | %MAKETEXT{"Responsible"}% | M |
+| Deviation | select2+multi | 50 limit="1" mustMatch | %SCRIPTURL{view}%/%AUDITWEB%/AuditAjaxHelper?contenttype=text/plain;skin=text;section=deviation;web=%BASEWEB% | %MAKETEXT{"Deviation"}% | initUrl="%SCRIPTURL{view}%/%AUDITWEB%/AuditAjaxHelper?section=deviation_init;contenttype=text/plain;skin=text;" M |
+| Status | select+values | 1 | %MAKETEXT{"new"}%=new,%MAKETEXT{"in progress"}%=in progress,%MAKETEXT{"in effectiveness check"}%=in effectiveness check,%MAKETEXT{"closed"}%=closed | %MAKETEXT{"Status"}% | |
+| Protected | checkbox+values | 1 | %MAKETEXT{"protected"}%=protected | %MAKETEXT{"Protected"}% | |
+| Participants | textboxlist | 50 mustMatch | %USERAUTOCOMPLETE% | %MAKETEXT{"Participants"}% | |
+
+   * Set ALLOWTOPICCHANGE = AdminUser
+   * Set NOWYSIWYG = 1

@@ -1,0 +1,34 @@
+%META:TOPICINFO{author="BaseUserMapping_333" comment="reprev" date="1424854482" format="1.1" reprev="4" version="2"}%
+%META:TOPICPARENT{name="WebTopicList"}%
+%TMPL:INCLUDE{edit}%
+%TMPL:INCLUDE{"AuditBreadcrumbs"}%
+%TMPL:INCLUDE{"AuditReportFormData"}%
+
+%TMPL:DEF{"content"}%%TMPL:P{"simpleheader"}%
+%TMPL:P{"formstart"}%%TMPL:P{"formtop"}%
+%TMPL:P{"auditmanagement"}%
+%TMPL:P{"topicinfo"}%
+%TMPL:P{"formend"}%
+%TMPL:END%
+
+%TMPL:DEF{"auditmanagement"}%
+<input type="hidden" name="WebPreferences_ALLOWWEBVIEW" value="%<nop>IF{$quot$'URLPARAM{Private}'='private'$quot then=$quot%<nop>URLPARAM{AuditTeam}%,%<nop>URLPARAM{Auditor}%$quot else=$quot$quot}%" />
+<input type="hidden" name="WebPreferences_ALLOWWEBCHANGE" value="%<nop>URLPARAM{AuditTeam}%,%<nop>URLPARAM{Auditor}%" />
+<!-- JSCalendarContribInline -->%INCLUDE{"%SYSTEMWEB%/JSCalendarContribInline"}%<!-- /JSCalendarContribInline -->
+<div class="widgetBlockTitle">
+%MAKETEXT{"General audit information"}%
+</div>
+<div class="widgetBlockContent">
+<table class="metaDataHead">
+%RENDERFOREDIT{
+    %TMPL:P{"audit_report_edit_extraparams"}%
+    format="<tr class='modacForm'><td><span class='title'>$title</span>$mandatory</td><td>$edit</td></tr>"
+    map="%TMPL:P{"auditformtable_mappings"}%"
+    mandatory="&nbsp;<span class='foswikiAlert'>*</span>"
+}%
+</table> 
+</div>
+%TMPL:END%
+
+%META:PREFERENCE{name="ALLOWTOPICCHANGE" title="ALLOWTOPICCHANGE" type="Set" value="AdminUser"}%
+%META:PREFERENCE{name="NOWYSIWYG" title="NOWYSIWYG" type="Set" value="1"}%

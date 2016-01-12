@@ -1,0 +1,8 @@
+.printOnly{
+    display:none;
+}
+@media print {
+    .printOnly {
+        display: initial;
+    }
+}
